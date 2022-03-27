@@ -1,28 +1,30 @@
 import React from "react";
 import Product from "../Product/Product";
+import { useEffect } from "react";
 import './Home.css'
+import { getProducts } from "../../store/products";
+import { useDispatch, useSelector } from "react-redux";
+
 
 function Home() {
+  const dispatch = useDispatch()
+  const products = useSelector((state) => Object.values(state.productReducer))
+
+useEffect(() => {
+  dispatch(getProducts())
+}, [])
+
   return (
     <div className="home">
       <div className="home__container">
-        <img
-          className="home__image"
-          src="https://images.hdqwalls.com/download/purple-blue-moving-down-abstract-4k-nq-1920x1080.jpg"
-          alt="home"
-        />
-        {/* loop products here */}
         <div className="home__row">
-            row1
+          {products && products.map(product => (
+            <Product id={product.id} title={product.title} description={product.description} image={product.image} price={product.price} rating={product.rating} userId={product.userId}/>
+            ))}
         </div>
-        <div className="home__row">
-            row2
-        </div>
-        <div className="home__row">
-          row3
-        </div>
+
+            </div>
       </div>
-    </div>
   );
 }
 

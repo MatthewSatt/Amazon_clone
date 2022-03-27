@@ -35,7 +35,7 @@ function NavBar() {
             {user && (
               <>
                 <span className="header__optionLineOne">
-                  Hello {user.email}
+                  Hello {user.username}
                 </span>
                 <span onClick={logoutUser} className="header__optionLineTwo">
                   Sign Out
