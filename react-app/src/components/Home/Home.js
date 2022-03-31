@@ -19,7 +19,7 @@ useEffect(() => {
       <div className="home__container">
         <div className="home__row">
           {products && products.map(product => (
-            <Product id={product.id} title={product.title} description={product.description} image={product.image} price={product.price} rating={product.rating} userId={product.userId}/>
+            <Product key={product.id} id={product.id} title={product.title} description={product.description} image={product.image} price={product.price} rating={product.rating} userId={product.userId}/>
             ))}
         </div>
 

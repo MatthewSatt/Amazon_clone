@@ -8,6 +8,7 @@ import { authenticate } from './store/session';
 import Home from './components/Home/Home'
 import SignUp from './components/Signup/Signup';
 import Product from './components/Product/Product';
+import Basket from './components/Basket/Basket';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -37,6 +38,9 @@ function App() {
         <ProtectedRoute path='/' exact={true} >
           <Home />
           <Product />
+        </ProtectedRoute>
+        <ProtectedRoute path='/checkout' exact={true}>
+          <Basket />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>

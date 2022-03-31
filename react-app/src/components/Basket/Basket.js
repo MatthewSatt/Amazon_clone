@@ -1,11 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Basket.css";
 import SubTotal from "../SubTotal/SubTotal";
-import { useStateValue } from "../StateProvider";
 import CheckoutProduct from "../CheckoutProduct/CheckoutProduct";
+import { useSelector, useDispatch } from "react-redux";
+import {getProducts} from '../../store/products'
 
 function Basket() {
-  const [{basket} , dispatch] = useStateValue()
+  const dispatch = useDispatch()
+ const user = useSelector(state => state.session.user)
+ const products = useSelector(state => Object.values(state.productReducer))
+ console.warn(products)
+
+ useEffect(() => {
+  dispatch(getProducts())
+ }, [])
   return (
     <div className="checkout">
       <div className="checkout__left">
@@ -16,8 +24,9 @@ function Basket() {
       <div>
         <h3>Hello, MatthewSatterwhiteMs@gmail.com</h3>
         <h2 className="checkout__title">Your shopping Basket</h2>
-        {basket && basket.map(item =>(
+        {products && products.map(item =>(
           <CheckoutProduct
+          key={item.id}
           id={item.id}
           title={item.title}
           image={item.image}
