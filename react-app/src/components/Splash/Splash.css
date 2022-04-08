@@ -1,12 +1,13 @@
 .productcategories {
     color: white;
-    background-color: rgb(161, 161, 161);
+    background-color: #cd9042;
     border: 1px solid red;
 }
 
 .productline {
     display: flex;
     margin: 2%;
+    scroll-behavior: smooth;
 }
 
 .eachproduct {
@@ -14,12 +15,29 @@
     margin: 20px;
     flex-direction: column;
     flex-wrap: wrap;
-    width: 300px;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
 }
 
 
 .producttitle {
     font-weight: bold;
+}
+
+.productcategories {
+    display: flex;
+    justify-content: space-between;
+}
+
+.scrolloptions{
+    display: inline-flex;
+    margin-right: 3%;
+}
+
+.scrolloptions p {
+    margin-left: 4%;
+    margin-right: 4%;
 }

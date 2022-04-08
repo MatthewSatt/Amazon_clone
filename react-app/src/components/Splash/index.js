@@ -19,15 +19,17 @@ function Splash() {
         <div className='splashnav'>
             {types && types.map(type => (
                 <div key={type.id}>
-                    <h1 className='productcategories'>{type.name}</h1>
+                    <h1 className='productcategories'>{type.name}
+                    <div className='scrolloptions'>
+                    <p>left</p>
+                    <p>right</p>
+                    </div>
+                    </h1>
+
                     <div className='productline'>
                     {products.filter(product => product.type_id == type.id).map(filteredProducts => (
                         <div className='eachproduct'>
-                            <div>
-
                             <p className='producttitle'>{filteredProducts.name}</p>
-                            </div>
-                            <p>{filteredProducts.description}</p>
                             <p><small>$</small>{filteredProducts.price}</p>
 
                         </div>
