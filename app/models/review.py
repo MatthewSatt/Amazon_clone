@@ -12,6 +12,7 @@ class Review(db.Model):
     product_id = db.Column(db.Integer, db.ForeignKey('products.id'), nullable=False)
     title=db.Column(db.String(255), nullable=False)
     body=db.Column(db.Text, nullable=False)
+    rating = db.Column(db.Integer)
     created_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
     updated_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
 
@@ -27,6 +28,7 @@ class Review(db.Model):
             'product_id': self.product_id,
             'title': self.title,
             'body': self.body,
+            'rating': self.rating,
             'created_at': self.created_at,
             'updated_at': self.updated_at
         }

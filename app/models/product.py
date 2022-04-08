@@ -1,14 +1,14 @@
 from .db import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
-from sqlalchemy import func
+from sqlalchemy import ForeignKey, func
 
 
 class Product(db.Model):
     __tablename__ = 'products'
 
     id=db.Column(db.Integer, primary_key=True)
-    type_id = db.Column(db.Integer, nullable=False)
+    type_id = db.Column(db.Integer, db.ForeignKey('types.id'), nullable=False)
     name=db.Column(db.String(255), nullable=False)
     description=db.Column(db.String(2000), nullable=False)
     price=db.Column(db.Float, nullable=False)
