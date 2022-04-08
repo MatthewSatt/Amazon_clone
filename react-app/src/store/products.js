@@ -20,9 +20,15 @@ export const getProducts = () => async (dispatch) => {
 
 const initialState = {};
 export default function productReducer(state = initialState, action) {
+    let newState
     switch (action.type) {
         case GET_ALL_PRODUCTS:
-            return action.products
+            const allProducts = {};
+            action.products.forEach(product => {
+                allProducts[product.id] = product
+
+            })
+            return {...allProducts}
     default:
       return state;
   }
