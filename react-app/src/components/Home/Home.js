@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 function Home() {
   const dispatch = useDispatch()
   const products = useSelector((state) => Object.values(state.productReducer))
+  console.log(products)
 
 useEffect(() => {
   dispatch(getProducts())

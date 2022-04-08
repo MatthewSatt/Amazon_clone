@@ -13,7 +13,7 @@ def seed_types():
     type7 = Type(name='Automotive')
     type8 = Type(name='Babies')
     type9 = Type(name='Music & Movies')
-    type10 = Type(name='Pet Supplies')
+    type10 = Type(name='Health')
     db.session.add(type1)
     db.session.add(type2)
     db.session.add(type3)
@@ -28,5 +28,5 @@ def seed_types():
 
 
 def undo_types():
-    db.session.execute('TRUNCATE users RESTART IDENTITY CASCADE;')
+    db.session.execute('TRUNCATE types RESTART IDENTITY CASCADE;')
     db.session.commit()
