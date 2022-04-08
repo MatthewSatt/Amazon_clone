@@ -11,6 +11,7 @@ export const getProducts = () => async (dispatch) => {
     const res = await fetch('/api/products/all')
     if(res.ok) {
         const products = await res.json()
+        console.log(products)
         dispatch(getAllP(products))
     } else {
         return 'No products Avaliable'
@@ -18,17 +19,11 @@ export const getProducts = () => async (dispatch) => {
 }
 
 
-const initialState = {};
+const initialState = [];
 export default function productReducer(state = initialState, action) {
-    let newState
     switch (action.type) {
         case GET_ALL_PRODUCTS:
-            const allProducts = {};
-            action.products.forEach(product => {
-                allProducts[product.id] = product
-
-            })
-            return {...allProducts}
+           return action.products
     default:
       return state;
   }

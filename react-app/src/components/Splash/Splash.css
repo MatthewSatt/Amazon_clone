@@ -1,0 +1,25 @@
+.productcategories {
+    color: white;
+    background-color: rgb(161, 161, 161);
+    border: 1px solid red;
+}
+
+.productline {
+    display: flex;
+    margin: 2%;
+}
+
+.eachproduct {
+    display: flex;
+    margin: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 300px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.producttitle {
+    font-weight: bold;
+}

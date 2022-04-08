@@ -7,7 +7,6 @@ product_routes = Blueprint("products", __name__)
 
 
 @product_routes.route('/all')
-@login_required
 def get_all_products():
     products = Product.query.all()
 

@@ -18,10 +18,5 @@ class Type(db.Model):
     def to_dict(self):
         return {
             'id': self.id,
-            'user_id': self.user_id,
-            'product_id': self.product_id,
-            'title': self.title,
-            'body': self.body,
-            'created_at': self.created_at,
-            'updated_at': self.updated_at
+            'name': self.name
         }
