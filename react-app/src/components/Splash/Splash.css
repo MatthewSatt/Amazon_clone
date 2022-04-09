@@ -1,25 +1,14 @@
 .productcategories {
     color: white;
     background-color: #cd9042;
-    border: 1px solid red;
 }
 
 .productline {
     display: flex;
     margin: 2%;
-    scroll-behavior: smooth;
-}
-
-.eachproduct {
-    display: flex;
-    margin: 20px;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
-    width: 25%;
-    height: 300px;
-    border: 2px solid black;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
 }
 
 
@@ -40,4 +29,8 @@
 .scrolloptions p {
     margin-left: 4%;
     margin-right: 4%;
+}
+
+#left {
+    margin-right: 2vw;
 }

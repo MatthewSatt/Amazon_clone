@@ -8,6 +8,8 @@ import { authenticate } from './store/session';
 import SignUp from './components/Signup/Signup';
 import Splash from './components/Splash'
 import Home from './components/Home'
+import SingleProduct from './components/SingleProduct';
+
 
 
 function App() {
@@ -30,17 +32,22 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
+        {!user && (
+          <>
+        <Route path='/'>
+          <Splash />
+        </Route>
+        <Route path="/product/:id" exact={true} >
+          <SingleProduct />
+        </Route>
+          </>
+        )}
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
         <Route path='/signup' exact={true}>
           <SignUp />
         </Route>
-        {!user && (
-        <Route path='/'>
-          <Splash />
-        </Route>
-        )}
         <ProtectedRoute path='/' exact={true} >
           <Home />
         </ProtectedRoute>

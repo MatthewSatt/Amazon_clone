@@ -12,6 +12,7 @@ class Product(db.Model):
     name=db.Column(db.String(255), nullable=False)
     description=db.Column(db.String(2000), nullable=False)
     price=db.Column(db.Float, nullable=False)
+    image=db.Column(db.String)
     created_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
     updated_at = db.Column(db.DateTime(timezone=True), server_default=func.now())
 
@@ -28,6 +29,7 @@ class Product(db.Model):
             'name': self.name,
             'description': self.description,
             'price': self.price,
+            'image': self.image,
             'created_at': self.created_at,
             'updated_at': self.updated_at
         }
