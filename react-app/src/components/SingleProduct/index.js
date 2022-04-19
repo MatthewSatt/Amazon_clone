@@ -20,7 +20,7 @@ function SingleProduct() {
         <div className='productname'>
           {thisProduct.name}
         </div>
-          <button>Add to Cart</button>
+          <button className='addtocart'>Add to Cart</button>
         <div>
           <small>$</small>{thisProduct.price}
         </div>
