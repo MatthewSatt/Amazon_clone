@@ -28,10 +28,6 @@ const SignUp = () => {
       }
     }
   };
-  console.warn(username)
-  console.warn(email)
-  console.warn(password)
-  console.warn(repeatPassword)
 
   const updateUsername = (e) => {
       setUsername(e.target.value)

@@ -34,23 +34,29 @@ function App() {
       <Switch>
         {!user && (
           <>
-        <Route path='/'>
+        <Route path='/' exact={true}>
           <Splash />
         </Route>
-        <Route path="/product/:id" exact={true} >
-          <SingleProduct />
-        </Route>
-          </>
-        )}
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
         <Route path='/signup' exact={true}>
           <SignUp />
         </Route>
+        <Route path='/product/:id'>
+          <SingleProduct />
+        </Route>
+          </>
+        )}
         <ProtectedRoute path='/' exact={true} >
           <Home />
         </ProtectedRoute>
+        <Route path='/login' exact={true}>
+          <LoginForm />
+        </Route>
+        <Route path='/signup' exact={true}>
+          <SignUp />
+        </Route>
         <ProtectedRoute path='/checkout' exact={true}>
         </ProtectedRoute>
       </Switch>

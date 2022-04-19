@@ -11,7 +11,6 @@ export const getProducts = () => async (dispatch) => {
     const res = await fetch('/api/products/all')
     if(res.ok) {
         const products = await res.json()
-        console.log(products)
         dispatch(getAllP(products))
     } else {
         return 'No products Avaliable'
