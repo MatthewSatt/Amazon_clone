@@ -13,6 +13,7 @@ function NavBar() {
 
   const logoutUser = async () => {
     await dispatch(logout(user));
+    history.push('/')
   };
 
   return (

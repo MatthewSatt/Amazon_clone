@@ -35,3 +35,19 @@
 #left {
     margin-right: 2vw;
 }
+
+.products {
+    display: flex;
+}
+#productimage {
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+}
+
+#productimage:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+    z-index: 1;
+    cursor: pointer
+}

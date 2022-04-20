@@ -8,7 +8,7 @@ import { authenticate } from './store/session';
 import SignUp from './components/Signup/Signup';
 import Splash from './components/Splash'
 import Home from './components/Home'
-import SingleProduct from './components/SingleProduct';
+import Product from './components/Product';
 
 
 
@@ -37,26 +37,36 @@ function App() {
         <Route path='/' exact={true}>
           <Splash />
         </Route>
+
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
+
         <Route path='/signup' exact={true}>
           <SignUp />
         </Route>
+
         <Route path='/product/:productId'>
-          <SingleProduct />
+          <Product />
         </Route>
           </>
         )}
         <ProtectedRoute path='/' exact={true} >
           <Home />
         </ProtectedRoute>
+
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
+
         <Route path='/signup' exact={true}>
           <SignUp />
         </Route>
+
+        <Route path='/product/:productId'>
+          <Product />
+        </Route>
+
         <ProtectedRoute path='/checkout' exact={true}>
         </ProtectedRoute>
       </Switch>
