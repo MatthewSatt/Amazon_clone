@@ -29,7 +29,7 @@ function Splash() {
                     </h1>
                     <div className='productline'>
                     {products.filter(product => product.type_id == type.id).map(filteredProducts => (
-                        <div className='eachproduct'>
+                        <div className='eachproduct' key={filteredProducts.id}>
                             <Product id={filteredProducts.id}
                                     typeId={filteredProducts.type_id}
                                     name={filteredProducts.name}

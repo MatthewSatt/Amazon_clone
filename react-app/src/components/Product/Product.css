@@ -2,14 +2,14 @@
     display: flex;
 }
 #productimage {
-    max-width: 200px;
-    margin-right: 20px;
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
 }
 
 #productimage:hover {
+    transform: scale(1.1);
     transition: 0.2s;
-    padding-bottom: 10%;
     z-index: 1;
-    position: relative;
     cursor: pointer
 }

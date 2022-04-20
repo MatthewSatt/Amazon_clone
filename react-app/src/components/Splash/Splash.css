@@ -5,7 +5,8 @@
 
 .productline {
     display: flex;
-    margin: 2%;
+    /* margin: 2%; */
+    padding: 2%;
     align-items: center;
     overflow-x: scroll;
     scroll-behavior: smooth;

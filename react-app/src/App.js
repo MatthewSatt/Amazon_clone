@@ -43,7 +43,7 @@ function App() {
         <Route path='/signup' exact={true}>
           <SignUp />
         </Route>
-        <Route path='/product/:id'>
+        <Route path='/product/:productId'>
           <SingleProduct />
         </Route>
           </>
