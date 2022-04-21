@@ -13,7 +13,7 @@
     text-decoration: none;
     transition: ease-in-out;
     animation-name: shiftright;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
 }
 
 .producttypelinks{
@@ -40,7 +40,7 @@
 
 #close {
    font-size: 40px;
-   color: red;
+   color: #9c7e31;
    position: relative;
 }
 

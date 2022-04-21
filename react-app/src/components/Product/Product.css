@@ -82,7 +82,7 @@
     padding:15px;
     transition: ease-in-out;
     animation-name: shiftleft;
-    animation-duration: 1s;
+    animation-duration: 0.3s;
 }
 
 .price {

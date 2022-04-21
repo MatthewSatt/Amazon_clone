@@ -9,9 +9,10 @@ import './Home.css'
 function Home() {
   const dispatch = useDispatch()
   const user = useSelector(state => state.session.user)
-  const products = useSelector(state => state.productReducer);
+  const products = useSelector(state => Object.values(state.productReducer));
   const types = useSelector((state) => state.typeReducer);
   const [showSideNav, setShowSideNav] = useState(false)
+  console.log(products)
 
   useEffect(() => {
     dispatch(getProducts());
@@ -21,6 +22,9 @@ function Home() {
   return (
     <div className='home'>
       <Dropdown showSideNav={showSideNav} setShowSideNav={setShowSideNav}/>
+      {products && products.map(product => (
+        <img src={product.image}/>
+      ))}
     </div>
   )
 }
