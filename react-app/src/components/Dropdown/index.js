@@ -28,8 +28,7 @@ function Dropdown({ showSideNav, setShowSideNav }) {
       <div className="dropdownopen">
       {showSideNav &&
       <Modal onClose={() => setShowSideNav(false)}>
-        <FaArrowAltCircleLeft id='close' onClick={closeModel}/>
-          <h2>Shop by...</h2>
+          <h2>Product Categories</h2>
             <div className="producttypelinks">
             {types && types?.map(type => (
                 <div className="navproducts" key={type?.id}>
@@ -38,6 +37,10 @@ function Dropdown({ showSideNav, setShowSideNav }) {
                     </Link>
                 </div>
             ))}
+            </div>
+            <div>
+            <FaArrowAltCircleLeft id='close' onClick={closeModel}/>
+
             </div>
         </Modal>}
         </div>
