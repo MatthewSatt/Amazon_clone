@@ -14,10 +14,12 @@
     cursor: pointer
 }
 
-
-.singleproduct {
-    margin: 5%;
+.singleproductimage {
+    object-fit: contain;
+    height: 500px;
+    width: 300px;
 }
+
 .imageproductdetails {
     display: flex;
     justify-content: space-evenly;
@@ -29,28 +31,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5%;
+
     margin-right: 20%;
     margin-left: 20%;
 
 }
 
 .productname {
-    margin-bottom: 5%;
-    flex-wrap: wrap;
-    font-size: 200%;
+    margin-bottom: 2%;
+    font-size: 300%;
 }
 
 .productdescription {
     display: flex;
     justify-content: center;
+    margin: 20px;
     font-size: 25px;
 }
 
 .singleproductbuttons {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    text-align: center;
     align-items: center;
+    width: 40%;
 }
 
 .addtocart {
@@ -60,4 +65,34 @@
     height: 30px;
     border: 1px solid;
     border-color: #a88734 #9c7e31 #846a29
+}
+
+
+
+
+#alertmessage {
+    color: white;
+    background-color: rgba(229,30,80, 0.9);
+    border-radius: 10px;
+    position: absolute;
+    top: 80px;
+    right:20px;
+    font-size:18px;
+    font-weight:400;
+    padding:15px;
+    transition: ease-in-out;
+    animation-name: shiftleft;
+    animation-duration: 1s;
+}
+
+.price {
+    margin: 5px;
+    font-size: 30px;
+}
+
+
+
+@keyframes shiftleft {
+    from{ transform: translateX(420px)};
+    to{ transform: translateX(0px)};
 }

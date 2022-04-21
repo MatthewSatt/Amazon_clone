@@ -20,13 +20,11 @@ function Splash() {
       <div className="splashnav">
         {types &&
           types.map((type) => (
-            <div key={type.id}>
+            <div className ='productsections'key={type.id}>
               <h1 className="productcategories">
-                {type.name}
-                <div className="scrolloptions">
                   <FaArrowAltCircleLeft id="left" />
+                {type.name}
                   <FaArrowAltCircleRight id="right" />
-                </div>
               </h1>
               <div className="productline">
                 {products
