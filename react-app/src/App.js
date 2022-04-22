@@ -16,7 +16,7 @@ import Electronics from './components/ProductTypes/Electronics'
 import FoodGrocery from './components/ProductTypes/Food&Grocery'
 import Health from './components/ProductTypes/Health'
 import MusicMovies from './components/ProductTypes/Music&Movies'
-import Outdoors from './components/ProductTypes/OutDoors';
+import Outdoors from './components/ProductTypes/Outdoors';
 import PetSupplies from './components/ProductTypes/PetSupplies'
 import Sports from "./components/ProductTypes/Sports"
 

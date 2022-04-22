@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Food&Beverage.css"
+import "./Food&Grocery.css"
 
 function FoodBeverage() {
   return (
