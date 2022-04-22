@@ -9,6 +9,18 @@ import SignUp from './components/Signup/Signup';
 import Splash from './components/Splash'
 import Home from './components/Home'
 import Product from './components/Product';
+import Automotive from './components/ProductTypes/Automotive'
+import Babies from './components/ProductTypes/Babies'
+import Books from './components/ProductTypes/Books'
+import Electronics from './components/ProductTypes/Electronics'
+import FoodGrocery from './components/ProductTypes/Food&Grocery'
+import Health from './components/ProductTypes/Health'
+import MusicMovies from './components/ProductTypes/Music&Movies'
+import Outdoors from './components/ProductTypes/OutDoors';
+import PetSupplies from './components/ProductTypes/PetSupplies'
+import Sports from "./components/ProductTypes/Sports"
+
+
 
 
 
@@ -66,6 +78,46 @@ function App() {
         <Route path='/product/:productId'>
           <Product />
         </Route>
+
+        <ProtectedRoute path="/Automotive">
+          <Automotive />
+        </ProtectedRoute>
+
+        <ProtectedRoute path="/Babies">
+          <Babies />
+        </ProtectedRoute>
+
+        <ProtectedRoute path="/Books">
+          <Books />
+        </ProtectedRoute>
+
+        <ProtectedRoute path="/Electronics">
+          <Electronics />
+        </ProtectedRoute>
+
+        <ProtectedRoute path="/Food">
+          <FoodGrocery />
+        </ProtectedRoute>
+
+        <ProtectedRoute path="/Health">
+          <Health />
+        </ProtectedRoute>
+
+        <ProtectedRoute path="/Music">
+          <MusicMovies />
+        </ProtectedRoute>
+
+        <ProtectedRoute path="/Outdoors">
+          <Outdoors />
+        </ProtectedRoute>
+
+        <ProtectedRoute path="/PetSupplies">
+          <PetSupplies />
+        </ProtectedRoute>
+
+        <ProtectedRoute path="/Sports">
+          <Sports />
+        </ProtectedRoute>
 
         <ProtectedRoute path='/checkout' exact={true}>
         </ProtectedRoute>
