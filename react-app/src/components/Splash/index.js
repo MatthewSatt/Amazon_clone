@@ -17,6 +17,7 @@ function Splash() {
   }, [dispatch]);
   return (
     <div className="splashpage">
+      <div className="tophalf"></div>
       <div className="splashnav">
         {types &&
           types.map((type) => (
