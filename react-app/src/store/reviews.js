@@ -8,10 +8,9 @@ const getReviews = (reviews) => ({
 export const getReviewsThunk = (productId) => async (dispatch) => {
     const res = await fetch(`/api/reviews/${productId}`)
     if(res.ok) {
-        const products = await res.json()
-        dispatch(getReviews(products))
-    } else {
-        return 'No products Avaliable'
+        const reviews = await res.json()
+        console.log(reviews)
+        dispatch(getReviews(reviews))
     }
 }
 
@@ -20,7 +19,7 @@ const initialState = [];
 export default function reviewReducer(state = initialState, action) {
     switch (action.type) {
         case GET_PRODUCT_REVIEWS:
-           return action.products
+           return action.reviews
     default:
       return state;
   }

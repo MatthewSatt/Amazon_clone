@@ -27,15 +27,6 @@
     border-bottom: 4px solid black;
 }
 
-.producttext {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    margin-right: 20%;
-    margin-left: 20%;
-
-}
 
 .productname {
     margin-bottom: 2%;
@@ -46,7 +37,7 @@
     display: flex;
     justify-content: center;
     margin: 20px;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .singleproductbuttons {
@@ -64,6 +55,7 @@
     width: 150px;
     height: 30px;
     border: 1px solid;
+    margin: 5px;
     border-color: #a88734 #9c7e31 #846a29
 }
 
@@ -86,9 +78,39 @@
     animation-duration: 0.3s;
 }
 
+#alertmessagereview {
+    color: black;
+    font-weight: bold;
+    background-color: #f0c14b;
+    border-radius: 10px;
+    position: absolute;
+    top: 160px;
+    right:20px;
+    font-size:18px;
+    font-weight:400;
+    padding:15px;
+    transition: ease-in-out;
+    animation-name: shiftleft;
+    animation-duration: 0.3s;
+}
+
 .price {
     margin: 5px;
     font-size: 30px;
+}
+
+.noreviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.noreviewoptions {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
 }
 
 

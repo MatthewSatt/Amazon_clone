@@ -9,17 +9,20 @@ import SignUp from './components/Signup/Signup';
 import Splash from './components/Splash'
 import Home from './components/Home'
 import Product from './components/Product';
+import Babies from './components/ProductTypes/Babies';
 import Automotive from './components/ProductTypes/Automotive'
-import Babies from './components/ProductTypes/Babies'
 import Books from './components/ProductTypes/Books'
 import Electronics from './components/ProductTypes/Electronics'
-import FoodGrocery from './components/ProductTypes/Food&Grocery'
+import Food from './components/ProductTypes/Food'
 import Health from './components/ProductTypes/Health'
-import MusicMovies from './components/ProductTypes/Music&Movies'
 import Outdoors from './components/ProductTypes/Outdoors';
-import PetSupplies from './components/ProductTypes/PetSupplies'
+import Pets from './components/ProductTypes/Pets'
 import Sports from "./components/ProductTypes/Sports"
+import Music from './components/ProductTypes/Music';
+import Movies from "./components/ProductTypes/Movies"
 import Checkout from './components/Checkout';
+
+
 
 
 
@@ -97,7 +100,7 @@ function App() {
         </ProtectedRoute>
 
         <ProtectedRoute path="/Food">
-          <FoodGrocery />
+          <Food />
         </ProtectedRoute>
 
         <ProtectedRoute path="/Health">
@@ -105,15 +108,19 @@ function App() {
         </ProtectedRoute>
 
         <ProtectedRoute path="/Music">
-          <MusicMovies />
+          <Music />
+        </ProtectedRoute>
+
+        <ProtectedRoute path="/Movies">
+          <Movies />
         </ProtectedRoute>
 
         <ProtectedRoute path="/Outdoors">
           <Outdoors />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/PetSupplies">
-          <PetSupplies />
+        <ProtectedRoute path="/Pets">
+          <Pets />
         </ProtectedRoute>
 
         <ProtectedRoute path="/Sports">
