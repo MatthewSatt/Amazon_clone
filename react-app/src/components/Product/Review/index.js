@@ -6,19 +6,17 @@ import "./Review.css"
 
 function Review({ id, userId, productId, title, body, rating, created, updated }) {
     const dispatch = useDispatch()
+    const user = useSelector(state => state?.session?.user)
     const users = useSelector((state) => state?.userReducer?.users)
-    let author = users?.find(user => user?.id === id)
-    console.log(author)
+    let author = users?.find(user => user?.id === userId)
+    console.log(user)
+    console.log(userId)
 
-  const starFiller = (num, value) => {
-    Array(num).fill().map((_, i) => {
-      console.log(value)
-    })
-  }
+
 
     useEffect(() => {
         dispatch(getUsersThunk())
-    }, [])
+    }, [dispatch])
 
   return (
     <div className='review'>
@@ -27,13 +25,23 @@ function Review({ id, userId, productId, title, body, rating, created, updated }
       {Array(rating).fill().map((_, i) => (
         <FaStar id='starrating' icon="fa-solid fa-star" />
       ))}
-      <span className='author'>{author?.username}</span>
+      <span className='author'>{author?.username}
+      {user?.id === userId && (
+        <span>(you)</span>
+      )}
+      </span>
       </div>
       <div className='time'>{created}</div>
         </div>
         <div className='reviewdescription'>
           {body}
         </div>
+        {user?.id === userId && (
+          <div className='reviewcrud'>
+            <button className='addtocart'>Edit Review</button>
+            <button className='addtocart'>Remove Review</button>
+          </div>
+        )}
     </div>
   )
 }

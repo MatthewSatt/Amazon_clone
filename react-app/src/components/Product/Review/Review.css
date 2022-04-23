@@ -38,3 +38,14 @@
     padding: 20px;
     width: 80%;
 }
+
+.reviewcrud {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.reviewcrud button {
+    margin: 8px;
+}

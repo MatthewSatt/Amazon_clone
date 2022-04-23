@@ -15,13 +15,17 @@ function Books() {
   }, []);
 
   return (
-    <div>
-      Books
+    <div className="books">
+      <h1>Books</h1>
       {products &&
         products.map((product) => (
-            <Link to={`/product/${product.id}`}>
-            <h1>{product.name}</h1>
+              <div className="productcontainer">
+            <Link className='productlinks' to={`/product/${product.id}`}>
+            <img className='productimage'src={product.image} alt=""/>
             </Link>
+            {/* <h1>{product.title}</h1> */}
+
+              </div>
           ))}
     </div>
   );
