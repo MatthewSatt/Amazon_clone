@@ -12,7 +12,11 @@ function Pets() {
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId));
   }, []);
-  return <div>Pets</div>;
+  return <div>Pets
+          {products && products.map(product => (
+        <div key={product.id}>{product.name}</div>
+      ))}
+  </div>;
 }
 
 export default Pets;

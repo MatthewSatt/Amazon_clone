@@ -12,7 +12,11 @@ function Music() {
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId));
   }, []);
-  return <div>Music</div>;
+  return <div>Music
+          {products && products.map(product => (
+        <div key={product.id}>{product.name}</div>
+      ))}
+  </div>;
 }
 
 export default Music;

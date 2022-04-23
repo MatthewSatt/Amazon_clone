@@ -12,7 +12,11 @@ function Outdoors() {
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId));
   }, []);
-  return <div>Outdoors</div>;
+  return <div>Outdoors
+          {products && products.map(product => (
+        <div key={product.id}>{product.name}</div>
+      ))}
+  </div>;
 }
 
 export default Outdoors;

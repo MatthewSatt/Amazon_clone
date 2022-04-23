@@ -13,7 +13,11 @@ function Electronics() {
     dispatch(getProductTypesThunk(typeId))
   }, [])
   return (
-    <div>Electronics</div>
+    <div>Electronics
+            {products && products.map(product => (
+        <div key={product.id}>{product.name}</div>
+      ))}
+    </div>
   )
 }
 

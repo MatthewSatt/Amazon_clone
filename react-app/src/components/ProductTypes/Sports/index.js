@@ -12,7 +12,11 @@ function Sports() {
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId));
   }, []);
-  return <div>Sports</div>;
+  return <div>Sports
+          {products && products.map(product => (
+        <div key={product.id}>{product.name}</div>
+      ))}
+  </div>;
 }
 
 export default Sports;
