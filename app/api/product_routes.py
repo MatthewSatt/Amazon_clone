@@ -15,3 +15,11 @@ def get_all_products():
 def product_types(typeId):
     products = Product.query.filter(Product.type_id == typeId)
     return jsonify([product.to_dict() for product in products])
+
+@product_routes.route("/delete/<int:id>",  methods=['DELETE'])
+@login_required
+def delete_product(id):
+    product = Product.query.filter(Product.id == id).first()
+    db.session.delete(product)
+    db.session.commit()
+    return product.to_dict()
