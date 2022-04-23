@@ -1,5 +1,7 @@
+from itertools import product
+import re
 from flask import Blueprint, jsonify, request
-from app.models import db, Product
+from app.models import db, Review, review
 from flask_login import login_required
 
 
@@ -7,12 +9,7 @@ from flask_login import login_required
 review_routes = Blueprint("reviews", __name__)
 
 
-# @review_routes.route('/all')
-# @login_required
-# def get_all_products():
-#     products = Product.query.all()
-
-#     print(product.to_dict() for product in products)
-
-
-#     return jsonify([product.to_dict() for product in products])
+@review_routes.route("/<int:id>")
+def getReviews(id):
+    reviews = Review.query.filter(id == Review.product_id).all()
+    return jsonify([review.to_dict() for review in reviews])
