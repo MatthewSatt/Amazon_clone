@@ -71,8 +71,9 @@
 
 
 #alertmessage {
-    color: white;
-    background-color: rgba(229,30,80, 0.9);
+    color: black;
+    font-weight: bold;
+    background-color: #f0c14b;
     border-radius: 10px;
     position: absolute;
     top: 80px;

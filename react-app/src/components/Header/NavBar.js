@@ -13,8 +13,17 @@ function NavBar() {
 
   const logoutUser = async () => {
     await dispatch(logout(user));
-    history.push('/')
+    history.push("/");
   };
+
+  const handleCartError = () => {
+    let old = document.getElementById("checkouterror")
+    const errorDiv = document.createElement("div")
+    errorDiv.innerText = "You must sign in to view your cart"
+    errorDiv.id = 'alertmessage'
+    old.appendChild(errorDiv)
+    setTimeout(() => errorDiv.remove(), 2500)
+  }
 
   return (
     <div className="header">
@@ -68,11 +77,13 @@ function NavBar() {
           {!user && (
             <>
               <span className="header__optionLineOne">Orders</span>
-            <Link to='/signup'
-            className="header__optionLineOne"
-            id='login-link'>
-              <span className="header__optionLineTwo">Sign Up</span>
-            </Link>
+              <Link
+                to="/signup"
+                className="header__optionLineOne"
+                id="login-link"
+              >
+                <span className="header__optionLineTwo">Sign Up</span>
+              </Link>
             </>
           )}
         </div>
@@ -81,14 +92,22 @@ function NavBar() {
           <span className="header__optionLineOne">Your</span>
           <span className="header__optionLineTwo">Prime</span>
         </div>
-        <Link to="/checkout">
+        {user && (
+          <Link to="/checkout">
+            <div className="header__optionBasket">
+              <ShoppingBasketIcon />
+              <span className="header__optionLineTwo header__basketCount">
+                {}
+              </span>
+            </div>
+          </Link>
+        )}
+        {!user && (
           <div className="header__optionBasket">
-            <ShoppingBasketIcon />
-            <span className="header__optionLineTwo header__basketCount">
-              {}
-            </span>
+            <ShoppingBasketIcon onClick={handleCartError}/>
+            <span id="checkouterror"></span>
           </div>
-        </Link>
+        )}
       </div>
     </div>
   );

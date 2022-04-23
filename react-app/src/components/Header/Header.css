@@ -71,3 +71,8 @@
      text-decoration: none;
      color: white;
  }
+
+ #checkouterror {
+    margin-left: 10px;
+    margin-right: 10px;
+ }
