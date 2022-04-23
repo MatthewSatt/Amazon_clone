@@ -30,9 +30,18 @@ def seed_reviews():
         rating=4
         )
 
+    review4 = Review(
+        user_id=2,
+        product_id=18,
+        title='DO NOT BUY',
+        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
+        rating=1
+        )
+
     db.session.add(review1)
     db.session.add(review2)
     db.session.add(review3)
+    db.session.add(review4)
     db.session.commit()
 
 

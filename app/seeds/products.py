@@ -75,6 +75,50 @@ def seed_products():
         price=309.99,
         image="https://m.media-amazon.com/images/I/71NBQ2a52CL._AC_UY436_FMwebp_QL65_.jpg"
       )
+    pet1 = Product(
+        type_id=3,
+        name="Bissell 74R7 Pet Stain & Odor Portable Machine Formula, 32-Ounce, Fl Oz",
+        description="Full HD Camera & Night Vision: livestream video to monitor your pet with a wide-angle view,that functions even in pitch black, without disturbing those being monitored. It also features an intelligent system to ensure clear and high-quality images day and night.",
+        price=129.99,
+        image="https://m.media-amazon.com/images/I/61E90Y7EEdS._AC_UY436_FMwebp_QL65_.jpg"
+
+    )
+    pet2 = Product(
+        type_id=3,
+        name="WOpet Smart Pet Camera:Dog Treat Dispenser, Full HD WiFi Pet Camera with Night Vision for Pet Viewing,Two Way Audio Communication",
+        description="Full HD Camera & Night Vision: livestream video to monitor your pet with a wide-angle view,that functions even in pitch black, without disturbing those being monitored. It also features an intelligent system to ensure clear and high-quality images day and night.",
+        price=129.99,
+        image="https://m.media-amazon.com/images/I/615CxGedJpL._AC_UY436_FMwebp_QL65_.jpg"
+
+    )
+    pet3 = Product(
+        type_id=3,
+        name="WOpet Smart Pet Camera:Dog Treat Dispenser, Full HD WiFi Pet Camera with Night Vision for Pet Viewing,Two Way Audio Communication",
+        description="Full HD Camera & Night Vision: livestream video to monitor your pet with a wide-angle view,that functions even in pitch black, without disturbing those being monitored. It also features an intelligent system to ensure clear and high-quality images day and night.",
+        price=129.99,
+        image="https://m.media-amazon.com/images/I/71XFKVLXXjL._AC_UY436_FMwebp_QL65_.jpg"
+
+    )
+    pet4 = Product(
+        type_id=3,
+        name="WOpet Smart Pet Camera:Dog Treat Dispenser, Full HD WiFi Pet Camera with Night Vision for Pet Viewing,Two Way Audio Communication",
+        description="Full HD Camera & Night Vision: livestream video to monitor your pet with a wide-angle view,that functions even in pitch black, without disturbing those being monitored. It also features an intelligent system to ensure clear and high-quality images day and night.",
+        price=129.99,
+        image="https://m.media-amazon.com/images/I/81dABCf4jCL._AC_UY436_FMwebp_QL65_.jpg"
+
+    )
+    pet5 = Product(
+        type_id=3,
+        name="WOpet Smart Pet Camera:Dog Treat Dispenser, Full HD WiFi Pet Camera with Night Vision for Pet Viewing,Two Way Audio Communication",
+        description="Full HD Camera & Night Vision: livestream video to monitor your pet with a wide-angle view,that functions even in pitch black, without disturbing those being monitored. It also features an intelligent system to ensure clear and high-quality images day and night.",
+        price=129.99,
+        image="https://m.media-amazon.com/images/I/21wge1Dq22L._AC_UY436_FMwebp_QL65_.jpg"
+
+    )
+
+
+
+
 
     db.session.add(book1)
     db.session.add(book2)
@@ -89,6 +133,11 @@ def seed_products():
     db.session.add(electronics1)
     db.session.add(electronics2)
     db.session.add(electronics3)
+    db.session.add(pet1)
+    db.session.add(pet2)
+    db.session.add(pet3)
+    db.session.add(pet4)
+    db.session.add(pet5)
 
     db.session.commit()
 
