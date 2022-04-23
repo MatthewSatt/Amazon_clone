@@ -12,7 +12,6 @@ function Home() {
   const products = useSelector(state => Object.values(state.productReducer));
   const types = useSelector((state) => state.typeReducer);
   const [showSideNav, setShowSideNav] = useState(false)
-  console.log(products)
 
   useEffect(() => {
     dispatch(getProducts());

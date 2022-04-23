@@ -32,7 +32,7 @@ function Dropdown({ showSideNav, setShowSideNav }) {
             <div className="producttypelinks">
             {types && types?.map(type => (
                 <div className="navproducts" key={type?.id}>
-                    <Link id='navlinks'to={`/${type?.name}`}>
+                    <Link id='navlinks'to={`/${type?.id}/${type?.name}`}>
                     {type?.name}
                     </Link>
                 </div>

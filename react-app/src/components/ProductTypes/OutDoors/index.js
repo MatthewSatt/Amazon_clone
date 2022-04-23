@@ -1,10 +1,18 @@
-import React from 'react'
-import "./Outdoors.css"
+import React from "react";
+import "./Outdoors.css";
+import { useSelector, useDispatch } from "react-redux";
+import { getProductTypesThunk } from "../../../store/products";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 function Outdoors() {
-  return (
-    <div>Outdoors</div>
-  )
+  const dispatch = useDispatch();
+  const products = useSelector((state) => state.productReducer);
+  const { typeId } = useParams();
+  useEffect(() => {
+    dispatch(getProductTypesThunk(typeId));
+  }, []);
+  return <div>Outdoors</div>;
 }
 
-export default Outdoors
+export default Outdoors;

@@ -83,47 +83,47 @@ function App() {
           <Product />
         </Route>
 
-        <ProtectedRoute path="/Automotive">
+        <ProtectedRoute path="/:typeId/Automotive">
           <Automotive />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/Babies">
+        <ProtectedRoute path="/:typeId/Babies">
           <Babies />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/Books">
+        <ProtectedRoute path="/:typeId/Books">
           <Books />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/Electronics">
+        <ProtectedRoute path="/:typeId/Electronics">
           <Electronics />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/Food">
+        <ProtectedRoute path="/:typeId/Food">
           <Food />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/Health">
+        <ProtectedRoute path="/:typeId/Health">
           <Health />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/Music">
+        <ProtectedRoute path="/:typeId/Music">
           <Music />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/Movies">
+        <ProtectedRoute path="/:typeId/Movies">
           <Movies />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/Outdoors">
+        <ProtectedRoute path="/:typeId/Outdoors">
           <Outdoors />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/Pets">
+        <ProtectedRoute path="/:typeId/Pets">
           <Pets />
         </ProtectedRoute>
 
-        <ProtectedRoute path="/Sports">
+        <ProtectedRoute path="/:typeId/Sports">
           <Sports />
         </ProtectedRoute>
 
