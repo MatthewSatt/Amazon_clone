@@ -5,12 +5,15 @@
 .tophalf {
     height: 50vh;
     background-image: url("https://2syt8l41furv2dqan6123ah0-wpengine.netdna-ssl.com/wp-content/uploads/2013/08/amazon-banner.png");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
+    background-position: center;
     background-size: 100%;
 }
 
 
 .productcategories {
+    display: flex;
+    justify-content: space-between;
     color: white;
     background-color: #cd9042;
 }
@@ -28,10 +31,6 @@
     font-weight: bold;
 }
 
-.productcategories {
-    display: flex;
-    justify-content: space-evenly;
-}
 
 
 #left {

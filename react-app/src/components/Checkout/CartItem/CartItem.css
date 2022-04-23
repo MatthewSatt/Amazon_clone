@@ -1,0 +1,38 @@
+ .cartitem{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 30px;
+    border-bottom: 1px solid grey;
+
+ }
+
+
+ .cartitemimage {
+    object-fit: contain;
+    width: 200px;
+    height: 240px;
+ }
+
+
+ .cartiteminfo {
+    padding-left: 20px;
+ }
+
+ .cartitemname {
+    font-size: larger;
+    font-weight: bold;
+
+ }
+
+ .cartitemprice {
+    font-weight: bold;
+ }
+
+ .remove {
+    background: #f0c14b;
+    border: 1px solid;
+    margin-top: 10px;
+    border-color: #a88738 #9c7e31 #846a29;
+    color: #111;
+ }

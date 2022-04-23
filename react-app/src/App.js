@@ -19,6 +19,7 @@ import MusicMovies from './components/ProductTypes/Music&Movies'
 import Outdoors from './components/ProductTypes/Outdoors';
 import PetSupplies from './components/ProductTypes/PetSupplies'
 import Sports from "./components/ProductTypes/Sports"
+import Checkout from './components/Checkout';
 
 
 
@@ -120,6 +121,7 @@ function App() {
         </ProtectedRoute>
 
         <ProtectedRoute path='/checkout' exact={true}>
+          <Checkout />
         </ProtectedRoute>
       </Switch>
     </BrowserRouter>
