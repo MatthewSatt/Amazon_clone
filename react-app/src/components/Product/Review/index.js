@@ -32,16 +32,17 @@ function Review({ id, userId, productId, title, body, rating, created, updated }
         <div>
       {Array(rating).fill().map((_, i) => (
         <FaStar id='starrating' icon="fa-solid fa-star" />
-      ))}
+        ))}
       <span className='author'>{author?.username}
       {user?.id === userId && (
         <span>(you)</span>
-      )}
+        )}
       </span>
       </div>
       <div className='time'>{created}</div>
         </div>
         <div className='reviewdescription'>
+        <h4>{title}</h4><br></br>
           {body}
         </div>
         {user?.id === userId && (
