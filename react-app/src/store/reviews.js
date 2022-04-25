@@ -1,9 +1,15 @@
 const GET_PRODUCT_REVIEWS = 'reviews/GET_PRODUCT_REVIEWS';
+const ADD_REVIEW = 'reviews/ADD_REVIEW'
 
 const getReviews = (reviews) => ({
   type: GET_PRODUCT_REVIEWS,
   reviews,
 });
+
+const addReview = (newReview) => ({
+  type: ADD_REVIEW,
+  newReview
+})
 
 export const getReviewsThunk = (productId) => async (dispatch) => {
     const res = await fetch(`/api/reviews/${productId}`)
@@ -14,12 +20,29 @@ export const getReviewsThunk = (productId) => async (dispatch) => {
     }
 }
 
+export const addReviewThunk = (review) => async (dispatch) => {
+  console.log(review)
+  const res = await fetch(`/api/reviews/add`, {
+    method: "POST",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(
+      review
+    )
+  })
+  if(res.ok) {
+    const newReview = await res.json()
+    dispatch(addReview(newReview))
+  }
+}
+
 
 const initialState = [];
 export default function reviewReducer(state = initialState, action) {
     switch (action.type) {
         case GET_PRODUCT_REVIEWS:
            return action.reviews
+        case ADD_REVIEW:
+          return [...state, action.newReview]
     default:
       return state;
   }

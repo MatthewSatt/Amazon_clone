@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router";
 import { getProducts } from "../../store/products";
 import { getReviewsThunk } from "../../store/reviews";
 import Review from "./Review";
+import AddReviewModal from "./Review/ReviewModal/AddReview";
 import "./Product.css";
 
 function Product() {
@@ -13,6 +14,7 @@ function Product() {
   const products = useSelector((state) => Object.values(state?.productReducer));
   const reviews = useSelector((state) => state?.reviewReducer);
   const thisProduct = products.find((product) => product?.id === +productId);
+  const [showReviewAddModal, setShowReviewAddModal] = useState(false)
 
   const handleAddToCart = async () => {
     if (!user) {
@@ -38,7 +40,7 @@ function Product() {
       div.innerText = "You must be logged in to leave reviews";
       setTimeout(() => div.remove(), 3000);
     } else {
-      console.log("Add Product to Cart");
+      setShowReviewAddModal(true);
     }
   };
 
@@ -92,6 +94,9 @@ function Product() {
               <div className="noreviewoptions">
                 <p>Be the first?</p>
                 <button onClick={handleReview} className="addtocart">Leave a Review</button>
+                {showReviewAddModal && (
+                  <AddReviewModal showReviewAddModal={showReviewAddModal} setShowReviewAddModal={setShowReviewAddModal} name={thisProduct.name} productId={thisProduct.id}/>
+                )}
 
               </div>
             </div>
