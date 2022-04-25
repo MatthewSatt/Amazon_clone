@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getProductTypesThunk } from '../../../store/products'
 import { useParams } from 'react-router-dom'
 import {useEffect} from 'react'
+import ProductDisplay from '../ProductDisplay'
 
 function Electronics() {
   const dispatch = useDispatch()
@@ -13,11 +14,17 @@ function Electronics() {
     dispatch(getProductTypesThunk(typeId))
   }, [])
   return (
-    <div>Electronics
-            {products && products.map(product => (
-        <div key={product.id}>{product.name}</div>
-      ))}
-    </div>
+    <div className="books">
+    <div className="electronicsimage">
+      <h1>Electronics</h1>
+      </div>
+      {products &&
+        products.map((product) => (
+          <div className="productcontainer">
+            <ProductDisplay id={product.id} name={product.name} price={product.price} image={product.image} desc={product.description} created={product.created_at} updated={product.updated}/>
+              </div>
+          ))}
+  </div>
   )
 }
 

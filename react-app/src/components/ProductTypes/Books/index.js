@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getProductTypesThunk } from "../../../store/products";
-import { useParams } from "react-router-dom";
+import { useHistory, useParams } from "react-router-dom";
 import {Link} from 'react-router-dom'
 import "./Books.css";
+import ProductDisplay from "../ProductDisplay";
 
 function Books() {
   const dispatch = useDispatch();
+  const history = useHistory()
   const products = useSelector((state) => state.productReducer);
   const { typeId } = useParams();
 
@@ -16,18 +18,16 @@ function Books() {
 
   return (
     <div className="books">
+    <div className="booksimage">
       <h1>Books</h1>
+      </div>
       {products &&
         products.map((product) => (
-              <div className="productcontainer">
-            <Link className='productlinks' to={`/product/${product.id}`}>
-            <img className='productimage'src={product.image} alt=""/>
-            </Link>
-            {/* <h1>{product.title}</h1> */}
-
+          <div className="productcontainer">
+            <ProductDisplay id={product.id} name={product.name} price={product.price} image={product.image} desc={product.description} created={product.created_at} updated={product.updated}/>
               </div>
           ))}
-    </div>
+  </div>
   );
 }
 
