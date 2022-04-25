@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import "./Header.css";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../store/session";
+import { getProducts } from "../../store/products";
 
 function NavBar() {
   const history = useHistory();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);
+  const products = useSelector(state => state.productReducer)
 
   const logoutUser = async () => {
     await dispatch(logout(user));
@@ -25,85 +27,89 @@ function NavBar() {
     setTimeout(() => errorDiv.remove(), 2500)
   }
 
+  const cartNumber = () => {
+    return products.length
+  }
+
   return (
     <div className="header">
       <Link to="/">
         <img
-          className="header__logo"
+          className="headerlogo"
           src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Emblem.jpg"
         />
       </Link>
 
-      <div className="header__search">
-        <input className="header__searchInput" type="text" />
-        <SearchIcon className="header__searchIcon" />
+      <div className="headersearch">
+        <input className="headersearchinput" type="text" />
+        <SearchIcon className="headersearchicon" />
       </div>
 
-      <div className="header__nav">
-        <div className="header__option">
+      <div className="headernav">
+        <div className="headeroption">
           <>
             {user && (
               <>
-                <span className="header__optionLineOne">
+                <span className="headeroptionlineone">
                   Hello {user.username}
                 </span>
-                <span onClick={logoutUser} className="header__optionLineTwo">
+                <span onClick={logoutUser} className="headeroptionlinetwo">
                   Sign Out
                 </span>
               </>
             )}
             {!user && (
               <>
-                <span className="header__optionLineOne">Hello</span>
+                <span className="headeroptionlineone">Hello</span>
                 <Link
-                  className="header__optionLineTwo"
-                  id="login-link"
+                  className="headeroptionlinetwo"
+                  id="loginlink"
                   to="/login"
                 >
-                  <span className="header__optionLineTwo">Sign In</span>
+                  <span className="headeroptionlinetwo">Sign In</span>
                 </Link>
               </>
             )}
           </>
         </div>
 
-        <div className="header__option">
+        <div className="headeroption">
           {user && (
             <>
-              <span className="header__optionLineOne">View</span>
-              <span className="header__optionLineTwo">Orders</span>
+              <span className="headeroptionlineone">View</span>
+              <span className="headeroptionlinetwo">Orders</span>
             </>
           )}
           {!user && (
             <>
-              <span className="header__optionLineOne">Orders</span>
+              <span className="headeroptionlineone">Orders</span>
               <Link
                 to="/signup"
-                className="header__optionLineOne"
-                id="login-link"
+                className="headeroptionlineone"
+                id="loginlink"
               >
-                <span className="header__optionLineTwo">Sign Up</span>
+                <span className="headeroptionlinetwo">Sign Up</span>
               </Link>
             </>
           )}
         </div>
 
-        <div className="header__option">
-          <span className="header__optionLineOne">Your</span>
-          <span className="header__optionLineTwo">Prime</span>
+        <div className="headeroption">
+          <span className="headeroptionlineone">Your</span>
+          <span className="headeroptionlinetwo">Prime</span>
         </div>
         {user && (
           <Link to="/checkout">
-            <div className="header__optionBasket">
+            <div className="headeroptionbasket">
               <ShoppingBasketIcon />
-              <span className="header__optionLineTwo header__basketCount">
-                {}
+              <span className="headeroptionlinetwo headerbasketcount">
+                {cartNumber()}
               </span>
             </div>
           </Link>
         )}
         {!user && (
-          <div className="header__optionBasket">
+          <div className="headeroptionbasket">
             <ShoppingBasketIcon onClick={handleCartError}/>
             <span id="checkouterror"></span>
           </div>
