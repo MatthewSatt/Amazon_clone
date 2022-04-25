@@ -1,6 +1,7 @@
 .addreviewmodal {
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,6 +12,7 @@
 .formcontent {
     display: flex;
     flex-direction: column;
+    overflow-y: scroll;
 
     align-items: center;
 }
