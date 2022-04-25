@@ -109,7 +109,7 @@ def seed_products():
     )
     pet5 = Product(
         type_id=3,
-        name="WOpet Smart Pet Camera:Dog Treat Dispenser, Full HD WiFi Pet Camera with Night Vision for Pet Viewing,Two Way Audio Communication",
+        name="The Pet Climber Thing",
         description="Full HD Camera & Night Vision: livestream video to monitor your pet with a wide-angle view,that functions even in pitch black, without disturbing those being monitored. It also features an intelligent system to ensure clear and high-quality images day and night.",
         price=129.99,
         image="https://m.media-amazon.com/images/I/21wge1Dq22L._AC_UY436_FMwebp_QL65_.jpg"

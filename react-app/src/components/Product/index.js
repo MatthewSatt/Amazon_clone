@@ -94,12 +94,12 @@ function Product() {
               <div className="noreviewoptions">
                 <p>Be the first?</p>
                 <button onClick={handleReview} className="addtocart">Leave a Review</button>
-                {showReviewAddModal && (
-                  <AddReviewModal showReviewAddModal={showReviewAddModal} setShowReviewAddModal={setShowReviewAddModal} name={thisProduct.name} productId={thisProduct.id}/>
-                )}
 
               </div>
             </div>
+          )}
+          {showReviewAddModal && (
+            <AddReviewModal showReviewAddModal={showReviewAddModal} setShowReviewAddModal={setShowReviewAddModal} name={thisProduct.name} productId={thisProduct.id}/>
           )}
       </div>
     </div>
