@@ -2,7 +2,7 @@ import React from 'react'
 import "./ProductDisplay.css"
 import {Link} from 'react-router-dom'
 
-function ProductDisplay({id, name, image, price, desc, type_id, created, updated}) {
+function ProductDisplay({id, typeId, name, image, price, desc, type_id, created, updated}) {
   return (
     <div className='productdisplay'>
       <Link to={`/product/${id}`}>

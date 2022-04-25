@@ -1,0 +1,13 @@
+#sportsimage {
+    background-image: url("https://images.unsplash.com/photo-1530549387789-4c1017266635?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNwb3J0c3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+    background-position: center;
+    height: 40vh;
+    background-size: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: white;
+    font-size: 50px;
+
+}

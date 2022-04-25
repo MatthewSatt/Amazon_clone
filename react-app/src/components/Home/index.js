@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from 'react-redux'
 import {useState, useEffect} from 'react'
 import { getProducts } from '../../store/products';
 import { getTypesThunk } from '../../store/types';
+import ProductDisplay from '../ProductTypes/ProductDisplay';
 import Dropdown from '../Dropdown';
 import './Home.css'
 
@@ -19,12 +20,15 @@ function Home() {
   }, []);
 
   return (
+    <div className='homepage'>
+
     <div className='home'>
       <Dropdown showSideNav={showSideNav} setShowSideNav={setShowSideNav}/>
+      </div>
       {products && products.map(product => (
-        <img src={product.image}/>
-      ))}
-    </div>
+        <ProductDisplay id={product.id} typeId={product.type_id} name={product.name} price={product.price} image={product.image} desc={product.description} created={product.created_at} updated={product.updated}/>
+        ))}
+        </div>
   )
 }
 

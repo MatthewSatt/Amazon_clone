@@ -3,6 +3,7 @@ import "./Babies.css"
 import { useSelector, useDispatch } from 'react-redux'
 import { getProductTypesThunk } from '../../../store/products'
 import { useParams } from 'react-router-dom'
+import ProductDisplay from '../ProductDisplay'
 import {useEffect} from 'react'
 
 function Babies() {
@@ -13,13 +14,18 @@ function Babies() {
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId))
   }, [])
-
   return (
-    <div>Babies
-            {products && products.map(product => (
-        <div key={product.id}>{product.name}</div>
-      ))}
-    </div>
+    <div className="electronics">
+    <div id="babyimage">
+      <h1>Babies</h1>
+      </div>
+      {products &&
+        products.map((product) => (
+          <div className="productcontainer">
+            <ProductDisplay id={product.id} typeId={product.type_id} name={product.name} price={product.price} image={product.image} desc={product.description} created={product.created_at} updated={product.updated}/>
+              </div>
+          ))}
+  </div>
   )
 }
 
