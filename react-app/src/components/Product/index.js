@@ -6,7 +6,7 @@ import { getReviewsThunk } from "../../store/reviews";
 import Review from "./Review";
 import AddReviewModal from "./Review/ReviewModal/AddReview";
 import "./Product.css";
-import { getCartThunk } from "../../store/cart";
+import { addToCartThunk, getCartThunk } from "../../store/cart";
 
 function Product() {
   const dispatch = useDispatch();
@@ -34,7 +34,7 @@ function Product() {
       div.innerText = "You must be logged in to add to your cart";
       setTimeout(() => div.remove(), 3000);
     } else {
-      console.log(+productId, user.id) ///// ADD PRODUCT DISPATCH
+      dispatch(addToCartThunk(+productId, user.id))
       const div = document.createElement("div");
       div.id = "alertmessage";
       const div2 = document.getElementById("alert");
