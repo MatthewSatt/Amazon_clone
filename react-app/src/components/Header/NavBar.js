@@ -19,7 +19,6 @@ function NavBar() {
 
 
   useEffect(() => {
-    dispatch(getCartThunk(user.id))
     setCartAmount(products.length)
   }, [dispatch])
 
