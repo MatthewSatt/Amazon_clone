@@ -22,3 +22,13 @@ def user_cart_delete(productId):
     db.session.delete(cart_item)
     db.session.commit()
     return cart_item.to_dict()
+
+
+# @cart_routes.route('/add', methods=["POST"])
+# def user_cart_add():
+#     data = {"productId": 1, }
+#     data = request.json
+#     product_id = data['productId']
+#     user_id = data['userId']
+#     product = Product.query.get(product_id)
+#     return {"productId": product_id}
