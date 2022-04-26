@@ -1,10 +1,15 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { getCartThunk } from '../../../store/cart'
 import "./Subtotal.css"
 
+
 function Subtotal() {
-  const products = useSelector(state => state.productReducer)
-  console.log(products)
+  const dispatch = useDispatch()
+  const user = useSelector(state => state.session.user)
+  const products = useSelector(state => state.cartReducer)
+
+
 
   const totalItems = (array) => {
     return array.length

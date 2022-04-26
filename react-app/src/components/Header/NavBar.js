@@ -1,17 +1,27 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import "./Header.css";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../store/session";
-import { getProducts } from "../../store/products";
+import { getCartThunk } from "../../store/cart";
+
 
 function NavBar() {
   const history = useHistory();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);
-  const products = useSelector(state => state.productReducer)
+  const products = useSelector(state => state?.cartReducer);
+  const [cartAmount, setCartAmount] = useState(products.length)
+
+
+
+
+  useEffect(() => {
+    dispatch(getCartThunk(user.id))
+    setCartAmount(products.length)
+  }, [dispatch])
 
   const logoutUser = async () => {
     await dispatch(logout(user));
@@ -25,10 +35,6 @@ function NavBar() {
     errorDiv.id = 'alertmessage'
     old.appendChild(errorDiv)
     setTimeout(() => errorDiv.remove(), 2500)
-  }
-
-  const cartNumber = () => {
-    return products.length
   }
 
   return (
@@ -103,7 +109,7 @@ function NavBar() {
             <div className="headeroptionbasket">
               <ShoppingBasketIcon />
               <span className="headeroptionlinetwo headerbasketcount">
-                {cartNumber()}
+                {cartAmount}
               </span>
             </div>
           </Link>

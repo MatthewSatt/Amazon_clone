@@ -1,17 +1,24 @@
 from flask import Blueprint, jsonify, request
-from app.models import db, Product
+from app.models import db, Product, Cart, User
 from flask_login import login_required
 
 
 cart_routes = Blueprint("carts", __name__)
 
+#passing in id of user
+@cart_routes.route('/<int:userId>')
+def user_cart_products(userId):
+    cart_items = Cart.query.filter(Cart.user_id == userId).all()
+    user_items = []
+    for item in cart_items:
+        user_product = Product.query.filter(Product.id == item.product_id).first()
+        user_items.append(user_product.to_dict())
+    return {"cart_product": user_items}
 
-# @cart_routes.route('/all')
-# @login_required
-# def get_all_products():
-#     products = Product.query.all()
 
-#     print(product.to_dict() for product in products)
-
-
-#     return jsonify([product.to_dict() for product in products])
+@cart_routes.route('/delete/<int:productId>', methods=["DELETE"])
+def user_cart_delete(productId):
+    cart_item = Cart.query.filter(Cart.product_id == productId).first()
+    db.session.delete(cart_item)
+    db.session.commit()
+    return cart_item.to_dict()

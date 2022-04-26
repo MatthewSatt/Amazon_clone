@@ -2,16 +2,19 @@ import React from "react";
 import CartItem from "./CartItem";
 import "./Checkout.css";
 import Subtotal from "./Subtotal";
+import { getCartThunk } from "../../store/cart";
 import { getProducts } from "../../store/products";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 
 function Checkout() {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state.productReducer);
+  const userId = useSelector((state) => state.session.user.id)
+  // const products = useSelector((state) => state.productReducer);
+  const products = useSelector(state => state.cartReducer)
 
   useEffect(() => {
-    dispatch(getProducts());
+    dispatch(getCartThunk(userId));
   }, [dispatch]);
 
   console.log(products);

@@ -1,7 +1,6 @@
 // constants
 const GET_ALL_PRODUCTS = 'products/GET_ALL_PRODUCTS';
 const TYPES_OF_PRODUCTS = 'products/TYPES_OF_PRODUCTS'
-const DELETE_PRODUCT = 'products/DELETE_PRODUCT'
 
 const getAllP = (products) => ({
   type: GET_ALL_PRODUCTS,
@@ -11,11 +10,6 @@ const getAllP = (products) => ({
 const getProductTypes = (products) => ({
     type: GET_ALL_PRODUCTS,
     products
-})
-
-const deleteProduct = (product) => ({
-    type: DELETE_PRODUCT,
-    product
 })
 
 
@@ -37,17 +31,6 @@ export const getProductTypesThunk = (typeId) => async (dispatch) => {
     }
 }
 
-export const deleteCartItemThunk = (id) => async (dispatch) => {
-    const res = await fetch(`/api/products/delete/${id}`, {
-        method: "DELETE"
-    })
-    if(res.ok) {
-        const product = await res.json()
-        dispatch(deleteProduct(product))
-        return product
-    }
-}
-
 
 const initialState = [];
 export default function productReducer(state = initialState, action) {
@@ -57,9 +40,6 @@ export default function productReducer(state = initialState, action) {
 
         case TYPES_OF_PRODUCTS:
             return action.state
-
-        case DELETE_PRODUCT:
-            return state.filter((prod) => prod.id !== action.product.id);
 
     default:
       return state;
