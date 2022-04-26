@@ -6,6 +6,7 @@ import { getReviewsThunk } from "../../store/reviews";
 import Review from "./Review";
 import AddReviewModal from "./Review/ReviewModal/AddReview";
 import "./Product.css";
+import { getCartThunk } from "../../store/cart";
 
 function Product() {
   const dispatch = useDispatch();
@@ -13,8 +14,15 @@ function Product() {
   const user = useSelector((state) => state.session.user);
   const products = useSelector((state) => Object.values(state?.productReducer));
   const reviews = useSelector((state) => state?.reviewReducer);
+  const cart = useSelector((state) => state.cartReducer)
   const thisProduct = products.find((product) => product?.id === +productId);
   const [showReviewAddModal, setShowReviewAddModal] = useState(false)
+
+
+
+  useEffect(() => {
+    dispatch(getCartThunk())
+  }, [])
 
   const handleAddToCart = async () => {
     if (!user) {
@@ -26,7 +34,14 @@ function Product() {
       div.innerText = "You must be logged in to add to your cart";
       setTimeout(() => div.remove(), 3000);
     } else {
-      console.log("Add Product to Cart");
+      console.log(+productId, user.id) ///// ADD PRODUCT DISPATCH
+      const div = document.createElement("div");
+      div.id = "alertmessage";
+      const div2 = document.getElementById("alert");
+      let parentDiv = div2.parentNode;
+      parentDiv.insertBefore(div, div2);
+      div.innerText = `${thisProduct.name} added to your cart`;
+      setTimeout(() => div.remove(), 3000);
     }
   };
 
@@ -54,7 +69,6 @@ function Product() {
   return (
     <div className="singleproduct">
       <div id="alert"></div>
-      <div id='alert1'></div>
       <div className="imageproductdetails">
         <div>
           <img className="singleproductimage" src={thisProduct?.image} />
