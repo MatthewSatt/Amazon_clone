@@ -22,7 +22,6 @@ function Review({ id, userId, productId, title, body, rating, created, updated }
 
     useEffect(() => {
         dispatch(getUsersThunk())
-        dispatch(getReviewsThunk(+productId));
     }, [dispatch])
 
 

@@ -21,7 +21,7 @@ function Product() {
 
 
   useEffect(() => {
-    dispatch(getCartThunk())
+    dispatch(getCartThunk(user.id))
   }, [])
 
   const handleAddToCart = async () => {

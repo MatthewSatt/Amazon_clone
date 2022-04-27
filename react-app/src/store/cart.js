@@ -64,7 +64,8 @@ export default function cartReducer(state = initialState, action) {
         case GET_CART_ITEMS:
             return action.cartProducts.cart_product
         case DELETE_PRODUCT:
-            return state.filter((prod) => prod.id !== action.product.id);
+            console.log('........',action.product.product_id)
+            return state.filter((prod) => prod.id !== action.product.product_id);
         case ADD_TO_CART:
             return [...state, action.product]
         default:
