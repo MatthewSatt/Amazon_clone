@@ -13,14 +13,8 @@ function NavBar() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);
   const products = useSelector(state => state?.cartReducer);
-  const [cartAmount, setCartAmount] = useState(products.length)
 
 
-
-
-  useEffect(() => {
-    setCartAmount(products.length)
-  }, [dispatch])
 
   const logoutUser = async () => {
     await dispatch(logout(user));
@@ -108,7 +102,7 @@ function NavBar() {
             <div className="headeroptionbasket">
               <ShoppingBasketIcon />
               <span className="headeroptionlinetwo headerbasketcount">
-                {cartAmount}
+                {products.length}
               </span>
             </div>
           </Link>

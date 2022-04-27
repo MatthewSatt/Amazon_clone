@@ -19,10 +19,11 @@ function Product() {
   const [showReviewAddModal, setShowReviewAddModal] = useState(false)
 
 
-
   useEffect(() => {
     dispatch(getCartThunk(user.id))
-  }, [])
+  }, [dispatch])
+
+
 
   const handleAddToCart = async () => {
     const item = {"productId": +productId, "userId": user.id, "quantity": 1}

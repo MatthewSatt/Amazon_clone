@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getProducts } from '../../../store/products'
-import {deleteCartItemThunk} from "../../../store/cart"
+import {deleteCartItemThunk, getCartThunk} from "../../../store/cart"
 import "./CartItem.css"
 
 function CartItem({ id, name, image, des, price, typeId, created, updated }) {
   const dispatch = useDispatch()
   const products = useSelector((state) => state.productReducer)
+  const userId = useSelector((state) => state.session.user.id)
 
   const handleDelete = () => {
     console.log('hi')
@@ -14,8 +15,9 @@ function CartItem({ id, name, image, des, price, typeId, created, updated }) {
   }
 
   useEffect(() => {
-    dispatch(getProducts())
+    dispatch(getCartThunk(userId))
   }, [dispatch])
+  
   return (
     <div className='cartitem'>
         <img className='cartitemimage' src={image} />
