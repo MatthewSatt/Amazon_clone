@@ -21,7 +21,7 @@ const addToCart = (product) => ({
 
 export const getCartThunk = (userId) => async (dispatch) => {
     const res = await fetch(`/api/carts/${userId}`)
-    if(res.ok) {
+    if (res.ok) {
         const cartProducts = await res.json()
         dispatch(getCart(cartProducts))
     }
@@ -32,23 +32,23 @@ export const deleteCartItemThunk = (id) => async (dispatch) => {
     const res = await fetch(`/api/carts/delete/${id}`, {
         method: "DELETE"
     })
-    if(res.ok) {
+    if (res.ok) {
         const product = await res.json()
         dispatch(deleteProduct(product))
         return product
     }
 }
 
-export const addToCartThunk = (productId, userId) => async (dispatch) => {
+export const addToCartThunk = (item) => async (dispatch) => {
+    console.log("ITEM", item)
     const res = await fetch(`/api/carts/add`, {
         method: "POST",
-        headers: {"Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(
-            productId,
-            userId
+            item
         )
     })
-    if(res.ok) {
+    if (res.ok) {
         const product = await res.json()
         dispatch(addToCart(product))
     }
@@ -67,7 +67,7 @@ export default function cartReducer(state = initialState, action) {
             return state.filter((prod) => prod.id !== action.product.id);
         case ADD_TO_CART:
             return [...state, action.product]
-    default:
-      return state;
-  }
+        default:
+            return state;
+    }
 }

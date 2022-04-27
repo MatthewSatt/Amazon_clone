@@ -25,6 +25,7 @@ function Product() {
   }, [])
 
   const handleAddToCart = async () => {
+    const item = {"productId": +productId, "userId": user.id, "quantity": 1}
     if (!user) {
       const div = document.createElement("div");
       div.id = "alertmessage";
@@ -34,7 +35,7 @@ function Product() {
       div.innerText = "You must be logged in to add to your cart";
       setTimeout(() => div.remove(), 3000);
     } else {
-      dispatch(addToCartThunk(+productId, user.id))
+      dispatch(addToCartThunk(item))
       const div = document.createElement("div");
       div.id = "alertmessage";
       const div2 = document.getElementById("alert");
