@@ -1,15 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { getUsersThunk } from '../../../store/users';
 import { deleteReviewThunk, getReviewsThunk } from '../../../store/reviews';
 import { FaStar } from "react-icons/fa";
 import "./Review.css"
+import EditReviewModal from './ReviewModal/EditReview';
+import { useParams } from 'react-router-dom';
 
-function Review({ id, userId, productId, title, body, rating, created, updated }) {
+function Review({ id, userId, title, body, rating, created, updated }) {
     const dispatch = useDispatch()
+    const product = useParams()
     const user = useSelector(state => state?.session?.user)
     const users = useSelector((state) => state?.userReducer?.users)
     let author = users?.find(user => user?.id === userId)
+    const productId = +product.productId
+
+    const[showReviewEditModal, setShowReviewEditModal] = useState(false)
 
 
 
@@ -17,7 +23,13 @@ function Review({ id, userId, productId, title, body, rating, created, updated }
       dispatch(deleteReviewThunk(id))
     }
 
+    const editReview = () => {
+      setShowReviewEditModal(true)
+    }
 
+    useEffect(() => {
+      getReviewsThunk(1)
+    })
 
 
     useEffect(() => {
@@ -46,9 +58,12 @@ function Review({ id, userId, productId, title, body, rating, created, updated }
         </div>
         {user?.id === userId && (
           <div className='reviewcrud'>
-            <button className='addtocart'>Edit Review</button>
+            <button onClick={e => editReview(id)} className='addtocart'>Edit Review</button>
             <button onClick={e => deleteReview(id)} className='addtocart'>Remove Review</button>
           </div>
+        )}
+        {showReviewEditModal && (
+          <EditReviewModal showReviewEditModal={showReviewEditModal} setShowReviewEditModal={setShowReviewEditModal} id={id} userId={userId} productId={productId} title={title} body={body} rating={rating} created={created} updated={updated} />
         )}
     </div>
   )

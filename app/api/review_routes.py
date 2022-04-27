@@ -35,3 +35,13 @@ def delete_review(id):
     db.session.delete(deleted_review)
     db.session.commit()
     return deleted_review.to_dict()
+
+@review_routes.route("/edit", methods=["PUT"])
+def edit_review():
+    data = request.json
+    review = Review.query.get(data['id'])
+    review.title = data['title']
+    review.body = data['body']
+    review.rating = data['rating']
+    db.session.commit()
+    return review.to_dict()

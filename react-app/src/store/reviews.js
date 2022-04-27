@@ -1,6 +1,7 @@
 const GET_PRODUCT_REVIEWS = 'reviews/GET_PRODUCT_REVIEWS';
 const ADD_REVIEW = 'reviews/ADD_REVIEW'
 const DELETE_REVIEW = 'reviews/DELETE_REVIEW'
+const EDIT_REVIEW = 'reviews/EDIT_REVIEW'
 
 const getReviews = (reviews) => ({
   type: GET_PRODUCT_REVIEWS,
@@ -14,6 +15,11 @@ const addReview = (newReview) => ({
 
 const deleteReview = (review) => ({
   type: DELETE_REVIEW,
+  review
+})
+
+const editReview = (review) => ({
+  type: EDIT_REVIEW,
   review
 })
 
@@ -52,6 +58,21 @@ export const deleteReviewThunk = (id) => async (dispatch) => {
   }
 }
 
+export const editReviewThunk = (payload) => async (dispatch) => {
+  console.log(payload)
+  const res = await fetch('/api/reviews/edit', {
+    method: "PUT",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(
+      payload
+    )
+  })
+  if(res.ok) {
+    const review = await res.json()
+    dispatch(editReview(review))
+  }
+}
+
 
 const initialState = [];
 export default function reviewReducer(state = initialState, action) {
@@ -62,6 +83,13 @@ export default function reviewReducer(state = initialState, action) {
           return [...state, action.newReview]
         case DELETE_REVIEW:
           return state.filter((rev) => rev.id !== action.review.id);
+        case EDIT_REVIEW:
+          return state.map((rev) => {
+            if (rev.id === action.review.id) {
+                return action.review;
+            }
+            return rev;
+        })
     default:
       return state;
   }
