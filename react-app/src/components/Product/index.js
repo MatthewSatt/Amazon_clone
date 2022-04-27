@@ -21,11 +21,12 @@ function Product() {
 
 
   useEffect(() => {
-    dispatch(getCartThunk(user.id))
+    if(user) {
+      dispatch(getCartThunk(user.id))
+    }
   }, [])
 
   const handleAddToCart = async () => {
-    const item = {"productId": +productId, "userId": user.id, "quantity": 1}
     if (!user) {
       const div = document.createElement("div");
       div.id = "alertmessage";
@@ -35,6 +36,7 @@ function Product() {
       div.innerText = "You must be logged in to add to your cart";
       setTimeout(() => div.remove(), 3000);
     } else {
+      const item = {"productId": +productId, "userId": user.id, "quantity": 1}
       dispatch(addToCartThunk(item))
       const div = document.createElement("div");
       div.id = "alertmessage";

@@ -28,7 +28,7 @@ function Review({ id, userId, title, body, rating, created, updated }) {
     }
 
     useEffect(() => {
-      getReviewsThunk(1)
+      getReviewsThunk(user.id)
     })
 
 
