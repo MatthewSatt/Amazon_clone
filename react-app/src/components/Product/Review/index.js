@@ -27,10 +27,6 @@ function Review({ id, userId, title, body, rating, created, updated }) {
       setShowReviewEditModal(true)
     }
 
-    useEffect(() => {
-      getReviewsThunk(user.id)
-    })
-
 
     useEffect(() => {
         dispatch(getUsersThunk())
