@@ -10,27 +10,38 @@ function Subtotal() {
   const cart = useSelector(state => state.cartReducer)
   const products = useSelector(state => state.productReducer)
   const [length, setLength] = useState(0)
-  const [price, setPrice] = useState(0)
+  const [shipping, setShipping] = useState(0)
+  const [itemPrice, setItemPrice] = useState(0)
+  const [total, setTotal] = useState(0)
 
 
 
 useEffect(() => {
   setLength(cart.length)
+  setShipping(0)
+  setItemPrice(0)
+  setTotal(0)
 }, [cart.length])
 
 useEffect(() =>  {
+  let itemPrice = 0
+  let shippingCost = 0
   let total = 0
   if(cart.length === 0) {
-    setPrice(0)
+    setTotal(0)
   }
   cart.forEach((item) => {
     for(let i = 0; i < products.length; i++) {
       let product = products[i]
       if(product.id === item.product_id) {
-        total += product.price
+        shippingCost += product.price * 0.05
+        itemPrice += product.price
+        total += (product.price + product.price * 0.05)
       }
     }
-    setPrice(total.toFixed(2))
+    setShipping(shippingCost.toFixed(2))
+    setItemPrice(itemPrice.toFixed(2))
+    setTotal(total.toFixed(2))
   }, [cart.length])
 
 })
@@ -38,12 +49,17 @@ useEffect(() =>  {
   return (
     <div className='subtotal'>
     <div className='cartitemcount'>
-      <h1>Total Items ({length}):</h1>
+      <h2>Total Items: ({length}):</h2>
     </div>
+      <h4>Item Cost: ${itemPrice}</h4>
+      <h4>Shipping: ${shipping}</h4>
     <div className='cartprice'>
-      <h2>Price: {`$${price}`}</h2>
     </div>
+    <div className='totalcheckout'>
+
+      <h2>Total: {`$${total}`}</h2>
     <button className='cartbutton'>Purchase</button>
+    </div>
 
     </div>
   )
