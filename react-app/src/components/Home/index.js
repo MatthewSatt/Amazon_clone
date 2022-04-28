@@ -6,6 +6,7 @@ import { getTypesThunk } from "../../store/types";
 import ProductDisplay from "../ProductTypes/ProductDisplay";
 import Dropdown from "../Dropdown";
 import "./Home.css";
+import { getCartThunk } from "../../store/cart";
 
 function Home() {
   const dispatch = useDispatch();
@@ -18,6 +19,10 @@ function Home() {
     dispatch(getProducts());
     dispatch(getTypesThunk());
   }, []);
+
+  useEffect(() => {
+    dispatch(getCartThunk(user.id))
+  }, [user.id])
 
   return (
     <div className="homepage">

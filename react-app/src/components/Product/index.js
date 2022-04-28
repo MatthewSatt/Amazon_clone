@@ -14,7 +14,6 @@ function Product() {
   const user = useSelector((state) => state.session.user);
   const products = useSelector((state) => Object.values(state?.productReducer));
   const reviews = useSelector((state) => state?.reviewReducer);
-  const cart = useSelector((state) => state.cartReducer)
   const thisProduct = products.find((product) => product?.id === +productId);
   const [showReviewAddModal, setShowReviewAddModal] = useState(false)
 

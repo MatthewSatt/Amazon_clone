@@ -5,16 +5,19 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import "./Header.css";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../store/session";
-import { getCartThunk } from "../../store/cart";
 
 
 function NavBar() {
   const history = useHistory();
   const dispatch = useDispatch();
+  const cart = useSelector((state) => state.cartReducer)
   const user = useSelector((state) => state.session.user);
-  const products = useSelector(state => state?.cartReducer);
+  const [length, setLength] = useState(0)
 
 
+  useEffect(() => {
+    setLength(cart.length)
+  }, [cart.length])
 
   const logoutUser = async () => {
     await dispatch(logout(user));
@@ -102,7 +105,7 @@ function NavBar() {
             <div className="headeroptionbasket">
               <ShoppingBasketIcon />
               <span className="headeroptionlinetwo headerbasketcount">
-                {products.length}
+                {length}
               </span>
             </div>
           </Link>
