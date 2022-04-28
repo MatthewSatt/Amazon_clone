@@ -12,7 +12,6 @@ const getProductTypes = (products) => ({
     products
 })
 
-
 export const getProducts = () => async (dispatch) => {
     const res = await fetch('/api/products/all')
     if(res.ok) {
@@ -31,16 +30,13 @@ export const getProductTypesThunk = (typeId) => async (dispatch) => {
     }
 }
 
-
 const initialState = [];
 export default function productReducer(state = initialState, action) {
     switch (action.type) {
         case GET_ALL_PRODUCTS:
            return action.products
-
         case TYPES_OF_PRODUCTS:
             return action.state
-
     default:
       return state;
   }

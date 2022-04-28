@@ -23,3 +23,9 @@ def delete_product(id):
     db.session.delete(product)
     db.session.commit()
     return product.to_dict()
+
+@product_routes.route("/single/<int:productId>")
+@login_required
+def single_product(productId):
+    product = Product.query.get(productId)
+    return product.to_dict()

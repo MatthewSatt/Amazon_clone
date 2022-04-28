@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import CartItem from "./CartItem";
 import "./Checkout.css";
 import Subtotal from "./Subtotal";
@@ -10,14 +10,20 @@ import { useEffect } from "react";
 function Checkout() {
   const dispatch = useDispatch();
   const userId = useSelector((state) => state.session.user.id)
-  // const products = useSelector((state) => state.productReducer);
-  const products = useSelector(state => state.cartReducer)
+  const carts = useSelector(state => state?.cartReducer)
+  const products = useSelector((state) => state.productReducer)
+
 
   useEffect(() => {
     dispatch(getCartThunk(userId));
   }, [dispatch]);
 
-  console.log(products);
+
+  useEffect(() => {
+    dispatch(getProducts())
+  }, [])
+
+
 
   return (
     <div className="checkout">
@@ -43,18 +49,14 @@ function Checkout() {
           <h2>Your Basket</h2>
         </div>
         <div className="checkoutproduct">
-          {products.length > 0 &&
-            products.map((product) => (
+          {carts.length > 0 &&
+            carts.map((cart) => (
               <CartItem
-                key={product.id}
-                id={product.id}
-                name={product.name}
-                image={product.image}
-                des={product.description}
-                price={product.price}
-                typeId={product.type_id}
-                created={product.created_at}
-                updated={product.updated_at}
+                key={cart.id}
+                id={cart.id}
+                userId={cart.user_id}
+                productId={cart.product_id}
+                quantity={cart.quantity}
               />
             ))}
         </div>

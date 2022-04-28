@@ -1,17 +1,18 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { getProducts } from '../../../store/products'
+// import { getSingleProduct } from '../../../store/products'
 import {deleteCartItemThunk, getCartThunk} from "../../../store/cart"
 import "./CartItem.css"
 
-function CartItem({ id, name, image, des, price, typeId, created, updated }) {
+function CartItem({id, userId, productId, quanity}) {
   const dispatch = useDispatch()
-  const products = useSelector((state) => state.productReducer)
-  const userId = useSelector((state) => state.session.user.id)
+  const products = useSelector((state) => state?.productReducer)
+  const thisProduct = products.find(product => product?.id === productId)
 
   const handleDelete = () => {
-    dispatch(deleteCartItemThunk({productId: id, userId}))
+    dispatch(deleteCartItemThunk(id))
   }
+
 
   useEffect(() => {
     dispatch(getCartThunk(userId))
@@ -19,11 +20,11 @@ function CartItem({ id, name, image, des, price, typeId, created, updated }) {
 
   return (
     <div className='cartitem'>
-        <img className='cartitemimage' src={image} />
-          {id}
+        <img className='cartitemimage' src={thisProduct?.image} />
+          cartId: {id}
         <div className='cartiteminfo'>
-          <p className='cartitemname'>{name}</p>
-          <p className='cartitemprice'><span>$</span>{price}</p>
+          <p className='cartitemname'>{thisProduct?.name}</p>
+          <p className='cartitemprice'><span>$</span>{thisProduct?.price}</p>
           <button onClick={handleDelete} className='remove'>Remove from Basket</button>
 
         </div>
