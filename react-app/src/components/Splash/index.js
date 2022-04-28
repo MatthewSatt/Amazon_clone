@@ -4,8 +4,10 @@ import { getProducts } from "../../store/products";
 import { getTypesThunk } from "../../store/types";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Type from "./Type";
+import DisplayProduct from "./DisplayProduct";
 import "./Splash.css";
-
+//productsections
 function Splash() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.productReducer);
@@ -22,22 +24,12 @@ function Splash() {
         {types &&
           types.map((type) => (
             <div className ='productsections'key={type.id}>
-              <h1 className="productcategories">
-                  <FaArrowAltCircleLeft id="left" />
-                {type.name}
-                  <FaArrowAltCircleRight id="right" />
-              </h1>
+                  <Type id={type.id} name={type.name}/>
               <div className="productline">
                 {products
                   .filter((product) => product.type_id == type.id)
                   .map((filteredProducts) => (
-                    <div className="eachproduct" key={filteredProducts.id}>
-                      <Link className="linktosinglesong" to={`/product/${filteredProducts.id}`}>
-                        <div className="products">
-                          <img id="productimage" alt="product" src={filteredProducts.image} />
-                        </div>
-                      </Link>
-                    </div>
+                      <DisplayProduct id={filteredProducts.id} image={filteredProducts.image}/>
                   ))}
               </div>
             </div>
