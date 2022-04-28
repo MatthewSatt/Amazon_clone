@@ -5,6 +5,7 @@ import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import "./Header.css";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../store/session";
+import SearchBar from "./SearchBar";
 
 
 function NavBar() {
@@ -13,6 +14,7 @@ function NavBar() {
   const cart = useSelector((state) => state.cartReducer)
   const user = useSelector((state) => state.session.user);
   const [length, setLength] = useState(0)
+  const [searchResult, setSearchResult] = useState([])
 
 
   useEffect(() => {
@@ -32,7 +34,7 @@ function NavBar() {
     old.appendChild(errorDiv)
     setTimeout(() => errorDiv.remove(), 2500)
   }
-
+  console.log(searchResult)
   return (
     <div className="header">
       <Link to="/">
@@ -41,11 +43,14 @@ function NavBar() {
           src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Emblem.jpg"
         />
       </Link>
+    <div className="headersearch">
+      <SearchBar setSearchResult={setSearchResult} searchResult={searchResult}/>
 
-      <div className="headersearch">
-        <input className="headersearchinput" type="text" />
-        <SearchIcon className="headersearchicon" />
-      </div>
+    </div>
+    {/* {searchResult.length > 3 && searchResult.map((item) => (
+      <div>Hello</div>
+    ))} */}
+
 
       <div className="headernav">
         <div className="headeroption">
