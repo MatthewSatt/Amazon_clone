@@ -115,7 +115,408 @@ def seed_products():
         image="https://m.media-amazon.com/images/I/21wge1Dq22L._AC_UY436_FMwebp_QL65_.jpg"
 
     )
+    pet6 = Product(
+        type_id=3,
+        name="Dog Bowl",
+        description="Full HD Camera & Night Vision: livestream video to monitor your pet with a wide-angle view,that functions even in pitch black, without disturbing those being monitored. It also features an intelligent system to ensure clear and high-quality images day and night.",
+        price=129.99,
+        image="https://st2.depositphotos.com/1504385/10861/i/600/depositphotos_108614828-stock-photo-natural-and-dry-dogs-food.jpg"
 
+    )
+    pet7 = Product(
+        type_id=3,
+        name="Dog Food",
+        description="",
+        price=8.99,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food1 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food2 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food3 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food4 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food5 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food6 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food7 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food8 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food9 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food10 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food11 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    food12 = Product(
+        type_id=4,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+
+    sports1 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports2 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports3 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports4 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports5 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports6 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports7 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports8 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports9 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports10 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports11 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    sports12 = Product(
+        type_id=5,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+
+    outdoors1 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors2 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors3 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors4 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors5 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors6 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors7 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors8 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors9 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors10 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors11 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    outdoors12 = Product(
+        type_id=6,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive1 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive2 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive3 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive4 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive5 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive6 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive7 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive8 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive9 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive10 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive11 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    automotive12 = Product(
+        type_id=7,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
 
 
 
@@ -138,7 +539,56 @@ def seed_products():
     db.session.add(pet3)
     db.session.add(pet4)
     db.session.add(pet5)
-
+    db.session.add(pet6)
+    db.session.add(pet7)
+    db.session.add(food1)
+    db.session.add(food2)
+    db.session.add(food3)
+    db.session.add(food4)
+    db.session.add(food5)
+    db.session.add(food6)
+    db.session.add(food7)
+    db.session.add(food8)
+    db.session.add(food9)
+    db.session.add(food10)
+    db.session.add(food11)
+    db.session.add(food12)
+    db.session.add(sports1)
+    db.session.add(sports2)
+    db.session.add(sports3)
+    db.session.add(sports4)
+    db.session.add(sports5)
+    db.session.add(sports6)
+    db.session.add(sports7)
+    db.session.add(sports8)
+    db.session.add(sports9)
+    db.session.add(sports10)
+    db.session.add(sports11)
+    db.session.add(sports12)
+    db.session.add(outdoors1)
+    db.session.add(outdoors2)
+    db.session.add(outdoors3)
+    db.session.add(outdoors4)
+    db.session.add(outdoors5)
+    db.session.add(outdoors6)
+    db.session.add(outdoors7)
+    db.session.add(outdoors8)
+    db.session.add(outdoors9)
+    db.session.add(outdoors10)
+    db.session.add(outdoors11)
+    db.session.add(outdoors12)
+    db.session.add(automotive1)
+    db.session.add(automotive2)
+    db.session.add(automotive3)
+    db.session.add(automotive4)
+    db.session.add(automotive5)
+    db.session.add(automotive6)
+    db.session.add(automotive7)
+    db.session.add(automotive8)
+    db.session.add(automotive9)
+    db.session.add(automotive10)
+    db.session.add(automotive11)
+    db.session.add(automotive12)
     db.session.commit()
 
 

@@ -32,16 +32,81 @@ def seed_reviews():
 
     review4 = Review(
         user_id=2,
+        product_id=13,
+        title='BEST PRODUCT EVER',
+        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
+        rating=5
+        )
+    review5 = Review(
+        user_id=2,
+        product_id=11,
+        title='DO NOT BUY',
+        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
+        rating=1
+        )
+    review6 = Review(
+        user_id=3,
+        product_id=16,
+        title='Worth the money',
+        body="I've had this for years and it's been great",
+        rating=4
+        )
+    review7 = Review(
+        user_id=2,
+        product_id=9,
+        title='DO NOT BUY',
+        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
+        rating=1
+        )
+    review8 = Review(
+        user_id=2,
+        product_id=7,
+        title='DO NOT BUY',
+        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
+        rating=1
+        )
+    review9 = Review(
+        user_id=1,
+        product_id=15,
+        title='DO NOT BUY',
+        body="It's way too much money.",
+        rating=1
+        )
+    review10 = Review(
+        user_id=2,
         product_id=18,
         title='DO NOT BUY',
         body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
         rating=1
         )
+    review11 = Review(
+        user_id=1,
+        product_id=18,
+        title='DO NOT BUY',
+        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
+        rating=1
+        )
+    review12 = Review(
+        user_id=2,
+        product_id=3,
+        title='I read this as a kid',
+        body="Stanley Yelnats ....racecar",
+        rating=1
+        )
+
 
     db.session.add(review1)
     db.session.add(review2)
     db.session.add(review3)
     db.session.add(review4)
+    db.session.add(review5)
+    db.session.add(review6)
+    db.session.add(review7)
+    db.session.add(review8)
+    db.session.add(review9)
+    db.session.add(review10)
+    db.session.add(review11)
+    db.session.add(review12)
     db.session.commit()
 
 
