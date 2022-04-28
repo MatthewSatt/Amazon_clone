@@ -9,13 +9,13 @@ import { useEffect } from "react";
 
 function Checkout() {
   const dispatch = useDispatch();
-  const userId = useSelector((state) => state?.session?.user?.id);
+  const user = useSelector((state) => state?.session?.user);
   const carts = useSelector((state) => state?.cartReducer);
   const products = useSelector(state => state?.productReducer)
 
 
   useEffect(() => {
-    dispatch(getCartThunk(userId));
+    dispatch(getCartThunk(user.id));
   }, []);
 
   useEffect(() => {
@@ -44,7 +44,7 @@ function Checkout() {
       </div>
       <div className="checkoutbottom">
         <div className="checkouttitle">
-          <h2>Your Basket</h2>
+          <h2>{user.username}'s Basket</h2>
         </div>
         <div className="checkoutproduct">
           {
