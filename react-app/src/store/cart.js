@@ -29,8 +29,13 @@ export const getCartThunk = (userId) => async (dispatch) => {
 
 
 export const deleteCartItemThunk = (id) => async (dispatch) => {
-    const res = await fetch(`/api/carts/delete/${id}`, {
-        method: "DELETE"
+    console.log(id)
+    const res = await fetch(`/api/carts/delete/${id.productId}`, {
+        method: "DELETE",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(
+            id,
+        )
     })
     if (res.ok) {
         const product = await res.json()

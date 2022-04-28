@@ -18,10 +18,13 @@ def user_cart_products(userId):
 
 @cart_routes.route('/delete/<int:productId>', methods=["DELETE"])
 def user_cart_delete(productId):
-    cart_item = Cart.query.filter(Cart.product_id == productId).first()
+    data = request.json
+    userId = data["userId"]
+    cart_item = Cart.query.filter(Cart.product_id == productId and Cart.user_id == userId).first()
     db.session.delete(cart_item)
     db.session.commit()
     return cart_item.to_dict()
+
 
 
 @cart_routes.route('/add', methods=["POST"])

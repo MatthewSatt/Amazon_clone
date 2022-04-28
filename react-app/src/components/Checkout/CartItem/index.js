@@ -10,14 +10,13 @@ function CartItem({ id, name, image, des, price, typeId, created, updated }) {
   const userId = useSelector((state) => state.session.user.id)
 
   const handleDelete = () => {
-    console.log('hi')
-    dispatch(deleteCartItemThunk(id))
+    dispatch(deleteCartItemThunk({productId: id, userId}))
   }
 
   useEffect(() => {
     dispatch(getCartThunk(userId))
   }, [dispatch])
-  
+
   return (
     <div className='cartitem'>
         <img className='cartitemimage' src={image} />
