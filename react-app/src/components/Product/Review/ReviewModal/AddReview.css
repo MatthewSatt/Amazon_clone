@@ -18,19 +18,21 @@
 }
 
 .addreviewmodal input{
-    width: 90%;
+    width: 20%;
 }
 
 .nameinput{
     text-align: center;
     margin-top: 40px;
-    width: 100%;
+    width: 18vw;
 }
+
 
 
 .bodyinput{
     margin-top: 40px;
     height: 40vh;
+    width: 18vw;
     text-align: top;
     text-align: left;
 }
