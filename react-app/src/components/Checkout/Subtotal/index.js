@@ -20,14 +20,17 @@ useEffect(() => {
 
 useEffect(() =>  {
   let total = 0
+  if(cart.length === 0) {
+    setPrice(0)
+  }
   cart.forEach((item) => {
     for(let i = 0; i < products.length; i++) {
       let product = products[i]
       if(product.id === item.product_id) {
         total += product.price
       }
-      setPrice(total.toFixed(2))
     }
+    setPrice(total.toFixed(2))
   }, [cart.length])
 
 
