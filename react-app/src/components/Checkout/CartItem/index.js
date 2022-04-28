@@ -21,7 +21,6 @@ function CartItem({id, userId, productId, quanity}) {
   return (
     <div className='cartitem'>
         <img className='cartitemimage' src={thisProduct?.image} />
-          cartId: {id}
         <div className='cartiteminfo'>
           <p className='cartitemname'>{thisProduct?.name}</p>
           <p className='cartitemprice'><span>$</span>{thisProduct?.price}</p>
