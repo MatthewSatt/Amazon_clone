@@ -9,25 +9,23 @@ import { useEffect } from "react";
 
 function Checkout() {
   const dispatch = useDispatch();
-  const userId = useSelector((state) => state.session.user.id)
-  const carts = useSelector(state => state?.cartReducer)
-  const products = useSelector((state) => state.productReducer)
+  const userId = useSelector((state) => state?.session?.user?.id);
+  const carts = useSelector((state) => state?.cartReducer);
+  const products = useSelector(state => state?.productReducer)
 
 
   useEffect(() => {
     dispatch(getCartThunk(userId));
-  }, [dispatch]);
-
+  }, []);
 
   useEffect(() => {
     dispatch(getProducts())
   }, [])
 
 
-
   return (
     <div className="checkout">
-      <div className="checkoutleft">
+      <div className="checkouttop">
         <div className="checkoutimages">
           <img
             className="banner"
@@ -36,33 +34,30 @@ function Checkout() {
           ></img>
           <img
             className="banner"
-            src="https://getstreamwise.com/wp-content/uploads/2020/10/Benefits-Of-Amazon-Prime-Membership-about-Which-Only-a-Few-Knows-3.jpg"
-            alt=""
-          ></img>
-          <img
-            className="banner"
             src="https://www.intelligencenode.com/blog/wp-content/uploads/2019/06/Prime-day.jpg"
             alt=""
           ></img>
         </div>
+        <div className="checkoutsubtotal">
+          <Subtotal />
+        </div>
+      </div>
+      <div className="checkoutbottom">
         <div className="checkouttitle">
           <h2>Your Basket</h2>
         </div>
         <div className="checkoutproduct">
-          {carts.length > 0 &&
-            carts.map((cart) => (
+          {
+            carts?.map((cart) => (
               <CartItem
-                key={cart.id}
-                id={cart.id}
-                userId={cart.user_id}
-                productId={cart.product_id}
-                quantity={cart.quantity}
+                key={cart?.id}
+                id={cart?.id}
+                userId={cart?.user_id}
+                productId={cart?.product_id}
+                quantity={cart?.quantity}
               />
             ))}
         </div>
-      </div>
-      <div className="checkoutright">
-        <Subtotal />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import {deleteCartItemThunk, getCartThunk} from "../../../store/cart"
 import "./CartItem.css"
 
-function CartItem({id, userId, productId, quanity}) {
+function CartItem({id, userId, productId, quantity}) {
   const dispatch = useDispatch()
   const products = useSelector((state) => state?.productReducer)
   const thisProduct = products.find(product => product?.id === productId)
