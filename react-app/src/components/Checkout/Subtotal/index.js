@@ -33,8 +33,6 @@ useEffect(() =>  {
     setPrice(total.toFixed(2))
   }, [cart.length])
 
-
-  // setPrice()
 })
 
   return (

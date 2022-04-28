@@ -16,6 +16,7 @@ def getReviews(id):
 
 
 @review_routes.route("/add", methods=["POST"])
+@login_required
 def add_review():
     data = request.json
     user_id = data["user_id"]
@@ -37,6 +38,7 @@ def delete_review(id):
     return deleted_review.to_dict()
 
 @review_routes.route("/edit", methods=["PUT"])
+@login_required
 def edit_review():
     data = request.json
     review = Review.query.get(data['id'])
