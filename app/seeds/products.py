@@ -805,6 +805,104 @@ def seed_products():
         image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
 
     )
+    health1 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health2 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health3 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health4 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health5 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health6 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health7 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health8 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health9 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health10 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health11 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    health12 = Product(
+        type_id=11,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+
+
 
 
 
@@ -923,6 +1021,19 @@ def seed_products():
     db.session.add(movies10)
     db.session.add(movies11)
     db.session.add(movies12)
+
+    db.session.add(health1)
+    db.session.add(health2)
+    db.session.add(health3)
+    db.session.add(health4)
+    db.session.add(health5)
+    db.session.add(health6)
+    db.session.add(health7)
+    db.session.add(health8)
+    db.session.add(health9)
+    db.session.add(health10)
+    db.session.add(health11)
+    db.session.add(health12)
 
 
     db.session.commit()
