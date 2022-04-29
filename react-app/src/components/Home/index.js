@@ -27,7 +27,7 @@ function Home() {
   return (
     <div className="homepage">
       <div className="home">
-        <ol>
+        {/* <ol>
           To do:
           <li>Likes on reviews?</li>
           <li>
@@ -47,7 +47,7 @@ function Home() {
           <li>AWS webbuckets</li>
           <li>Web Sockets?</li>
           <li>tbd...</li>
-        </ol>
+        </ol> */}
 
         <Dropdown showSideNav={showSideNav} setShowSideNav={setShowSideNav} />
       </div>

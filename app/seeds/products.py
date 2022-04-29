@@ -517,6 +517,295 @@ def seed_products():
         image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
 
     )
+    babies1 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies2 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies3 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies4 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies5 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies6 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies7 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies8 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies9 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies10 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies11 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    babies12 = Product(
+        type_id=8,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music1 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music2 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music3 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music4 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music5 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music6 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music7 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music8 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music9 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music10 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music11 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    music12 = Product(
+        type_id=9,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies1 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies2 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies3 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies4 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies5 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies6 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies7 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies8 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies9 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies10 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies11 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+    movies12 = Product(
+        type_id=10,
+        name="Replace",
+        description="",
+        price=1.00,
+        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+
+    )
+
 
 
 
@@ -531,9 +820,11 @@ def seed_products():
     db.session.add(book8)
     db.session.add(book9)
     db.session.add(book10)
+
     db.session.add(electronics1)
     db.session.add(electronics2)
     db.session.add(electronics3)
+
     db.session.add(pet1)
     db.session.add(pet2)
     db.session.add(pet3)
@@ -541,6 +832,7 @@ def seed_products():
     db.session.add(pet5)
     db.session.add(pet6)
     db.session.add(pet7)
+
     db.session.add(food1)
     db.session.add(food2)
     db.session.add(food3)
@@ -553,6 +845,7 @@ def seed_products():
     db.session.add(food10)
     db.session.add(food11)
     db.session.add(food12)
+
     db.session.add(sports1)
     db.session.add(sports2)
     db.session.add(sports3)
@@ -565,6 +858,7 @@ def seed_products():
     db.session.add(sports10)
     db.session.add(sports11)
     db.session.add(sports12)
+
     db.session.add(outdoors1)
     db.session.add(outdoors2)
     db.session.add(outdoors3)
@@ -577,6 +871,7 @@ def seed_products():
     db.session.add(outdoors10)
     db.session.add(outdoors11)
     db.session.add(outdoors12)
+
     db.session.add(automotive1)
     db.session.add(automotive2)
     db.session.add(automotive3)
@@ -589,6 +884,47 @@ def seed_products():
     db.session.add(automotive10)
     db.session.add(automotive11)
     db.session.add(automotive12)
+
+    db.session.add(babies1)
+    db.session.add(babies2)
+    db.session.add(babies3)
+    db.session.add(babies4)
+    db.session.add(babies5)
+    db.session.add(babies6)
+    db.session.add(babies7)
+    db.session.add(babies8)
+    db.session.add(babies9)
+    db.session.add(babies10)
+    db.session.add(babies11)
+    db.session.add(babies12)
+
+    db.session.add(music1)
+    db.session.add(music2)
+    db.session.add(music3)
+    db.session.add(music4)
+    db.session.add(music5)
+    db.session.add(music6)
+    db.session.add(music7)
+    db.session.add(music8)
+    db.session.add(music9)
+    db.session.add(music10)
+    db.session.add(music11)
+    db.session.add(music12)
+
+    db.session.add(movies1)
+    db.session.add(movies2)
+    db.session.add(movies3)
+    db.session.add(movies4)
+    db.session.add(movies5)
+    db.session.add(movies6)
+    db.session.add(movies7)
+    db.session.add(movies8)
+    db.session.add(movies9)
+    db.session.add(movies10)
+    db.session.add(movies11)
+    db.session.add(movies12)
+
+
     db.session.commit()
 
 
