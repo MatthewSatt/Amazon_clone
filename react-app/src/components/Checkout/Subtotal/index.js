@@ -13,6 +13,7 @@ function Subtotal() {
   const [shipping, setShipping] = useState(0)
   const [itemPrice, setItemPrice] = useState(0)
   const [total, setTotal] = useState(0)
+  const [savings, setSavings] = useState(0)
 
 
 
@@ -42,6 +43,11 @@ useEffect(() =>  {
     setShipping(shippingCost.toFixed(2))
     setItemPrice(itemPrice.toFixed(2))
     setTotal(total.toFixed(2))
+    if(user.isPrime) {
+      setTotal(total-shippingCost)
+      setSavings(shipping)
+
+    }
   }, [cart.length])
 
 })
@@ -53,8 +59,9 @@ useEffect(() =>  {
     </div>
       <h4>Item Cost: ${itemPrice}</h4>
       <h4>Shipping: ${shipping}</h4>
-    <div className='cartprice'>
-    </div>
+      {user.isPrime && (
+        <h4>Prime Discount: -${savings}</h4>
+      )}
     <div className='totalcheckout'>
 
       <h2>Total: {`$${total}`}</h2>
