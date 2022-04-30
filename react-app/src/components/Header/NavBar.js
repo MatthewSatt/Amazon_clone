@@ -22,8 +22,8 @@ function NavBar() {
   }, [cart.length])
 
   const logoutUser = async () => {
-    await dispatch(logout(user));
     history.push("/");
+    await dispatch(logout(user));
   };
 
   const handleCartError = () => {
