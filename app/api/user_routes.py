@@ -26,6 +26,5 @@ def set_prime(id):
         user.isPrime = True
     elif(user.isPrime == True):
         user.isPrime = False
-    print('.................', user.to_dict())
     db.session.commit()
     return user.to_dict()

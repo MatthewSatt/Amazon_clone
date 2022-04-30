@@ -9,7 +9,6 @@ cart_routes = Blueprint("carts", __name__)
 @cart_routes.route('/<int:userId>')
 @login_required
 def user_cart_products(userId):
-    print('...................', userId)
     cart_items = Cart.query.filter(Cart.user_id == userId)
     print(cart_items)
     return jsonify([cart.to_dict() for cart in cart_items])
