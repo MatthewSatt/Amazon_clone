@@ -22,6 +22,7 @@ import Music from './components/ProductTypes/Music';
 import Movies from "./components/ProductTypes/Movies"
 import Checkout from './components/Checkout';
 import Prime from './components/Prime'
+import Orders from './components/Orders';
 
 
 
@@ -135,6 +136,10 @@ function App() {
 
         <ProtectedRoute path="/:typeId/Sports">
           <Sports />
+        </ProtectedRoute>
+
+        <ProtectedRoute path='/orders' exact={true}>
+          <Orders />
         </ProtectedRoute>
 
         <ProtectedRoute path='/checkout' exact={true}>

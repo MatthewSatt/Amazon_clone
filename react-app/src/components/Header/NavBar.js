@@ -7,19 +7,17 @@ import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../store/session";
 import SearchBar from "./SearchBar";
 
-
 function NavBar() {
   const history = useHistory();
   const dispatch = useDispatch();
-  const cart = useSelector((state) => state.cartReducer)
+  const cart = useSelector((state) => state.cartReducer);
   const user = useSelector((state) => state.session.user);
-  const [length, setLength] = useState(0)
-  const [searchResult, setSearchResult] = useState([])
-
+  const [length, setLength] = useState(0);
+  const [searchResult, setSearchResult] = useState([]);
 
   useEffect(() => {
-    setLength(cart.length)
-  }, [cart.length])
+    setLength(cart.length);
+  }, [cart.length]);
 
   const logoutUser = async () => {
     history.push("/");
@@ -27,14 +25,14 @@ function NavBar() {
   };
 
   const handleCartError = () => {
-    let old = document.getElementById("checkouterror")
-    const errorDiv = document.createElement("div")
-    errorDiv.innerText = "You must sign in to view your cart"
-    errorDiv.id = 'alertmessage'
-    old.appendChild(errorDiv)
-    setTimeout(() => errorDiv.remove(), 2500)
-  }
-  console.log(searchResult)
+    let old = document.getElementById("checkouterror");
+    const errorDiv = document.createElement("div");
+    errorDiv.innerText = "You must sign in to view your cart";
+    errorDiv.id = "alertmessage";
+    old.appendChild(errorDiv);
+    setTimeout(() => errorDiv.remove(), 2500);
+  };
+  console.log(searchResult);
   return (
     <div className="header">
       <Link to="/">
@@ -43,14 +41,15 @@ function NavBar() {
           src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Emblem.jpg"
         />
       </Link>
-    <div className="headersearch">
-      <SearchBar setSearchResult={setSearchResult} searchResult={searchResult}/>
-
-    </div>
-    {/* {searchResult.length > 3 && searchResult.map((item) => (
+      <div className="headersearch">
+        <SearchBar
+          setSearchResult={setSearchResult}
+          searchResult={searchResult}
+        />
+      </div>
+      {/* {searchResult.length > 3 && searchResult.map((item) => (
       <div>Hello</div>
     ))} */}
-
 
       <div className="headernav">
         <div className="headeroption">
@@ -84,29 +83,27 @@ function NavBar() {
           {user && (
             <>
               <span className="headeroptionlineone">View</span>
-              <span className="headeroptionlinetwo">Orders</span>
+              <Link className="headeroptionlinetwo" id="loginlink" to="/orders">
+                <span className="headeroptionlinetwo">Orders</span>
+              </Link>
             </>
           )}
           {!user && (
             <>
               <span className="headeroptionlineone">Orders</span>
-              <Link
-                to="/signup"
-                className="headeroptionlineone"
-                id="loginlink"
-              >
+              <Link to="/signup" className="headeroptionlineone" id="loginlink">
                 <span className="headeroptionlinetwo">Sign Up</span>
               </Link>
             </>
           )}
         </div>
         {user && (
-        <Link to='/prime'>
-        <div className="headeroption">
-          <span className="headeroptionlineone">Your</span>
-          <span className="headeroptionlinetwo">Prime</span>
-        </div>
-        </Link>
+          <Link to="/prime">
+            <div className="headeroption">
+              <span className="headeroptionlineone">Your</span>
+              <span className="headeroptionlinetwo">Prime</span>
+            </div>
+          </Link>
         )}
         {user && (
           <Link to="/checkout">
@@ -120,7 +117,7 @@ function NavBar() {
         )}
         {!user && (
           <div className="headeroptionbasket">
-            <ShoppingBasketIcon onClick={handleCartError}/>
+            <ShoppingBasketIcon onClick={handleCartError} />
             <span id="checkouterror"></span>
           </div>
         )}
