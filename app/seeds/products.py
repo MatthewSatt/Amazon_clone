@@ -54,6 +54,7 @@ def seed_products():
         price=98.50,
         image="https://m.media-amazon.com/images/I/81F4YQEvsNL._AC_UL640_FMwebp_QL65_.jpg"
       )
+
     electronics1=Product(
         type_id=2,
         name="WiFi Range Extender Signal Booster up to 5000 sq.ft, Wireless Internet Repeater Wi-Fi Booster",
@@ -69,6 +70,69 @@ def seed_products():
         image="https://m.media-amazon.com/images/I/31Rq-MKrmSL._AC_UY436_FMwebp_QL65_.jpg"
       )
     electronics3=Product(
+        type_id=2,
+        name="XBox Series S",
+        description="Access your favorite entertainment through apps like YouTube, Netflix, and more Enjoy over 100 games right out of the box with a 1 month Xbox Game Pass trialWatch 4K Blu-ray movies and stream 4K video on Netflix, Amazon, Hulu, Microsoft Movies & TV, and more",
+        price=309.99,
+        image="https://m.media-amazon.com/images/I/71NBQ2a52CL._AC_UY436_FMwebp_QL65_.jpg"
+    )
+    electronics4=Product(
+        type_id=2,
+        name="Fire HD 10 tablet, 10.1, 1080p Full HD, 32 GB, latest model (2021 release), Black",
+        description="Fast and responsive - powerful octa-core processor and 3 GB RAM. 50% more RAM than previous generation. Long-lasting 12-hour battery and 32 or 64 GB internal storage. Add up to 1 TB with microSD (sold separately). Brighter display - Vivid 10.1 1080p Full HD display is 10% brighter than previous generation, with more than 2 million pixels.",
+        price=149.99,
+        image="https://m.media-amazon.com/images/I/61uE03cRsyS._AC_UY218_.jpg"
+      )
+    electronics5=Product(
+        type_id=2,
+        name="TCL 32-inch 1080p Roku Smart LED TV - 32S327, 2019 Model",
+        description="CPU: 3.5GHz, 8-core AMD Zen 2, Storage: Custom 825GB SSD, RAM: 16GB GDDR6, Disc drive: 4K Blu-ray player, GPU: 10.3 teraflop RDNA 2 GPU PVT GoPdik",
+        price=178.99,
+        image="https://m.media-amazon.com/images/I/71wYJc19PiL._AC_UY218_.jpg"
+      )
+    electronics6=Product(
+        type_id=2,
+        name="Apple AirPods (2nd Generation)",
+        description="Quick access to Siri by saying “ Hey Siri ” More than 24 hours total listening time with the Charging Case Effortless setup, in-ear detection, and automatic switching for a magical experience",
+        price=118.99,
+        image="https://m.media-amazon.com/images/I/7120GgUKj3L._AC_UY218_.jpg"
+      )
+    electronics7=Product(
+        type_id=2,
+        name="Echo Dot (3rd Gen, 2018 release) - Smart speaker with Alexa - Charcoal",
+        description="Meet Echo Dot - Our most compact smart speaker that fits perfectly into small spaces. Improved speaker quality - Better speaker quality than Echo Dot Gen 2 for richer and louder sound. Pair with a second Echo Dot for stereo sound.",
+        price=24.99,
+        image="https://m.media-amazon.com/images/I/610Ga56awRL._AC_UY436_FMwebp_QL65_.jpg"
+      )
+    electronics8=Product(
+        type_id=2,
+        name="Playstation 5",
+        description="CPU: 3.5GHz, 8-core AMD Zen 2, Storage: Custom 825GB SSD, RAM: 16GB GDDR6, Disc drive: 4K Blu-ray player, GPU: 10.3 teraflop RDNA 2 GPU PVT GoPdik",
+        price=1259.99,
+        image="https://m.media-amazon.com/images/I/31Rq-MKrmSL._AC_UY436_FMwebp_QL65_.jpg"
+      )
+    electronics9=Product(
+        type_id=2,
+        name="XBox Series S",
+        description="Access your favorite entertainment through apps like YouTube, Netflix, and more Enjoy over 100 games right out of the box with a 1 month Xbox Game Pass trialWatch 4K Blu-ray movies and stream 4K video on Netflix, Amazon, Hulu, Microsoft Movies & TV, and more",
+        price=309.99,
+        image="https://m.media-amazon.com/images/I/71NBQ2a52CL._AC_UY436_FMwebp_QL65_.jpg"
+      )
+    electronics10=Product(
+        type_id=2,
+        name="WiFi Range Extender Signal Booster up to 5000 sq.ft, Wireless Internet Repeater Wi-Fi Booster",
+        description="【Up to 5000 Square Feet】No Blind Spot! Although most WiFi range extender signal devices get stuck behind walls and cement floors, Hyzom delivers ultra-stable bandwidth for Internet surfing, video conferences, online gaming, and even streaming 4K HD video.",
+        price=59.99,
+        image="https://m.media-amazon.com/images/I/610Ga56awRL._AC_UY436_FMwebp_QL65_.jpg"
+      )
+    electronics11=Product(
+        type_id=2,
+        name="Playstation 5",
+        description="CPU: 3.5GHz, 8-core AMD Zen 2, Storage: Custom 825GB SSD, RAM: 16GB GDDR6, Disc drive: 4K Blu-ray player, GPU: 10.3 teraflop RDNA 2 GPU PVT GoPdik",
+        price=1259.99,
+        image="https://m.media-amazon.com/images/I/31Rq-MKrmSL._AC_UY436_FMwebp_QL65_.jpg"
+      )
+    electronics12=Product(
         type_id=2,
         name="XBox Series S",
         description="Access your favorite entertainment through apps like YouTube, Netflix, and more Enjoy over 100 games right out of the box with a 1 month Xbox Game Pass trialWatch 4K Blu-ray movies and stream 4K video on Netflix, Amazon, Hulu, Microsoft Movies & TV, and more",
@@ -922,6 +986,15 @@ def seed_products():
     db.session.add(electronics1)
     db.session.add(electronics2)
     db.session.add(electronics3)
+    db.session.add(electronics4)
+    db.session.add(electronics5)
+    db.session.add(electronics6)
+    db.session.add(electronics7)
+    db.session.add(electronics8)
+    db.session.add(electronics9)
+    db.session.add(electronics10)
+    db.session.add(electronics11)
+    db.session.add(electronics12)
 
     db.session.add(pet1)
     db.session.add(pet2)
@@ -1042,4 +1115,3 @@ def seed_products():
 def undo_products():
     db.session.execute('TRUNCATE products RESTART IDENTITY CASCADE;')
     db.session.commit()
-

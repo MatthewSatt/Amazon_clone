@@ -1,5 +1,5 @@
 #healthimage {
-    background-image: url("https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Zml0bmVzc3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
+    background-image: url("http://www.northhillsclub.com/assets/northhillsclub/Uploads/Fitness%20Banner.JPG");
     background-position: center;
     border-image-repeat: none;
     height: 40vh;
@@ -11,8 +11,4 @@
     color: white;
     font-size: 50px;
 
-}
-
-#healthimage > h1 {
-    color: rgba(89, 88, 88, 0.96);
 }
