@@ -21,6 +21,7 @@ import Sports from "./components/ProductTypes/Sports"
 import Music from './components/ProductTypes/Music';
 import Movies from "./components/ProductTypes/Movies"
 import Checkout from './components/Checkout';
+import Prime from './components/Prime'
 
 
 
@@ -65,6 +66,11 @@ function App() {
         <Route path='/product/:productId'>
           <Product />
         </Route>
+
+        <Route path="/prime">
+          <Prime />
+        </Route>
+
           </>
         )}
         <ProtectedRoute path='/' exact={true} >
@@ -81,6 +87,10 @@ function App() {
 
         <Route path='/product/:productId'>
           <Product />
+        </Route>
+
+        <Route path="/prime">
+          <Prime />
         </Route>
 
         <ProtectedRoute path="/:typeId/Automotive">

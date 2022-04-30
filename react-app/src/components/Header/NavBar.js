@@ -100,11 +100,14 @@ function NavBar() {
             </>
           )}
         </div>
-
+        {user && (
+        <Link to='/prime'>
         <div className="headeroption">
           <span className="headeroptionlineone">Your</span>
           <span className="headeroptionlinetwo">Prime</span>
         </div>
+        </Link>
+        )}
         {user && (
           <Link to="/checkout">
             <div className="headeroptionbasket">

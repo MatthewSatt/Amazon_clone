@@ -1,6 +1,8 @@
 // constants
 const SET_USER = 'session/SET_USER';
 const REMOVE_USER = 'session/REMOVE_USER';
+const SET_PRIME= 'session/USERS'
+const GET_USER = 'session/GETUSER'
 
 const setUser = (user) => ({
   type: SET_USER,
@@ -9,6 +11,18 @@ const setUser = (user) => ({
 
 const removeUser = () => ({
   type: REMOVE_USER,
+})
+
+
+const getUser = (user) => ({
+  type: GET_USER,
+  user
+})
+
+
+const setPrime = (user) => ({
+  type: SET_PRIME,
+  user,
 })
 
 const initialState = { user: null };
@@ -70,6 +84,21 @@ export const logout = () => async (dispatch) => {
 };
 
 
+export const setPrimeThunk = (userId) => async (dispatch) => {
+  const res = await fetch(`/api/users/prime/${userId}`, {
+    method: "PUT",
+    headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(
+      userId
+    )
+  })
+  if(res.ok) {
+    const user = await res.json()
+    dispatch(setPrime(user))
+  }
+}
+
+
 export const signUp = (username, email, password) => async (dispatch) => {
   const response = await fetch('/api/auth/signup', {
     method: 'POST',
@@ -97,12 +126,25 @@ export const signUp = (username, email, password) => async (dispatch) => {
   }
 }
 
+export const getUserThunk = (userId) => async (dispatch) => {
+  const res = await fetch(`/api/users/${userId}`)
+  if(res.ok){
+    const user = await res.json()
+    dispatch(getUser(user))
+  }
+}
+
+
 export default function reducer(state = initialState, action) {
   switch (action.type) {
     case SET_USER:
       return { user: action.payload }
     case REMOVE_USER:
       return { user: null }
+    case SET_PRIME:
+        return {user: action.user}
+    case GET_USER:
+        return {user: action.user}
     default:
       return state;
   }

@@ -11,6 +11,7 @@ const getUsers = (users) => ({
 
 
 
+
 export const getUsersThunk = () => async (dispatch) => {
     const res = await fetch('/api/users')
     if(res.ok) {
@@ -18,6 +19,7 @@ export const getUsersThunk = () => async (dispatch) => {
       dispatch(getUsers(users))
     }
   }
+
 
 
 const initialState = []

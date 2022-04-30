@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify
 from flask_login import login_required
-from app.models import User
+from app.models import User, db
 
 user_routes = Blueprint('users', __name__)
 
@@ -15,4 +15,17 @@ def users():
 @login_required
 def user(id):
     user = User.query.get(id)
+    return user.to_dict()
+
+
+@user_routes.route("/prime/<int:id>", methods=["PUT"])
+@login_required
+def set_prime(id):
+    user = User.query.get(id)
+    if(user.isPrime == False):
+        user.isPrime = True
+    elif(user.isPrime == True):
+        user.isPrime = False
+    print('.................', user.to_dict())
+    db.session.commit()
     return user.to_dict()
