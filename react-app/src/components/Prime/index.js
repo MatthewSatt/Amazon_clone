@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserThunk, setPrimeThunk } from "../../store/session";
+import {Link} from 'react-router-dom'
 import "./Prime.css";
 
 function Prime() {
@@ -31,6 +32,11 @@ function Prime() {
           <button className="addtocart" onClick={setPrime}>
             Unsubscribe
           </button>
+            <Link to='/'>
+          <button className="addtocart">
+            Start Shopping
+          </button>
+            </Link>
         </div>
       )}
       {!user.isPrime && (

@@ -9,20 +9,20 @@ function Subtotal() {
   const user = useSelector(state => state.session.user)
   const cart = useSelector(state => state.cartReducer)
   const products = useSelector(state => state.productReducer)
-  const [length, setLength] = useState(0)
-  const [shipping, setShipping] = useState(0)
-  const [itemPrice, setItemPrice] = useState(0)
-  const [total, setTotal] = useState(0)
-  const [savings, setSavings] = useState(0)
+  const [length, setLength] = useState(0.00)
+  const [shipping, setShipping] = useState(0.00)
+  const [itemPrice, setItemPrice] = useState(0.00)
+  const [total, setTotal] = useState(0.00)
+  const [savings, setSavings] = useState(0.00)
 
 
 
 useEffect(() => {
   setLength(cart.length)
-  setShipping(0)
-  setItemPrice(0)
-  setTotal(0)
-  setSavings(0)
+  setShipping(0.00)
+  setItemPrice(0.00)
+  setTotal(0.00)
+  setSavings(0.00)
 }, [cart.length])
 
 useEffect(() =>  {
@@ -65,7 +65,7 @@ useEffect(() =>  {
       )}
     <div className='totalcheckout'>
 
-      <h2>Total: {`$${total.toFixed(2)}`}</h2>
+      <h2>Total: {`$${(total)}`}</h2>
     <button className='cartbutton'>Purchase</button>
     </div>
 
