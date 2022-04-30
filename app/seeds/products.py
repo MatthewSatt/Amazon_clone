@@ -1042,4 +1042,4 @@ def seed_products():
 def undo_products():
     db.session.execute('TRUNCATE products RESTART IDENTITY CASCADE;')
     db.session.commit()
-ff
+f
