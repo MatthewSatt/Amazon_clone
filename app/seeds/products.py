@@ -54,6 +54,21 @@ def seed_products():
         price=98.50,
         image="https://m.media-amazon.com/images/I/81F4YQEvsNL._AC_UL640_FMwebp_QL65_.jpg"
       )
+    book11=Product(
+        type_id=1,
+        name="Atomic Habits",
+        description="Goals are about the results you want to achieve. Systems are about the processes that lead to those results.",
+        price=11.98,
+        image="https://images-na.ssl-images-amazon.com/images/I/51-uspgqWIL._AC_SX184_.jpg"
+      )
+    book12=Product(
+        type_id=1,
+        name="Slow Horses",
+        description="Everyone wanted a life less ordinary. And only a tiny minority ever got it, and even they probably didn’t appreciate it much..",
+        price=98.50,
+        image="https://images-na.ssl-images-amazon.com/images/I/51qzR6Ok+fL._AC_SX184_.jpg"
+      )
+
 
     electronics1=Product(
         type_id=2,
@@ -982,6 +997,8 @@ def seed_products():
     db.session.add(book8)
     db.session.add(book9)
     db.session.add(book10)
+    db.session.add(book11)
+    db.session.add(book12)
 
     db.session.add(electronics1)
     db.session.add(electronics2)
