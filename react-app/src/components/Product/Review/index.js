@@ -27,7 +27,7 @@ function Review({ id, userId, title, body, rating, created, updated }) {
 
   useEffect(() => {
     dispatch(getUsersThunk());
-  }, [dispatch]);
+  }, []);
 
   return (
     <div className="review">
@@ -40,7 +40,7 @@ function Review({ id, userId, title, body, rating, created, updated }) {
             ))}
           <span className="author">
             {author?.username}
-            {user?.id === userId && <span>(you)</span>}
+            {user?.id === userId && <span className="you">(you)</span>}
           </span>
         </div>
         <div className="time">{created}</div>

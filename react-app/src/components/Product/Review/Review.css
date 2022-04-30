@@ -49,3 +49,8 @@
 .reviewcrud button {
     margin: 8px;
 }
+
+.you {
+    font-size: 20px;
+    align-self: auto;
+}

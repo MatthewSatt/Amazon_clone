@@ -8,10 +8,6 @@ const getUsers = (users) => ({
     users
   })
 
-
-
-
-
 export const getUsersThunk = () => async (dispatch) => {
     const res = await fetch('/api/users')
     if(res.ok) {
