@@ -65,7 +65,7 @@ useEffect(() =>  {
       )}
     <div className='totalcheckout'>
 
-      <h2>Total: {`$${(total)}`}</h2>
+      <h2>Total: {`$${Number.parseFloat(total).toFixed(2)}`}</h2>
     <button className='cartbutton'>Purchase</button>
     </div>
 
