@@ -1,0 +1,57 @@
+.prime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.primemembers {
+    position: absolute;
+    top: 40%;
+}
+
+.userprimetext h3{
+    margin: 5px;
+    padding: 5px;
+}
+
+.userprimetext h4 {
+    margin: 5px;
+    padding: 5px;
+}
+
+
+.notprimemembers {
+    margin-top: 5%;
+    text-align: center;
+    width: 80%;
+    font-size: 18px;
+}
+.shipping {
+    margin: 5px;
+    padding: 5px;
+}
+
+.shipping > p {
+    margin: 5px;
+    padding: 5px;
+}
+
+.streaming {
+    margin: 5px;
+    padding: 5px;
+}
+
+.streaming > p {
+    margin: 5px;
+    padding: 5px;
+}
+
+.active {
+    color: green;
+}
+
+.inactive {
+    color: red;
+}
