@@ -65,7 +65,7 @@ def seed_products():
         type_id=1,
         name="Slow Horses",
         description="Everyone wanted a life less ordinary. And only a tiny minority ever got it, and even they probably didn’t appreciate it much..",
-        price=98.50,
+        price=11.69,
         image="https://images-na.ssl-images-amazon.com/images/I/51qzR6Ok+fL._AC_SX184_.jpg"
       )
 
