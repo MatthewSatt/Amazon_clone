@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserOrdersThunk } from "../../store/orders";
 import OrderDisplay from "./OrderDisplay";
+import './Orders.css'
 
 function Orders() {
   const dispatch = useDispatch();
@@ -13,7 +14,7 @@ function Orders() {
   }, [dispatch]);
   return (
     <div className="orders">
-      <div>{user.username}'s Order History</div>
+      <div className="userordertitle">{user.username}'s Order History</div>
       {orders &&
         orders.map((order) => (
           <div key={order.id}>
