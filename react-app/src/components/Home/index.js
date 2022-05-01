@@ -39,6 +39,7 @@ function Home() {
         <HomeCaro2 />
         </div>
       </div>
+      <div className="homeboxes">
       <div className="homerow1">
         <div className="box">
           <div className="box1title">Favorite Books</div>
@@ -142,6 +143,7 @@ function Home() {
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThY0TTfIT4MbS2tcS95yoH4MeJTfbe-w45FA&usqp=CAU"className="movieimage"></img>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoUg2t__lqkZBIjqycnh_G70HR-Qq2yRmHCQ&usqp=CAU"className="movieimage"></img>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmzEXBR-Xu9AWSxTNV55f8tl0RDLT_vvl8g&usqp=CAU"className="movieimage"></img>
+        </div>
       </div>
     </div>
   );

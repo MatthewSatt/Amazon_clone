@@ -114,3 +114,39 @@
     display: none;
 }
 }
+
+@media only screen and (max-width: 1330px) {
+    .homeboxes {
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0px;
+        margin: 0px;
+        border: solid red 1px;
+
+    }
+    .homerow1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .homerow2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .box {
+        min-width: 360px;
+        min-height: 360px;
+    }
+    .homecarousel2 {
+        height: 50vh;
+    }
+}
