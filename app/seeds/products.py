@@ -788,12 +788,19 @@ def seed_products():
         image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
 
     )
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3DhkzTf_OxvG6690L3HHBVfb5GBK96_4eHA&usqp=CAU"className="movieimage"></img>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwM8sRQ_CrNfrWnrT-Pl2uvkfJZa5eA9ypgg&usqp=CAU"className="movieimage"></img>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTand8zTxuYCbBygvgJdXcXjtbM_Xx7OgGD2A&usqp=CAU"className="movieimage"></img>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThY0TTfIT4MbS2tcS95yoH4MeJTfbe-w45FA&usqp=CAU"className="movieimage"></img>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoUg2t__lqkZBIjqycnh_G70HR-Qq2yRmHCQ&usqp=CAU"className="movieimage"></img>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmzEXBR-Xu9AWSxTNV55f8tl0RDLT_vvl8g&usqp=CAU"className="movieimage"></img>
     movies1 = Product(
         type_id=10,
         name="Replace",
         description="",
         price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQudt5t_EZf55GHHTHhDogYg1HvLhU3-3Y6bQ&usqp=CAU"
 
     )
     movies2 = Product(
