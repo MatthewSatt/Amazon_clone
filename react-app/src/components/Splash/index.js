@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import Type from "./Type";
 import DisplayProduct from "./DisplayProduct";
 import "./Splash.css";
-import Carousel from "../Home/Carousel";
+import Carousel from "./Carousel";
 //productsections
 function Splash() {
   const dispatch = useDispatch();

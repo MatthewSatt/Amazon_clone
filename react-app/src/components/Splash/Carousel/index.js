@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import "./Carousel.css";
 
 function Carousel() {
+  const user = useSelector(state => state.session.user)
   const history = useHistory()
 let slideIndex = 0;
 
@@ -11,7 +13,7 @@ useEffect(() => {
 },[])
 
 function showSlides() {
-  if(history.location.pathname === '/') {
+  if(history.location.pathname === '/' && !user) {
 
     let i;
     let slides = document.getElementsByClassName("mySlides");
@@ -25,7 +27,7 @@ function showSlides() {
     } else {
       slides[slideIndex-1].style.display = "block";
     }
-    setTimeout(showSlides, 2900);
+    setTimeout(showSlides, 3800);
   } else {
     return
   }
