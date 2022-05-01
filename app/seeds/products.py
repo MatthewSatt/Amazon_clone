@@ -790,7 +790,6 @@ def seed_products():
     )
 
 
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoUg2t__lqkZBIjqycnh_G70HR-Qq2yRmHCQ&usqp=CAU"className="movieimage"></img>
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmzEXBR-Xu9AWSxTNV55f8tl0RDLT_vvl8g&usqp=CAU"className="movieimage"></img>
     movies1 = Product(
         type_id=10,
@@ -837,7 +836,7 @@ def seed_products():
         name="Replace",
         description="",
         price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoUg2t__lqkZBIjqycnh_G70HR-Qq2yRmHCQ&usqp=CAU"
 
     )
     movies7 = Product(
