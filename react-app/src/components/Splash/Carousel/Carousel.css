@@ -9,6 +9,8 @@
 
 .homeimages {
     width: 100%;
+    z-index: 1;
+    position: relative;
 }
 
 /* Hide the images by default */
