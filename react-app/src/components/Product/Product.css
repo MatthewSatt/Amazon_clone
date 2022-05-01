@@ -29,24 +29,33 @@
 
 
 .productname {
+    text-align: left;
     margin-bottom: 2%;
-    font-size: 300%;
+    font-size: 200%;
+    font-weight: 600;
+    font-family: "Amazon Ember",
+    Arial,
+    sans-serif;
 }
 
 .productdescription {
-    display: flex;
-    justify-content: center;
-    margin: 20px;
+    text-align: start;
+    word-wrap: break-word;
     font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
 }
 
 .singleproductbuttons {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     text-align: center;
     align-items: center;
-    width: 40%;
+    width: 55%;
+    border-radius: 2px;
+    margin: 20px;
+    background-color: white;
+    padding: 20px;
 }
 
 .addtocart {
@@ -118,4 +127,26 @@
 @keyframes shiftleft {
     from{ transform: translateX(420px)};
     to{ transform: translateX(0px)};
+}
+
+.cart-buttons {
+    border: 1.5px solid rgb(207, 211, 211);
+    border-radius: 3px;
+    margin: 20px;
+}
+
+
+@media only screen and (max-width: 720px) {
+    .imageproductdetails {
+        flex-direction: column;
+    }
+    .singleproductbuttons {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .singleproductimage {
+        width: 100% !important;
+    }
+
 }
