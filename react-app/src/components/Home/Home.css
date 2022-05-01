@@ -21,26 +21,29 @@
 .homecarousels {
     display: flex;
     justify-content: center;
-    height: 25vh;
+    height: 50vh;
     width: 100%;
     margin: 3px;
-
 }
 
 
 .homecarousel1 {
-    background-image: url("https://i.ytimg.com/vi/MFPg04jAfcY/maxresdefault.jpg");
+    background-image: url("https://m.media-amazon.com/images/G/01/FlexComm/Web/Home1rleftMakeQuickerweb.png");
     background-repeat: no-repeat;
     position: relative;
-    background-position: center;
-    width: 48%;
+    width: 20%;
     margin: 10px;
+    overflow: hidden;
+    margin-right: 0;
 }
 
 .homecarousel2 {
-    width: 48%;
+    width: 80%;
     margin: 10px;
+    overflow: hidden;
+    margin-left: 0;
 }
+
 
 .homerow1 {
     display: flex;
@@ -98,4 +101,16 @@
     left: 0;
     padding: 4px;
     font-size: 28px;
+}
+
+@media only screen and (max-width: 1160px) {
+.homecarousel2 {
+    width: 100%;
+    /* margin: 10px;
+    overflow: hidden;
+    margin-left: 0; */
+}
+.homecarousel1 {
+    display: none;
+}
 }
