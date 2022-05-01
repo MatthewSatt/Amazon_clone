@@ -1124,7 +1124,7 @@ def seed_products():
     db.session.add(health9)
     db.session.add(health10)
     db.session.add(health11)
-    db.session.add(health12)
+    db.session.add(health1)
 
 
     db.session.commit()
