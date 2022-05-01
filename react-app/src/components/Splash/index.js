@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Type from "./Type";
 import DisplayProduct from "./DisplayProduct";
 import "./Splash.css";
+import Carousel from "../Home/Carousel";
 //productsections
 function Splash() {
   const dispatch = useDispatch();
@@ -17,9 +18,12 @@ function Splash() {
     dispatch(getProducts());
     dispatch(getTypesThunk());
   }, [dispatch]);
+
   return (
     <div className="splashpage">
-      <div className="tophalf"></div>
+      <div className="imagecarousel">
+        <Carousel />
+      </div>
       <div className="splashnav">
         {types &&
           types.map((type) => (

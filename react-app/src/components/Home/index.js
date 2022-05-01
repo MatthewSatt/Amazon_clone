@@ -7,6 +7,7 @@ import ProductDisplay from "../ProductTypes/ProductDisplay";
 import Dropdown from "../Dropdown";
 import "./Home.css";
 import { getCartThunk } from "../../store/cart";
+import Carousel from "./Carousel";
 
 function Home() {
   const dispatch = useDispatch();
@@ -27,31 +28,10 @@ function Home() {
   return (
     <div className="homepage">
       <div className="home">
-        {/* <ol>
-          To do:
-          <li>Likes on reviews?</li>
-          <li>
-            Fix delete tags and just return cart objects. cart.id,
-            cart.product_id, cart.user_id, cart.quantity)<br></br>
-            <small>
-              Then have different routes to indivdual products(referenced from
-              cart.productId) to render them onto the page. But then we can
-              delete the cart directly from the id. Which will fix the duplicate
-              product mass delete and the the global delete for each user. Idk
-              I'm tired
-            </small>
-          </li>
-          <li>Seeds for days I want about 15 of each product type</li>
-          <li>Css checkout styling problem is still untouched because nah.</li>
-          <li>Searchbar to search for products || product types</li>
-          <li>AWS webbuckets</li>
-          <li>Web Sockets?</li>
-          <li>tbd...</li>
-        </ol> */}
-
         <Dropdown showSideNav={showSideNav} setShowSideNav={setShowSideNav} />
       </div>
-      {products &&
+      <Carousel />
+      {/* {products &&
         products.map((product) => (
           <ProductDisplay
             key={product.id}
@@ -64,7 +44,7 @@ function Home() {
             created={product.created_at}
             updated={product.updated}
           />
-        ))}
+        ))} */}
     </div>
   );
 }
