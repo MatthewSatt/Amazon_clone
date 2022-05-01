@@ -1,7 +1,99 @@
+.homepage {
+    background-color: #dedede;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headerhome {
+    position: static;
+    margin-bottom: auto;
+    width: 100%;
+    background-image: url("https://assets.aboutamazon.com/dims4/default/b073721/2147483647/strip/true/crop/2357x1179+74+690/resize/1200x600!/quality/90/?url=https%3A%2F%2Famazon-blogs-brightspot.s3.amazonaws.com%2Fab%2F7d%2F7387c5c34035af9dafce465fe433%2Famazon-org-smile-extruded-sq.jpg");
+}
 
 
 .dropdownmenu{
     font-size: 40px;
     padding: 5px;
-    /* position: absolute; */
+}
+
+.homecarousels {
+    display: flex;
+    justify-content: center;
+    height: 25vh;
+    width: 100%;
+    margin: 3px;
+
+}
+
+.homecarousel1 {
+width: 48%;
+ border: 1px solid blue;
+ margin: 10px;
+}
+
+.homecarousel2 {
+    width: 48%;
+    border: 1px solid green;
+    margin: 10px;
+}
+
+.homerow1 {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+.homerow2 {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.homerow3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 90%;
+    height: 300px;
+    margin: 10px;
+    background-color: white;
+}
+.box {
+    display: flex;
+    border-radius: 15px;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    width: 350px;
+    height: 350px;
+    margin: 10px;
+}
+
+.boximage {
+    height: 130px;
+    width: 130px;
+    margin: 10px;
+    border: 1px solid rgb(207, 207, 207);
+    object-fit: contain;
+}
+
+.movieimage {
+    display: fit-content;
+    width: 150px;
+    height: 220px;
+    margin: 8px;
+    border: 2px solid black;
+}
+
+
+.homepagemoviestitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 4px;
+    font-size: 28px;
 }
