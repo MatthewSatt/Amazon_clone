@@ -32,9 +32,6 @@ function Home() {
         <Dropdown showSideNav={showSideNav} setShowSideNav={setShowSideNav} />
       </div>
       <div className="homecarousels">
-        <div className="homecarousel1">
-
-        </div>
         <div className="homecarousel2">
         <HomeCaro2 />
         </div>

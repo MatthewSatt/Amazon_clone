@@ -21,7 +21,7 @@
 .homecarousels {
     display: flex;
     justify-content: center;
-    height: 50vh;
+    height: fit-content;
     width: 100%;
     margin: 3px;
 }
@@ -40,7 +40,6 @@
 .homecarousel2 {
     width: 80%;
     margin: 10px;
-    overflow: hidden;
     margin-left: 0;
 }
 
@@ -125,7 +124,6 @@
         width: 100%;
         padding: 0px;
         margin: 0px;
-        border: solid red 1px;
 
     }
     .homerow1 {
@@ -142,11 +140,24 @@
         justify-content: center;
 
     }
+    .homerow3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .homerow3 > *{
+        width: 40%;
+        height: 60%;
+    }
     .box {
         min-width: 360px;
         min-height: 360px;
     }
-    .homecarousel2 {
-        height: 50vh;
-    }
+
 }
