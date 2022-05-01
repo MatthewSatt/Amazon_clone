@@ -48,3 +48,28 @@
      flex-direction: column;
      margin-right: 5%;
  }
+
+
+ @media only screen and (max-width: 730px) {
+   .productdisplay {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+     .productitemname{
+      display: none;
+     }
+
+     .productitemdescription {
+        display: none;
+     }
+
+     .productitemimage {
+        margin-right: 30px;
+     }
+  }
