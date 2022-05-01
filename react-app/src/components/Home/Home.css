@@ -82,11 +82,11 @@ width: 48%;
 }
 
 .movieimage {
-    object-fit: contain;
+    display: fit-content;
     width: 150px;
     height: 220px;
     margin: 8px;
-    border: 1px solid red;
+    border: 2px solid black;
 }
 
 
