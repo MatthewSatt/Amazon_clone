@@ -24,7 +24,7 @@ function Orders() {
               userId={order.user_id}
             />
           </div>
-        ))}
+        )).reverse()}
     </div>
   );
 }
