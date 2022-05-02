@@ -16,7 +16,7 @@ function Checkout() {
 
   useEffect(() => {
     dispatch(getCartThunk(user.id));
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(getProducts())
@@ -40,7 +40,7 @@ function Checkout() {
             src="https://www.intelligencenode.com/blog/wp-content/uploads/2019/06/Prime-day.jpg"
             alt=""
           ></img>
-       
+
         </div>
         <div className="checkoutsubtotal">
           <Subtotal />

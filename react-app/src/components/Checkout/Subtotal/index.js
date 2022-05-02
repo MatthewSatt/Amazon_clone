@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { getCartThunk } from '../../../store/cart'
+import {submitOrderThunk } from '../../../store/orders'
 import "./Subtotal.css"
 
 
@@ -16,7 +16,6 @@ function Subtotal() {
   const [savings, setSavings] = useState(0.00)
 
 
-
 useEffect(() => {
   setLength(cart.length)
   setShipping(0.00)
@@ -24,6 +23,7 @@ useEffect(() => {
   setTotal(0.00)
   setSavings(0.00)
 }, [cart.length])
+
 
 useEffect(() =>  {
   let itemPrice = 0
@@ -50,8 +50,11 @@ useEffect(() =>  {
 
     }
   }, [cart.length])
-
 })
+
+const purchaseOrders = () => {
+  dispatch(submitOrderThunk({"submitOrder": cart}))
+}
 
   return (
     <div className='subtotal'>
@@ -66,7 +69,7 @@ useEffect(() =>  {
     <div className='totalcheckout'>
 
       <h2>Total: {`$${Number.parseFloat(total).toFixed(2)}`}</h2>
-    <button className='cartbutton'>Purchase</button>
+    <button  onClick={purchaseOrders}className='cartbutton'>Purchase</button>
     </div>
 
     </div>
