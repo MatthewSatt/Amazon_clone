@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { getCartThunk } from '../../../store/cart'
 import {submitOrderThunk } from '../../../store/orders'
+import { getProducts } from '../../../store/products'
 import "./Subtotal.css"
 
 
@@ -52,8 +54,10 @@ useEffect(() =>  {
   }, [cart.length])
 })
 
-const purchaseOrders = () => {
-  dispatch(submitOrderThunk({"submitOrder": cart}))
+const purchaseOrders = async () => {
+  await dispatch(submitOrderThunk({"submitOrder": cart}))
+  await dispatch(getCartThunk(user.id))
+
 }
 
   return (
