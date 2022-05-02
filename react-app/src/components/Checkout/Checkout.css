@@ -8,29 +8,28 @@
   }
 
   .checkoutimages {
+    border-image-repeat: no-repeat;
     width: 66.6%;
+  }
+  .third {
+    background-color: blue;
   }
 
   .banner {
     width: 50%;
     height: 200px;
-    margin-bottom: 5px;
-
   }
 
   .checkoutsubtotal {
     width: 33.4%;
-    height: 200px;
   }
 
   .checkouttitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: sticky;
-    position: top;
-    top: 265px;
+    text-align: center;
+    padding: 10px;
     z-index: 100;
+    background-color: black;
+    color: white;
   }
 
 
@@ -38,9 +37,37 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    height: auto;
   }
 
 
   ::-webkit-scrollbar {
     display: none;
   }
+
+  @media only screen and (max-width: 685px) {
+    .banner{
+      display: none;
+    }
+    .usernamesbasket {
+      display: none;
+    }
+    .subtotal {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      max-height: 30vh;
+      margin-bottom: 5%;
+  }
+
+  .checkoutbottom{
+    margin-top: 30vh;
+  }
+  .cartitem {
+    display: flex;
+    flex-direction: column;
+  }
+  .cartiteminfo {
+    text-align: center;
+  }
+}

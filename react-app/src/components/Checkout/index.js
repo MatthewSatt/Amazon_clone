@@ -27,6 +27,9 @@ function Checkout() {
     <div className="checkout">
       <div className="checkouttop">
         <div className="checkoutimages">
+        <div className="checkouttitle">
+          <h2 className="usernamesbasket">{user.username}'s Basket</h2>
+        </div>
           <img
             className="banner"
             src="https://gadgetstouse.com/wp-content/uploads/2021/01/prime-video.jpg"
@@ -37,15 +40,13 @@ function Checkout() {
             src="https://www.intelligencenode.com/blog/wp-content/uploads/2019/06/Prime-day.jpg"
             alt=""
           ></img>
+       
         </div>
         <div className="checkoutsubtotal">
           <Subtotal />
         </div>
       </div>
       <div className="checkoutbottom">
-        <div className="checkouttitle">
-          <h2>{user.username}'s Basket</h2>
-        </div>
         <div className="checkoutproduct">
           {
             carts?.map((cart) => (
