@@ -4,9 +4,7 @@ import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 function Type({name, id}) {
   return (
     <h2 className="productcategories">
-    <FaArrowAltCircleLeft id="left" />
-  {name}
-    <FaArrowAltCircleRight id="right" />
+  <div className='typename'>{name}</div>
 </h2>
   )
 }

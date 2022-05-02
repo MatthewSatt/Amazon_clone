@@ -35,7 +35,7 @@
 .splashnav {
     z-index: 2;
     position: absolute;
-    top:60%;
+    top:50%;
     width: 100%;
 }
 
@@ -66,4 +66,10 @@
     transition: 0.2s;
     z-index: 1;
     cursor: pointer
+}
+
+
+.typename {
+    margin-left: 20px;
+    padding: 2px;
 }

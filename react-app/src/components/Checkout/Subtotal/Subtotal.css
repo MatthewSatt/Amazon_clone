@@ -1,11 +1,27 @@
 .subtotal {
     display: flex;
-    height: 100%;
+    height: auto;
     border-radius: 2px;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     background-color: #f59415;
+    border: 2px solid black;
+}
+
+.cartitemcount {
+    margin-left: 20px;
+    margin-top: 10px;
+    padding: 10px;
+}
+.cartitemcount h3{
+    margin: 5px;
+    border-bottom: 1px solid black;
+}
+.cartitemcount h4{
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 1px solid black;
 }
 
 
@@ -13,7 +29,7 @@
     background: #f0c14b;
     border: 1px solid;
     margin-top: 10px;
-    border-color: #a88738 #9c7e31 #846a29;
+    border-color: #a88738 #9c7e31;
     color: #111;
 }
 

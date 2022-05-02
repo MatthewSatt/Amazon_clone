@@ -21,9 +21,7 @@ function Splash() {
 
   return (
     <div className="splashpage">
-      <div className="imagecarousel">
         <Carousel />
-      </div>
       <div className="splashnav">
         {types &&
           types.map((type) => (

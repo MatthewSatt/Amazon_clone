@@ -56,13 +56,13 @@ useEffect(() =>  {
   return (
     <div className='subtotal'>
     <div className='cartitemcount'>
-      <h2>Total Items: ({length}):</h2>
-    </div>
+      <h3>Total Items: ({length}):</h3>
       <h4>Item Cost: ${itemPrice}</h4>
       <h4>Shipping: ${shipping}</h4>
       {user.isPrime && (
         <h4>Prime Discount: -${savings}</h4>
-      )}
+        )}
+        </div>
     <div className='totalcheckout'>
 
       <h2>Total: {`$${Number.parseFloat(total).toFixed(2)}`}</h2>

@@ -27,6 +27,8 @@ function showSlides1() {
       slides[slideIndex1-1].style.display = "block";
     }
     setTimeout(showSlides1, 2400);
+  } else {
+    return
   }
 }
   return (
