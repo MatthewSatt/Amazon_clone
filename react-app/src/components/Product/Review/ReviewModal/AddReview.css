@@ -1,38 +1,29 @@
 .addreviewmodal {
     width: 100%;
     height: 100%;
-    overflow-y: scroll;
+    margin-top: 20px;
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
     text-align: center;
 }
 
-
-.formcontent {
-    display: flex;
-    flex-direction: column;
-    overflow-y: scroll;
-
-    align-items: center;
-}
-
-.addreviewmodal input{
-    width: 20%;
+.addreviewmodal{
+    width: 100%;
 }
 
 .nameinput{
-    text-align: center;
-    margin-top: 40px;
-    width: 18vw;
+    margin-top: 10px;
+ width: 100%;
+ height: auto;
 }
 
 
 
 .bodyinput{
-    margin-top: 40px;
-    height: 40vh;
-    width: 18vw;
+    margin-top: 20px;
+    width: 100%;
+    height: 60vh;
     text-align: top;
     text-align: left;
 }
@@ -45,4 +36,17 @@
 
 #submitbutton {
    margin-top: 40px;
+}
+
+@media only screen and (max-width: 780px) {
+    #modal-content {
+        width: 50%;
+    }
+}
+
+
+@media only screen and (max-width: 333px) {
+    #modal-content {
+        width: 100%;
+    }
 }
