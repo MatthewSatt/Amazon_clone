@@ -142,18 +142,12 @@
     }
     .homerow3 {
         display: flex;
-        flex-direction: column;
         flex-wrap: wrap;
-        height: 100%;
+        height: auto;
         width: 100%;
         align-items: center;
         justify-content: center;
 
-    }
-
-    .homerow3 > *{
-        width: 40%;
-        height: 60%;
     }
     .box {
         min-width: 360px;

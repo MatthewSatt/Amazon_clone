@@ -24,7 +24,7 @@ function Prime() {
         <div className="primemembers">
           <h1></h1>
           <div className="userprimetext">
-            <h3>Prime Membership <span className="active">Active</span></h3>
+            <h3>Prime Membership <span className="activez">Active</span></h3>
             <h4>
               You enjoy all the Shipping and Streaming benefits of our members.
             </h4>
