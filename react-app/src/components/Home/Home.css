@@ -76,6 +76,17 @@
     height: 320px;
     margin: 10px;
     padding: 4px;
+    transition: 1s;
+    box-shadow: 0px 0px 10px 5px rgb(160, 160, 160);
+    color: black;
+    cursor: pointer;
+}
+
+.box:hover {
+    box-shadow: 0px 0px 10px 5px rgb(0, 1, 7);
+    color: black;
+
+    cursor: pointer;
 }
 
 .boximage {
@@ -91,6 +102,14 @@
     height: 220px;
     margin: 8px;
     padding: 5px;
+    transition: 1s;
+}
+
+.movieimage:hover {
+    box-shadow: 0px 0px 10px 5px rgb(0, 1, 7);
+    color: black;
+    font-family: bold;
+    cursor: pointer;
 }
 
 

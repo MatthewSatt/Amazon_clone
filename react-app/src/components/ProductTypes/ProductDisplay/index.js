@@ -4,8 +4,11 @@ import {Link} from 'react-router-dom'
 import {useState, useEffect} from 'react'
 import { useSelector } from 'react-redux'
 import AddReviewModal from '../../Product/Review/ReviewModal/AddReview'
+import { addToCartThunk } from '../../../store/cart'
+import {useDispatch} from 'react-redux'
 
 function ProductDisplay({id, typeId, name, image, price, desc, type_id, created, updated}) {
+  const dispatch = useDispatch()
   const user = useSelector(state => state.session.user)
   const [showReviewAddModal, setShowReviewAddModal] = useState(false)
 
@@ -23,8 +26,31 @@ function ProductDisplay({id, typeId, name, image, price, desc, type_id, created,
       setShowReviewAddModal(true);
     }
   };
+
+  const handleAddToCart = async () => {
+    if (!user) {
+      const div = document.createElement("div");
+      div.id = "alertmessage";
+      const div2 = document.getElementById("alert");
+      let parentDiv = div2.parentNode;
+      parentDiv.insertBefore(div, div2);
+      div.innerText = "You must be logged in to add to your cart";
+      setTimeout(() => div.remove(), 3000);
+    } else {
+      const item = {"productId": id, "userId": user.id, "quantity": 1}
+      dispatch(addToCartThunk(item))
+      const div = document.createElement("div");
+      div.id = "alertmessage";
+      const div2 = document.getElementById("alert");
+      let parentDiv = div2.parentNode;
+      parentDiv.insertBefore(div, div2);
+      div.innerText = `${name} added to your cart`;
+      setTimeout(() => div.remove(), 3000);
+    }
+  };
   return (
     <div className='productdisplay'>
+      <div id='alert'></div>
       <Link to={`/product/${id}`}>
         <img className='productitemimage'src={image} alt='image'></img>
       </Link>
@@ -34,7 +60,7 @@ function ProductDisplay({id, typeId, name, image, price, desc, type_id, created,
         </div>
         <div className='productitemdescription'>{desc}</div>
         <div className='productbuttons'>
-          <button className='addtocart'>Add to Cart</button>
+          <button onClick={handleAddToCart} className='addtocart'>Add to Cart</button>
           <button onClick={handleReview} className='addtocart'>Leave review</button>
         </div>
         {showReviewAddModal && (
