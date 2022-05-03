@@ -12,7 +12,7 @@ useEffect(() => {
 },[])
 
 function showSlides() {
-  if(history.location.pathname === '/' && user) {
+  if(history.location.pathname === '/' && user.id) {
 
     let i;
     let slides = document.getElementsByClassName("mySlides");
