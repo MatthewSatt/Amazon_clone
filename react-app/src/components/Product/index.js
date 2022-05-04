@@ -12,18 +12,26 @@ function Product() {
   const dispatch = useDispatch();
   const { productId } = useParams();
   const user = useSelector((state) => state.session.user);
-  const products = useSelector((state) => Object.values(state?.productReducer));
+  const products = useSelector((state) => Object?.values(state?.productReducer));
   const reviews = useSelector((state) => state?.reviewReducer);
-  const thisProduct = products.find((product) => product?.id === +productId);
+  const thisProduct = products?.find((product) => product?.id === +productId);
   const [showReviewAddModal, setShowReviewAddModal] = useState(false)
-
-
 
   useEffect(() => {
     if(user) {
       dispatch(getCartThunk(user.id))
     }
   }, [])
+  
+  useEffect(() => {
+    dispatch(getProducts());
+  }, []);
+
+  useEffect(() => {
+    dispatch(getReviewsThunk(+productId));
+  }, [dispatch, productId]);
+
+
 
   const handleAddToCart = async () => {
     if (!user) {
@@ -60,14 +68,6 @@ function Product() {
       setShowReviewAddModal(true);
     }
   };
-
-  useEffect(() => {
-    dispatch(getProducts());
-  }, []);
-
-  useEffect(() => {
-    dispatch(getReviewsThunk(+productId));
-  }, [dispatch]);
   return (
     <div className="singleproduct">
       <div id="alert"></div>

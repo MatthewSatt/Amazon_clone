@@ -66,6 +66,7 @@ function NavBar() {
       <div className="searchresultcontainer">
       {searchResult.length > 0 && searchResult.map(result => (
         <Link onClick={clear} to={`product/${result.id}`}className="searchlinks">
+          {console.log(result.id)}
         <div className="searchresults">{result.name}</div>
         </Link>
         ))}

@@ -7,7 +7,7 @@ import AddReviewModal from '../../Product/Review/ReviewModal/AddReview'
 import { addToCartThunk } from '../../../store/cart'
 import {useDispatch} from 'react-redux'
 
-function ProductDisplay({id, typeId, name, image, price, desc, type_id, created, updated}) {
+function ProductDisplay({id, name, image, price, desc, created, updated}) {
   const dispatch = useDispatch()
   const user = useSelector(state => state.session.user)
   const [showReviewAddModal, setShowReviewAddModal] = useState(false)
