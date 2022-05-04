@@ -1,135 +1,150 @@
-# Flask React Project
 
-This is the starter for the Flask React project.
+# Amazon 
 
-## Getting started
+This website is a clone of [Amazon](https://www.Amazon.com/). 
 
-1. Clone this repository (only this branch)
+## Table of Contents 
 
-   ```bash
-   git clone https://github.com/appacademy-starters/python-project-starter.git
-   ```
+1. [General Info](#general-info)
+2. [Wiki-Documentation](#wiki-documentation)
+3. [Technologies](#technologies)
+4. [Installation](#installation)
+5. [Development](#development)
 
-2. Install dependencies
 
-      ```bash
-      pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt
-      ```
 
-3. Create a **.env** file based on the example with proper settings for your
-   development environment
-4. Setup your PostgreSQL user, password and database and make sure it matches your **.env** file
-
-5. Get into your pipenv, migrate your database, seed your database, and run your flask app
-
-   ```bash
-   pipenv shell
-   ```
-
-   ```bash
-   flask db upgrade
-   ```
-
-   ```bash
-   flask seed all
-   ```
-
-   ```bash
-   flask run
-   ```
-
-6. To run the React App in development, checkout the [README](./react-app/README.md) inside the `react-app` directory.
-
+### General Info 
 ***
-*IMPORTANT!*
-   If you add any python dependencies to your pipfiles, you'll need to regenerate your requirements.txt before deployment.
-   You can do this by running:
+# Amazon
+Amazon is an application where users can shop, view, comment, and purchase products that exist in the Amazon store.
+* Link to live  [Amazon](https://mattsamazonclone.herokuapp.com) project. 
 
-   ```bash
-   pipenv lock -r > requirements.txt
-   ```
+## Key Functionalities 
 
-*ALSO IMPORTANT!*
-   psycopg2-binary MUST remain a dev dependency because you can't install it on apline-linux.
-   There is a layer in the Dockerfile that will install psycopg2 (not binary) for us.
+Amazon allows users to view all of the products within the store, make reviews about the products, and purchase them, which moves the users cart item directly into the the recent orders section.
+
+  * Reviews: Users can create, read, update, and delete reviews.
+  * Prime: Users can update their current Prime memebership status which offers discounts on purchase totals.
+  * Products: Users can view all of the products inside of the amazon store.
+  * Types: All of Amazons products are categorized into specfic types which users can view their 
+  * Orders: Users can view their full order history and create new orders but making purchases.
+  * Cart: Users can add, view, and delete cart items them as desired.
+
+
+### Amazon Landing Page
+![landing](https://user-images.githubusercontent.com/85750283/155817655-01f031e4-934c-4932-8bc1-977fd5d0b7ba.png)
+
+
+### Amazon Home Page
+![home](https://user-images.githubusercontent.com/85750283/155817904-0443d4b2-86a2-4e53-ae9e-a3b9a26f93da.png)
+
+
+### Amazon Login Page 
+![login](https://user-images.githubusercontent.com/85750283/155817746-41b01f0b-a0e1-4272-aa30-51afccc114ea.png)
+
+
+### Amazon Sign Up Page
+![sign-up](https://user-images.githubusercontent.com/85750283/155817849-58e12c17-d83c-4355-b08d-b8ef8334c5db.png)
+
+
+### Amazon Checkout page
+![songs-modal](https://user-images.githubusercontent.com/85750283/155818076-8a5fcae7-28e0-45d0-934e-814a288c6880.png)
+
+
+### Amazon Drop Down Menu
+![songs-modal](https://user-images.githubusercontent.com/85750283/155818076-8a5fcae7-28e0-45d0-934e-814a288c6880.png)
+
+
+### Amazon Drop Down Menu
+![songs-modal](https://user-images.githubusercontent.com/85750283/155818076-8a5fcae7-28e0-45d0-934e-814a288c6880.png)
+
+
+### Amazon Drop Down Menu
+![songs-modal](https://user-images.githubusercontent.com/85750283/155818076-8a5fcae7-28e0-45d0-934e-814a288c6880.png)
+
+## Wiki Documentation: 
+***
+* [Database Schema](https://github.com/MatthewSatt/Amazon_clone/wiki/Database-Schema)
+* [MVP Feature List](https://github.com/MatthewSatt/Amazon_clone/wiki/Feature-List)
+* [User Stories](https://github.com/MatthewSatt/Amazon_clone/wiki/User-Stories)
+* [Wireframes](https://github.com/MatthewSatt/Amazon_clone/wiki/Wire-Frames)
+
+## Technologies 
+***
+Amazon was developed using the following Technologies: 
+
+<img 
+src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height=40/><img 
+src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" height=40/><img 
+src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" height=40/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"  height=40/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg"  height=40/><img  
+src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"  height=40/><img  
+src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"  height=40/><img  
+src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"  height=40/><img  
+src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"  height=40/>
+
+
+ React | Redux | Flask | Postgres |SQLAlchemy | Alembic | CSS | Git | Node.js | NPM | HTML / JSX | Heroku
+
+## Languages 
 ***
 
-## Deploy to Heroku
+<img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"  height=40/><img
+src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height=50/>
+* JavaScript/React (frontend)
+* Python/Flask (backend)
 
-1. Before you deploy, don't forget to run the following command in order to
-ensure that your production environment has all of your up-to-date
-dependencies. You only have to run this command when you have installed new
-Python packages since your last deployment, but if you aren't sure, it won't
-hurt to run it again.
 
-   ```bash
-   pipenv lock -r > requirements.txt
-   ```
+## Installation 
 
-2. Create a new project on Heroku
-3. Under Resources click "Find more add-ons" and add the add on called "Heroku Postgres"
-4. Install the [Heroku CLI](https://devcenter.heroku.com/articles/heroku-command-line)
-5. Run
+To install Amazon on your local machine please clone the project repository. 
 
-   ```bash
-   heroku login
-   ```
+1 )  `git clone https://github.com/MatthewSatt/Amazon_clone.git`
 
-6. Login to the heroku container registry
+2 ) cd into Amazon_clone
+    `cd Amazon_clone/`
 
-   ```bash
-   heroku container:login
-   ```
+3 )  Install dependencies
+     
+     `pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt`
 
-7. Update the `REACT_APP_BASE_URL` variable in the Dockerfile.
-   This should be the full URL of your Heroku app: i.e. "https://flask-react-aa.herokuapp.com"
-8. Push your docker container to heroku from the root directory of your project.
-   (If you are using an M1 mac, follow [these steps below](#for-m1-mac-users) instead, then continue on to step 9.)
-   This will build the Dockerfile and push the image to your heroku container registry.
+4 )  Create a .env file based on the example with proper settings for your development environment
 
-   ```bash
-   heroku container:push web -a {NAME_OF_HEROKU_APP}
-   ```
+5 )  Setup your PostgreSQL user, password, database, and make sure it matches your .env file
 
-9. Release your docker container to heroku
 
-      ```bash
-      heroku container:release web -a {NAME_OF_HEROKU_APP}
-      ```
+  
+6 ) To setup the backend application...
+   
+   enter the pipenv shell, migrate your database, seed your database, and run the flask application 
+     
+  •  `cd Amazon_clone/` 
 
-10. set up your database
+  •  `pipenv shell` to enter the pipenv shell 
 
-      ```bash
-      heroku run -a {NAME_OF_HEROKU_APP} flask db upgrade
-      heroku run -a {NAME_OF_HEROKU_APP} flask seed all
-      ```
+  •  `flask db upgrade`
 
-11. Under Settings find "Config Vars" and add any additional/secret .env
-variables.
+  •  `flask seed all`
 
-12. profit
+  •  `flask run` while in the shell and within the backend (Amazon_clone/) directory under localhost:5000
+  
+7 ) To run the frontend react application...
 
-### For M1 Mac users
+  •  Change into the frontend directory `Amazon_clone/react-app/`
 
-(Replaces **Step 8**)
+  •  Run `npm install` to install all dependencies from the package.json within the frontend directory 
+  
+  •  `npm start` within the frontend directory(Amazon_clone/react-app) under localhost:3000
+  
+## Development 
+This project was developed by a single developer (Matthew Satterwhite).
 
-1. Build image with linux platform for heroku servers. Replace
-{NAME_OF_HEROKU_APP} with your own tag:
+#### Highlight features: 
 
-   ```bash=
-   docker buildx build --platform linux/amd64 -t {NAME_OF_HEROKU_APP} .
-   ```
+* Design: Amazon was designed to be an interactive website that focuses on user experience and incorporates modern design elements. To accomplish this, transition effects and animations were added to different parts of the site to update the user on the current status of their orders, reviews, cart products, and individual payments. 
 
-2. Tag your app with the url for your apps registry. Make sure to use the name
-of your Heroku app in the url and tag name:
 
-   ```bash=2
-   docker tag {NAME_OF_HEROKU_APP} registry.heroku.com/{NAME_OF_HEROKU_APP}/web
-   ```
 
-3. Use docker to push the image to the Heroku container registry:
+## Future Features:
 
-   ```bash=3
-   docker push registry.heroku.com/{NAME_OF_HEROKU_APP}/web
-   ```
-# Amazon_clone
+• I would like to develop discounts on specific products for users that are subscribed to prime.
+
