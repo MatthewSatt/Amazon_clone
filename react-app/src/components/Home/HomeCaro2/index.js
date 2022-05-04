@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 
@@ -35,6 +35,7 @@ function showSlides1() {
     <div className="slideshow-container">
       <div className="mySlides1 fade">
         <img
+        alt=''
           className="homeimages"
           src="https://m.media-amazon.com/images/I/611YB+hYM3L._SX3000_.jpg"
         />
@@ -42,6 +43,7 @@ function showSlides1() {
 
       <div className="mySlides1 fade">
         <img
+        alt=''
           className="homeimages"
           src="https://m.media-amazon.com/images/I/61lZZvJoB7L._SX3000_.jpg"
         />

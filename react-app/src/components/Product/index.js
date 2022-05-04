@@ -73,14 +73,14 @@ function Product() {
       <div id="alert"></div>
       <div className="imageproductdetails">
         <div>
-          <img className="singleproductimage" src={thisProduct?.image} />
+          <img alt='' className="singleproductimage" src={thisProduct?.image} />
         </div>
         <div className="singleproductbuttons">
           <div>
           <div className="productname">{thisProduct?.name}</div>
           <div className="productdescription">{thisProduct?.description}</div>
           </div>
-          
+
           <div className="cart-buttons">
           <div className="price">
             <small>$</small>
@@ -91,7 +91,7 @@ function Product() {
           </button>
           <button onClick={handleReview} className="addtocart">Leave a Review</button>
           </div>
-         
+
         </div>
       </div>
       <div className="productreviews">

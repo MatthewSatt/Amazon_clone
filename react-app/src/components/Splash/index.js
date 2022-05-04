@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../store/products";
 import { getTypesThunk } from "../../store/types";
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import Type from "./Type";
 import DisplayProduct from "./DisplayProduct";
 import "./Splash.css";
@@ -29,7 +27,7 @@ function Splash() {
                   <Type id={type.id} name={type.name}/>
               <div className="productline">
                 {products
-                  .filter((product) => product.type_id == type.id)
+                  .filter((product) => product.type_id === type.id)
                   .map((filteredProducts) => (
                       <DisplayProduct id={filteredProducts.id} image={filteredProducts.image}/>
                   ))}

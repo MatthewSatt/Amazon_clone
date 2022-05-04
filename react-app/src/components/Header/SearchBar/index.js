@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {Link} from 'react'
 import SearchIcon from "@mui/icons-material/Search";
 import { getProducts } from "../../../store/products";
 
@@ -25,7 +24,6 @@ function SearchBar({setSearchResult, searchResult, search, setSearch}) {
       let array = []
       for(let i = 0; i< products.length; i++) {
          let name = products[i].name
-         console.log(name)
          if(name.includes(search) && array.length < 7) {
              array.push(products[i])
          }

@@ -13,7 +13,7 @@ function Automotive() {
 
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId));
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="electronics">

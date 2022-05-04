@@ -7,12 +7,12 @@ import "./Prime.css";
 function Prime() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);
-  const users = useSelector((state) => state.userReducer);
+  // const users = useSelector((state) => state.userReducer);
   console.log(user.isPrime)
 
   useEffect(() => {
     dispatch(getUserThunk(user.id));
-  }, [dispatch]);
+  }, [dispatch, user.id]);
 
   const setPrime = async () => {
     await dispatch(setPrimeThunk(user.id));

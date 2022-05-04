@@ -12,7 +12,7 @@ function Sports() {
   const { typeId } = useParams();
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId));
-  }, []);
+  }, [dispatch, typeId]);
   return (
     <div className="electronics">
     <div id="sportsimage">

@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBasketIcon from "@mui/icons-material/ShoppingBasket";
 import "./Header.css";
 import { useDispatch, useSelector } from "react-redux";
@@ -48,11 +47,11 @@ function NavBar() {
     old.appendChild(errorDiv);
     setTimeout(() => errorDiv.remove(), 2500);
   };
-  console.log(searchResult);
   return (
     <div className="header">
       <Link to="/">
         <img
+        alt=''
           className="headerlogo"
           src="https://logos-world.net/wp-content/uploads/2020/04/Amazon-Emblem.jpg"
         />

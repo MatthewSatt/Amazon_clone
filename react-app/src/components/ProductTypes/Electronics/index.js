@@ -1,6 +1,5 @@
 import React from 'react'
 import "./Electronics.css"
-
 import { useSelector, useDispatch } from 'react-redux'
 import { getProductTypesThunk } from '../../../store/products'
 import { useParams } from 'react-router-dom'
@@ -13,7 +12,7 @@ function Electronics() {
   const {typeId} = useParams()
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId))
-  }, [])
+  }, [dispatch, typeId])
   return (
     <div className="electronics">
     <div id="electronicsimage">

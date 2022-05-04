@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { signUp } from "../../store/session";
-import { Link } from "react-router-dom";
 import "./Signup.css";
 
 const SignUp = () => {
@@ -52,6 +51,7 @@ const SignUp = () => {
   return (
     <div className="login">
       <img
+      alt=''
         className="login__logo"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
       />

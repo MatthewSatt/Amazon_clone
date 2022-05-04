@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FaAlignJustify, FaArrowAltCircleLeft } from "react-icons/fa";
 import { Modal } from "../../context/Modal";
@@ -8,7 +8,7 @@ import "./Dropdown.css";
 
 function Dropdown({ showSideNav, setShowSideNav }) {
   const dispatch = useDispatch();
-  const products = useSelector((state) => state?.productReducer);
+  // const products = useSelector((state) => state?.productReducer);
   const types = useSelector((state) => state?.typeReducer);
 
   const openDropdown = () => {

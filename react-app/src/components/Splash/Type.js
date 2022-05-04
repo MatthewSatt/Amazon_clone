@@ -1,5 +1,4 @@
 import React from 'react'
-import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";
 
 function Type({name, id}) {
   return (

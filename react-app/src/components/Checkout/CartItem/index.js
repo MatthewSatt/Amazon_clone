@@ -20,7 +20,7 @@ function CartItem({id, userId, productId, quantity}) {
 
   return (
     <div className='cartitem'>
-        <img className='cartitemimage' src={thisProduct?.image} />
+        <img className='cartitemimage' src={thisProduct?.image} alt="productimage"/>
         <div className='cartiteminfo'>
           <p className='cartitemname'>{thisProduct?.name}</p>
           <p className='cartitemprice'><span>$</span>{thisProduct?.price}</p>

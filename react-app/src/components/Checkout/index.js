@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CartItem from "./CartItem";
 import "./Checkout.css";
 import Subtotal from "./Subtotal";
@@ -11,16 +11,16 @@ function Checkout() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state?.session?.user);
   const carts = useSelector((state) => state?.cartReducer);
-  const products = useSelector(state => state?.productReducer)
+  // const products = useSelector(state => state?.productReducer)
 
 
   useEffect(() => {
     dispatch(getCartThunk(user.id));
-  }, [dispatch]);
+  }, [dispatch, user.id]);
 
   useEffect(() => {
     dispatch(getProducts())
-  }, [])
+  }, [dispatch])
 
 
   return (

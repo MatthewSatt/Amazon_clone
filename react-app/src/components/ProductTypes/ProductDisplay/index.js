@@ -1,7 +1,7 @@
 import React from 'react'
 import "./ProductDisplay.css"
 import {Link} from 'react-router-dom'
-import {useState, useEffect} from 'react'
+import {useState} from 'react'
 import { useSelector } from 'react-redux'
 import AddReviewModal from '../../Product/Review/ReviewModal/AddReview'
 import { addToCartThunk } from '../../../store/cart'
@@ -52,7 +52,7 @@ function ProductDisplay({id, typeId, name, image, price, desc, type_id, created,
     <div className='productdisplay'>
       <div id='alert'></div>
       <Link to={`/product/${id}`}>
-        <img className='productitemimage'src={image} alt='image'></img>
+        <img className='productitemimage'src={image} alt=''></img>
       </Link>
         <div className='productitemname'>
         <div>{name}</div>

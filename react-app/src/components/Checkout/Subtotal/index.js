@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCartThunk } from '../../../store/cart'
 import {submitOrderThunk } from '../../../store/orders'
-import { getProducts } from '../../../store/products'
 import "./Subtotal.css"
 import PurchaseModal from './PurchaseModal'
 
@@ -53,7 +52,7 @@ useEffect(() =>  {
       setSavings(shipping)
 
     }
-  }, [cart.length])
+  }, [cart.length, user, products, shipping])
 })
 
 

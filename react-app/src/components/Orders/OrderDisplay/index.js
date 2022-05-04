@@ -28,12 +28,12 @@ function OrderDisplay({orderId, productId, userId}) {
 
     useEffect(() => {
         dispatch(getProducts())
-    }, [])
+    }, [dispatch])
 
   return (
         <div className='productdisplay'>
       <Link to={`/product/${thisProduct?.id}`}>
-        <img className='productitemimage'src={thisProduct?.image} alt='image'></img>
+        <img className='productitemimage'src={thisProduct?.image} alt=''></img>
       </Link>
         <div className='productitemname'>
         <div>{thisProduct?.name}</div>

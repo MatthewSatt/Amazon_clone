@@ -1,6 +1,6 @@
 import { Modal } from "../../../../context/Modal";
 import "./AddReview.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { editReviewThunk } from "../../../../store/reviews";
 
 import React from "react";

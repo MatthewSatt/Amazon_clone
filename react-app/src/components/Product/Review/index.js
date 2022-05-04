@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getUsersThunk } from "../../../store/users";
-import { deleteReviewThunk, getReviewsThunk } from "../../../store/reviews";
+import { deleteReviewThunk } from "../../../store/reviews";
 import { FaStar } from "react-icons/fa";
 import "./Review.css";
 import EditReviewModal from "./ReviewModal/EditReview";

@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from "react-redux";
 import { Redirect, useHistory } from "react-router-dom";
 import { login } from "../../store/session";
 import "./Login.css";
-import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const history = useHistory()
@@ -28,7 +27,7 @@ const LoginForm = () => {
 
   const handleDemo = async (e) => {
     e.preventDefault()
-    const data = await dispatch(login('demo@aa.io', 'password'))
+    await dispatch(login('demo@aa.io', 'password'))
   }
 
   const updateEmail = (e) => {
@@ -47,6 +46,7 @@ const LoginForm = () => {
     <div className="login">
 
         <img
+        alt=''
           className="login__logo"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
         />

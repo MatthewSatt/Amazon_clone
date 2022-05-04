@@ -13,7 +13,7 @@ function Babies() {
 
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId))
-  }, [])
+  }, [dispatch, typeId])
   return (
     <div className="electronics">
     <div id="babyimage">
