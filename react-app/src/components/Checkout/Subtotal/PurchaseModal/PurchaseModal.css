@@ -1,0 +1,17 @@
+.purchasemodal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.complete {
+    font-size: 40px;
+    color: rgb(230, 63, 12);
+    margin-bottom: 10%;
+}
+
+.completedescription {
+    text-align: center;
+    font-size: 15px;
+}

@@ -8,7 +8,7 @@ import {useEffect} from 'react'
 
 function Movies() {
   const dispatch = useDispatch()
-  const products = useSelector(state => state.productReducer)
+  const products = useSelector(state => state?.productReducer)
   const {typeId} = useParams()
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId))

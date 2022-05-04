@@ -71,3 +71,8 @@
     text-align: center;
   }
 }
+
+.nocartitems {
+  text-align: center;
+  margin-right: 20%;
+}

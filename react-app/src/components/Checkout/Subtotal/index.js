@@ -4,6 +4,7 @@ import { getCartThunk } from '../../../store/cart'
 import {submitOrderThunk } from '../../../store/orders'
 import { getProducts } from '../../../store/products'
 import "./Subtotal.css"
+import PurchaseModal from './PurchaseModal'
 
 
 function Subtotal() {
@@ -16,6 +17,7 @@ function Subtotal() {
   const [itemPrice, setItemPrice] = useState(0.00)
   const [total, setTotal] = useState(0.00)
   const [savings, setSavings] = useState(0.00)
+  const [showPurchaseModal, setShowPurchaseModal] = useState(false)
 
 
 useEffect(() => {
@@ -54,9 +56,14 @@ useEffect(() =>  {
   }, [cart.length])
 })
 
+
 const purchaseOrders = async () => {
   await dispatch(submitOrderThunk({"submitOrder": cart}))
   await dispatch(getCartThunk(user.id))
+  setShowPurchaseModal(true)
+  setTimeout(() => {
+    setShowPurchaseModal(false)
+  }, 4500)
 
 }
 
@@ -75,6 +82,9 @@ const purchaseOrders = async () => {
       <h2>Total: {`$${Number.parseFloat(total).toFixed(2)}`}</h2>
     <button  onClick={purchaseOrders}className='cartbutton'>Purchase</button>
     </div>
+    {showPurchaseModal && (
+      <PurchaseModal setShowPurchaseModal={setShowPurchaseModal} showPurchaseModal={showPurchaseModal}/>
+    )}
 
     </div>
   )

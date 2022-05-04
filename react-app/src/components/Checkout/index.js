@@ -48,7 +48,7 @@ function Checkout() {
       </div>
       <div className="checkoutbottom">
         <div className="checkoutproduct">
-          {
+          {carts.length > 0 &&
             carts?.map((cart) => (
               <CartItem
                 key={cart?.id}
@@ -58,6 +58,9 @@ function Checkout() {
                 quantity={cart?.quantity}
               />
             ))}
+            {carts.length === 0 && (
+              <h2 className="nocartitems">You have no items in your cart</h2>
+            )}
         </div>
       </div>
     </div>
