@@ -579,98 +579,98 @@ def seed_products():
 
     automotive1 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="NOCO Boost Plus GB40 1000 Amp 12-Volt",
+        description="Start Dead Batteries - Safely jump start a dead battery in seconds with this compact, yet powerful, 1000-amp portable lithium car battery jump starter pack - up to 20 jump starts on a single charge - and rated for gasoline engines up to 6 liters and diesel engines up to 3 liters.",
+        price=99.95,
+        image="https://m.media-amazon.com/images/I/913+OdWA3NL._AC_UL320_.jpg"
 
     )
     automotive2 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Car Trash Can, Pucuwu Car Garbage Can with Lid",
+        description="G CAR TRASH CAN- Dimensions 11.8’’ H x 7.3’’W x 7.3’’D, our foldable trash can with a large compartment, 2 side pocket and a tissue holder. which can hold 2.7 Gallon.CONVENIENCE GARBAGE BAG- With opening rubber lid. can put in tissue paper, fruit peels and bottle etc. Prevents litter and odor spills.",
+        price=8.49,
+        image="https://m.media-amazon.com/images/I/71OFhMigEOL._AC_UL320_.jpg"
 
     )
     automotive3 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="BDK PolyPro Car Seat Covers Full Set in Charcoal on Black",
+        description="PROTECTS AGAINST WEAR & TEAR – These are the perfect seat covers for your new car, or even a car that’s just new-to-you. Our car seat covers provide protection against daily wear and tear that occurs inside of your vehicle.",
+        price=26.39,
+        image="https://m.media-amazon.com/images/I/51Ntz25nijL._AC_UL320_.jpg"
 
     )
     automotive4 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Phone Mount for Car Dashboard,Car Phone Holder",
+        description="This upgraded version of the cell phone automobile cradle is made of the airliner PTFE materia and super suction cups. Say goodbye to substandard suction cups, limited compatibility and easy-to-break clamp arms, lengthy and tedious operations, and problems that hinder driving vision. All look similar,YFYYF always chooses the best materials.",
+        price=19.99,
+        image="https://m.media-amazon.com/images/I/71boW17cwGL._AC_UL320_.jpg"
 
     )
     automotive5 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Car Jump Starter, SUNPOW 2000A Peak 20000mAh Lithium",
+        description=":SUNPOW Car Jump Starter used High-speed polymer battery instead of normal starter. With the super 2000A peak and 20000mah capacity, it is easy to start a 12V vehicle (any gas engine or up to 8.5L diesel engine) , SUVs, trucks, vans, lawn-mower, snowmobile, motorcycle, yacht etc up to 35 times(charging only takes 4 to 5 hours).",
+        price=99.99,
+        image="https://m.media-amazon.com/images/I/817sadFMAvL._AC_UL320_.jpg"
 
     )
     automotive6 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="kyohans Car Seat Covers Full Set Fit for 2009-2019 Chevy Silverado Sierra, 5 Seats",
+        description="Premium Quality Material - Adopting high quality leather and padded with sponge, our car seat covers make you feel soft and comfortable. The car seat cover offers ultra-high anti-scratch and wear-proof protection for your original seats, also no need to worry about dogs’claw marks. It is waterproof and can be easily wiped clean by wet towels.",
+        price=169.99,
+        image="https://m.media-amazon.com/images/I/71eHvxr4NzL._AC_UL320_.jpg"
 
     )
     automotive7 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Wireless Backup Camera for Truck HD 1080P Waterproof Car Mini-RV Back Up Camera",
+        description="【Easy and Time-Saving Installation】 backup camera for truck just 2 steps to install: ①The monitor be powered by the cigarette lighter outlet or Fuse box, ACC, Radio, Ignition switch. ②Connect the camera to continuous power source like tail light/ running light/license plate light for driving use or connect to backup light for reversing use only.Save your time and installation fee.",
+        price=99.99,
+        image="https://m.media-amazon.com/images/I/71tb-RcLRpL._AC_UL320_.jpg"
 
     )
     automotive8 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="2 Pcs Car Assist Handle for Elderly, 4 in 1 Portable Vehicle Support Handle with LED",
+        description="HEAVY DUTY - Portable vehicle support handle is made of anti-rus and anti-corrosion high quality forged steel. Could carry 350lbs, ensure safer for getting in and out of the car.",
+        price=21.88,
+        image="https://m.media-amazon.com/images/I/61c2s6+aR7L._AC_UL320_.jpg"
 
     )
     automotive9 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="HULKMAN Alpha85 Jump Starter 2000 Amp 20000mAh Car Starter for up to 8.5L Gas",
+        description="Easier & Safer Start Assurance: Product status is intuitively shown on a 3.3-inch smart screen, so you can start your car easily. Over 9 types of protection, free your worries of misoperation and sparks.Powerful Performer: 2000 Amps peak cranking amp can start the vehicles up to 8.5L Gas/6.0L Diesel",
+        price=129.95,
+        image="https://m.media-amazon.com/images/I/71qouQwYCQL._AC_UL320_.jpg"
 
     )
     automotive10 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="1800 Amp 12V/24V Car Jump Starter Power Station, Tyrell Chenergy Automotive Battery",
+        description="Upgrade Powerful 12V/24V Jump Starter, All-new design with extremely jump starter for powerful engines start. 12V/24V Jump Starter is more powerful and stable than Ordinary 12V Jump starter. ",
+        price=299.99,
+        image="https://m.media-amazon.com/images/I/71TBv8zCQFL._AC_UL320_.jpg"
 
     )
     automotive11 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Interior Car Lights Keepsmile Car Accessories Car Led Lights APP Control with Remote",
+        description="DIY Modes: Car led lights has 16 million colors, or custom the colors and adjust the brightness through the smart app's color palette, Let you easily create your own car atmosphere.Perfect for decorating cars for Halloween and Christmas.",
+        price=14.99,
+        image="https://m.media-amazon.com/images/I/71bCyrGXmUL._AC_UL320_.jpg"
 
     )
     automotive12 = Product(
         type_id=7,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Rear View Mirror Hanging Accessories",
+        description="Car Decor Car Ornaments: This swing duck is swinging on your car,and the cute design makes your car which can well eliminate the driver's visual fatigue and increase safety.",
+        price=11.99,
+        image="https://m.media-amazon.com/images/I/61Rfc-aynGL._AC_UL320_.jpg"
 
     )
 
@@ -683,98 +683,98 @@ def seed_products():
 
     babies1 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Simple Joys by Carter's Unisex Babies' Short-Sleeve Bodysuit",
+        description="100% Cotton Imported Snap closure Machine Wash Six short-sleeve bodysuits in baby-soft cotton featuring stripes, prints, and solids Expandable necklines",
+        price=19.80,
+        image="https://m.media-amazon.com/images/I/91oN-swVBVL._AC_UL320_.jpg"
 
     )
     babies2 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Skip Hop Baby Bath Tub, 3-Stage Smart Sling Tub, Moby, Grey",
+        description="Our cheerful whale-shaped Moby tub grows with baby through three stages and offers Smart Sling support. The sling locks into two ergonomic positions: higher for full-body support and lower for seated support",
+        price=35.49,
+        image="https://m.media-amazon.com/images/I/810shJy-REL._AC_UL320_.jpg"
 
     )
     babies3 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Baby Einstein 4-in-1 Kickin' Tunes Music and Language Play Gym",
+        description="The Baby Einstein 4-in-1 Kickin' Tunes gym entertains your baby with 4 modes: Laying, Sitting, Tummy Time and Take-Along; the included piano toy also ages up with your growing baby 70 plus sounds and activities and 25 plus minutes of music for endless entertainment; includes 7 detachable toys: crinkle medallion, triangle rattle, BPA-free textured music note, flash cards, self-discovery mirror, piano toy and tummy time pillow",
+        price=44.98,
+        image="https://m.media-amazon.com/images/I/81uQmTEJRAL._AC_UL320_.jpg"
 
     )
     babies4 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Chicco Fit2 Infant & Toddler Car Seat - Cienna",
+        description="2-Stage base (included) converts to provide extended leg room and more upright, spacious seating with adjustability for toddlers 9-24m – without taking up extra space in the vehicle!",
+        price=319.99,
+        image="https://m.media-amazon.com/images/I/81IwcPrpqoL._AC_UL320_.jpg"
 
     )
     babies5 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Panasonic Baby Monitor with Camera and Audio",
+        description="Long Range Baby Monitor Keeps a Close Eye on Baby: 3.5” LCD display for clear audio and video from up to 1500 ft away; rechargeable battery provides up to 13 hrs standby / 5 hrs use",
+        price=149.99,
+        image="https://m.media-amazon.com/images/I/61QEr7zi3OL._AC_UL320_.jpg"
 
     )
     babies6 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Simple Joys by Carter's Unisex Toddlers and Babies' Holiday",
+        description="For safety, sleepwear should be either flame resistant or snug-fitting. Our polyester/fleece sleepwear is flame resistant and free of chemical treatments Set of two gripper-foot pajamas featuring Christmas patterns and Santa applique Ankle-to-chin zipper with snap-over tab Trusted Carter’s quality, everyday low prices, and hassle-free tag less packaging",
+        price=17.90,
+        image="https://m.media-amazon.com/images/I/91r6L9rAViL._MCnd_AC_UL320_.jpg"
 
     )
     babies7 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Simple Joys by Carter's Baby Boys' Short-Sleeve Bodysuit",
+        description="Machine Wash Six short-sleeve bodysuits in baby-soft cotton featuring stripes, prints, and solids Expandable lapped necklines Nickel-free snaps on reinforced panels Trusted Carter’s quality, everyday low prices, and hassle-free packaging",
+        price=19.69,
+        image="https://m.media-amazon.com/images/I/91U4UktkVaL._AC_UL320_.jpg"
 
     )
     babies8 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="New and Improved Baby Brezza",
+        description="Patented mixing technology automatically mixes formula and water to perfect consistency. Works with virtually all formula brands and all bottle brands/sizes.Clean your machine after every 4th bottle or when the clean funnel indicator light turns on so the mixing funnel is clear!",
+        price=199.99,
+        image="https://m.media-amazon.com/images/I/71Z2dCdw9HL._AC_UL320_.jpg"
 
     )
     babies9 = Product(
         type_id=8,
-        name="Replace",
-        description="",
+        name="Bigspinach Soft Pink Elephant",
+        description="Soft pink colors make this one of the best girl gifts and infant toys. Perfect for new moms and dads, or parents with teething children. Easily cleaned with dish soap and water, and can even be used after boiling with water. (boiling 1 Minten) ",
         price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        image="https://m.media-amazon.com/images/I/71EGd1ZFwOL._AC_UL320_.jpg"
 
     )
     babies10 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="'5'HD Split-Screen Baby Monitor",
+        description="Split-Screen HD Display with 2 HD Cameras: Unlike most standard baby monitors, this HD video baby monitor is equipped with 2 HD cameras and SPLIT-SCREEN feature, allowing to see both cameras or babies side by side on the same screen. You are sure to always know what’s going on in your baby’s room!. Connect up to 4 cameras in different rooms.",
+        price=145.89,
+        image="https://m.media-amazon.com/images/I/51ZYjmhEGsL._AC_UL320_.jpg"
 
     )
     babies11 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Baby Teething Toys for 0-6",
+        description="Features: The balanced texture, not too soft or too hard, allows babies to enjoy the fun of chewing. Various shape bumps can better relieve the discomfort of baby's teething gums. Perfectly handle size for babies to grasp. Safe Material: 100% food grade silicone, Non-Toxic, BPA free and FDA stand.CPSC certified laboratory tested.babies can bite at ease. ",
+        price=11.99,
+        image="https://m.media-amazon.com/images/I/71tBXWlwC0L._AC_UL320_.jpg"
 
     )
     babies12 = Product(
         type_id=8,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Plush Sensory Fabric Ball for Babies",
+        description="Plush Creations brings you a new plush sensory baby ball. Our beautifully designed plush fabric sensory ball is designed with 8 different textures, patterns, and sounds. The fabric sections of the ball are sure to entice your little one for hours!",
+        price=19.79,
+        image="https://m.media-amazon.com/images/I/81VUMhSd7aL._AC_UL320_.jpg"
 
     )
 
@@ -890,43 +890,42 @@ def seed_products():
 
     movies1 = Product(
         type_id=10,
-        name="",
-        description="",
-        price=1.00,
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQudt5t_EZf55GHHTHhDogYg1HvLhU3-3Y6bQ&usqp=CAU"
+        name="Elf",
+        description="Starring: Leon Redbone , Will Ferrell , James Caan and Ray Harryhausen Directed by: Jon Favreau",
+        price=3.99,
+        image="https://m.media-amazon.com/images/I/81Z+qD3jSoL._AC_UY218_.jpg"
 
     )
 
     movies2 = Product(
         type_id=10,
-        name="Harry Potter 1",
-        description="",
-        price=1.00,
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3DhkzTf_OxvG6690L3HHBVfb5GBK96_4eHA&usqp=CAU"
+        name="Sandlot",
+        description="The best baseball player in the neighborhood helps a new kid with his clumsy ball-handling.",
+        price=15.19,
+        image="https://m.media-amazon.com/images/I/31ryEwTFh4L._AC_UY218_.jpg"
 
     )
     movies3 = Product(
         type_id=10,
-        name="Joker",
-        description="",
-        price=1.00,
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwM8sRQ_CrNfrWnrT-Pl2uvkfJZa5eA9ypgg&usqp=CAU"
+        name="Into The Woods",
+        description="Starring: Meryl Streep , Emily Blunt , Anna Kendrick and James Corden Directed by: Rob Marshall",
+        price=3.99,
+        image="https://m.media-amazon.com/images/I/A13X4HqoVhL._AC_UY218_.jpg"
 
     )
     movies4 = Product(
         type_id=10,
-        name="Uncharted",
-        description="",
-        price=1.00,
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTand8zTxuYCbBygvgJdXcXjtbM_Xx7OgGD2A&usqp=CAU"
-
-    )
+        name="Monsters Inc.",
+        description="The city of Monstropolis in the monster world is powered by energy from the screams of human children. At the Monsters, Inc., factory, skilled monsters employed as 'scarers' venture into the human world to scare children and harvest their screams, through doors that activate portals to children's bedroom closets",
+        price=7.99,
+        image="https://m.media-amazon.com/images/I/91MeaUr78gL._AC_UY218_.jpg"
+        )
     movies5 = Product(
         type_id=10,
-        name="Avatar",
-        description="",
-        price=1.00,
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThY0TTfIT4MbS2tcS95yoH4MeJTfbe-w45FA&usqp=CAU"
+        name="Spiderman No Way Home",
+        description="When Dr. Strange's spell to restore Spider-Man's identity goes awry, Peter is forced to overcome his greatest challenge yet.",
+        price=21.29,
+        image="https://m.media-amazon.com/images/I/91sKumJLa0L._AC_UY218_.jpg"
 
     )
     movies6 = Product(
@@ -934,15 +933,15 @@ def seed_products():
         name="Black Swan",
         description="",
         price=1.00,
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoUg2t__lqkZBIjqycnh_G70HR-Qq2yRmHCQ&usqp=CAU"
+        image=""
 
     )
     movies7 = Product(
         type_id=10,
-        name="Avengers",
+        name="",
         description="",
         price=1.00,
-        image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmmzEXBR-Xu9AWSxTNV55f8tl0RDLT_vvl8g&usqp=CAU"
+        image=""
 
     )
     movies8 = Product(
@@ -950,7 +949,7 @@ def seed_products():
         name="The ",
         description="",
         price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        image=""
 
     )
     movies9 = Product(
@@ -958,7 +957,7 @@ def seed_products():
         name="Replace",
         description="",
         price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        image=""
 
     )
     movies10 = Product(
@@ -966,7 +965,7 @@ def seed_products():
         name="Replace",
         description="",
         price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        image=""
 
     )
     movies11 = Product(
@@ -974,7 +973,7 @@ def seed_products():
         name="Replace",
         description="",
         price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        image=""
 
     )
     movies12 = Product(
@@ -982,7 +981,7 @@ def seed_products():
         name="Replace",
         description="",
         price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        image=""
 
     )
 
