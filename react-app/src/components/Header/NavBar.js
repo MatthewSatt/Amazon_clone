@@ -14,10 +14,20 @@ function NavBar() {
   const user = useSelector((state) => state.session.user);
   const [length, setLength] = useState(0);
   const [searchResult, setSearchResult] = useState([]);
+  const [search, setSearch] = useState([]);
+
+
+
+  useEffect(() => {
+    if(search.length < 1) {
+        setSearchResult([])
+    }
+}, [search])
 
   useEffect(() => {
     setLength(cart.length);
   }, [cart.length]);
+
 
   const logoutUser = async () => {
     history.push("/");
@@ -43,10 +53,17 @@ function NavBar() {
       </Link>
       <div className="headersearch">
         <SearchBar
+        search={search}
+        setSearch={setSearch}
           setSearchResult={setSearchResult}
           searchResult={searchResult}
         />
+      <div className="searchresultcontainer">
+      {searchResult.length > 1 && searchResult.map(result => (
+        <div className="searchresults">{result.name}</div>
+        ))}
       </div>
+        </div>
       {/* {searchResult.length > 3 && searchResult.map((item) => (
       <div>Hello</div>
     ))} */}

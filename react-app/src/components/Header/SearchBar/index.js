@@ -4,10 +4,10 @@ import {Link} from 'react'
 import SearchIcon from "@mui/icons-material/Search";
 import { getProducts } from "../../../store/products";
 
-function SearchBar({setSearchResult, searchResult}) {
+function SearchBar({setSearchResult, searchResult, search, setSearch}) {
     const dispatch = useDispatch()
   const products = useSelector((state) => state?.productReducer);
-  const [search, setSearch] = useState([]);
+//   const [search, setSearch] = useState([]);
 
 
 
@@ -16,7 +16,7 @@ function SearchBar({setSearchResult, searchResult}) {
   }, [])
 
   useEffect(() => {
-      if(search.length > 3) {
+      if(search.length < 1) {
           return
       }
   }, [search])
@@ -26,7 +26,7 @@ function SearchBar({setSearchResult, searchResult}) {
       console.log(search)
       for(let i = 0; i< products.length; i++) {
          let name = products[i].name.toLowerCase()
-         if(name.includes(search)) {
+         if(name.includes(search) && array.length < 6) {
              array.push(products[i])
          }
       }

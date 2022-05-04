@@ -76,3 +76,21 @@
     margin-left: 10px;
     margin-right: 10px;
  }
+
+
+ .searchresultcontainer {
+     display: inline;
+     flex-direction: column;
+     flex: 0.2;
+     position: absolute;
+     top: 60px;
+     width: 80%;
+     background-color: white;
+
+ }
+
+ .searchresults {
+     padding: 2px;
+     border: 2px solid black;
+    width: 100%;
+ }
