@@ -94,5 +94,10 @@
      border: 2px solid black;
      background-color: whitesmoke;
     width: 100%;
+ }
 
+
+ .searchlinks {
+     text-decoration: none;
+     color: black;
  }
