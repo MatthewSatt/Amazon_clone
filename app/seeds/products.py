@@ -749,7 +749,7 @@ def seed_products():
         type_id=8,
         name="Bigspinach Soft Pink Elephant",
         description="Soft pink colors make this one of the best girl gifts and infant toys. Perfect for new moms and dads, or parents with teething children. Easily cleaned with dish soap and water, and can even be used after boiling with water. (boiling 1 Minten) ",
-        price=7.99.00,
+        price=7.99,
         image="https://m.media-amazon.com/images/I/71EGd1ZFwOL._AC_UL320_.jpg"
 
     )
