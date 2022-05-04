@@ -117,42 +117,42 @@ def seed_products():
         name="Echo Dot (3rd Gen, 2018 release) - Smart speaker with Alexa - Charcoal",
         description="Meet Echo Dot - Our most compact smart speaker that fits perfectly into small spaces. Improved speaker quality - Better speaker quality than Echo Dot Gen 2 for richer and louder sound. Pair with a second Echo Dot for stereo sound.",
         price=24.99,
-        image="https://m.media-amazon.com/images/I/610Ga56awRL._AC_UY436_FMwebp_QL65_.jpg"
+        image="https://m.media-amazon.com/images/I/51maMLyRs4L._AC_UY218_.jpg"
       )
     electronics8=Product(
         type_id=2,
-        name="Playstation 5",
+        name="Razer Keyboard",
         description="CPU: 3.5GHz, 8-core AMD Zen 2, Storage: Custom 825GB SSD, RAM: 16GB GDDR6, Disc drive: 4K Blu-ray player, GPU: 10.3 teraflop RDNA 2 GPU PVT GoPdik",
-        price=1259.99,
-        image="https://m.media-amazon.com/images/I/31Rq-MKrmSL._AC_UY436_FMwebp_QL65_.jpg"
+        price=159.99,
+        image="https://m.media-amazon.com/images/I/61BsbJkWSSS._AC_UL320_.jpg"
       )
     electronics9=Product(
         type_id=2,
-        name="XBox Series S",
+        name="Lenovo ThinkVision",
         description="Access your favorite entertainment through apps like YouTube, Netflix, and more Enjoy over 100 games right out of the box with a 1 month Xbox Game Pass trialWatch 4K Blu-ray movies and stream 4K video on Netflix, Amazon, Hulu, Microsoft Movies & TV, and more",
         price=309.99,
-        image="https://m.media-amazon.com/images/I/71NBQ2a52CL._AC_UY436_FMwebp_QL65_.jpg"
+        image="https://m.media-amazon.com/images/I/71zNBOOYAVL._AC_UL320_.jpg"
       )
     electronics10=Product(
         type_id=2,
-        name="WiFi Range Extender Signal Booster up to 5000 sq.ft, Wireless Internet Repeater Wi-Fi Booster",
+        name="PRJ 5G WiFi Projector",
         description="【Up to 5000 Square Feet】No Blind Spot! Although most WiFi range extender signal devices get stuck behind walls and cement floors, Hyzom delivers ultra-stable bandwidth for Internet surfing, video conferences, online gaming, and even streaming 4K HD video.",
         price=59.99,
-        image="https://m.media-amazon.com/images/I/610Ga56awRL._AC_UY436_FMwebp_QL65_.jpg"
+        image="https://m.media-amazon.com/images/I/61bZ3-m1UzL._AC_UL320_.jpg"
       )
     electronics11=Product(
         type_id=2,
-        name="Playstation 5",
+        name="Desktop Cooling Fan",
         description="CPU: 3.5GHz, 8-core AMD Zen 2, Storage: Custom 825GB SSD, RAM: 16GB GDDR6, Disc drive: 4K Blu-ray player, GPU: 10.3 teraflop RDNA 2 GPU PVT GoPdik",
-        price=1259.99,
-        image="https://m.media-amazon.com/images/I/31Rq-MKrmSL._AC_UY436_FMwebp_QL65_.jpg"
+        price=39.99,
+        image="https://m.media-amazon.com/images/I/61H9Gtz4RWL._AC_UL320_.jpg"
       )
     electronics12=Product(
         type_id=2,
-        name="XBox Series S",
-        description="Access your favorite entertainment through apps like YouTube, Netflix, and more Enjoy over 100 games right out of the box with a 1 month Xbox Game Pass trialWatch 4K Blu-ray movies and stream 4K video on Netflix, Amazon, Hulu, Microsoft Movies & TV, and more",
-        price=309.99,
-        image="https://m.media-amazon.com/images/I/71NBQ2a52CL._AC_UY436_FMwebp_QL65_.jpg"
+        name="High Power Bipolar Tower Speaker",
+        description="SOUND THAT TRANSCENDS THE STATUS QUO – Features BDSS technology drivers on front & rear array – 8 SPEAKERS! - Front 1 tweeter & (2) 4.5 mid drivers - rear facing 1 tweeter & 4.5 mid driver for more accurate lifelike sound",
+        price=999.99,
+        image="https://m.media-amazon.com/images/I/618ZF9xZBiL._AC_UL320_.jpg"
       )
 
 
@@ -286,7 +286,7 @@ def seed_products():
         type_id=4,
         name="Frito-Lay Ultimate Snack Care Package",
         description="($14.98/Count) $20.99$14.23 with Subscribe & Save discoun50% off gift wrap service: code GIFTWRAP50SNAP EBT eligibleFREE Shipping on orders over $25 shipped by Amazon",
-        price=1.00,
+        price=24.99,
         image="https://m.media-amazon.com/images/I/A1dBzjL58SL._AC_UL320_.jpg"
 
     )
@@ -453,7 +453,7 @@ def seed_products():
         type_id=5,
         name="Kick Ball",
         description="Size: 10 diameter ball is the recommended size for Adult kickball but is designed to be fun for kids of all ages Surface: textured, tacky rubber surface that is easy to handle and won't puncture easily or wear down quickly",
-        price=1.00,
+        price=5.99,
         image="https://m.media-amazon.com/images/I/91vs-F-5r1S._AC_UY218_.jpg"
 
     )
@@ -461,7 +461,7 @@ def seed_products():
         type_id=5,
         name="Inflatable Football Toss Target",
         description="Inflatable Football Toss Target Party Game, Sports Toys Gear and Gifts for Kids Boys Girls and Family",
-        price=1.00,
+        price=23.79,
         image="https://m.media-amazon.com/images/I/81+BRA+MuBL._AC_UY218_.jpg"
 
     )
@@ -515,10 +515,10 @@ def seed_products():
     )
     outdoors6 = Product(
         type_id=6,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Solar Lights Outdoor",
+        description="Auto Colorful Changing & Warm white】 Adjust to【FADE】mode,the light will automatically solar changer various colors,decorate your lawn,patio,courtyard, walkway, make them colorful and beautiful. Warm white will provide more lighter environment for you.",
+        price=45.99,
+        image="https://m.media-amazon.com/images/I/71YWMp1fXwL._AC_UY218_.jpg"
 
     )
     outdoors7 = Product(
@@ -749,7 +749,7 @@ def seed_products():
         type_id=8,
         name="Bigspinach Soft Pink Elephant",
         description="Soft pink colors make this one of the best girl gifts and infant toys. Perfect for new moms and dads, or parents with teething children. Easily cleaned with dish soap and water, and can even be used after boiling with water. (boiling 1 Minten) ",
-        price=1.00,
+        price=7.99.00,
         image="https://m.media-amazon.com/images/I/71EGd1ZFwOL._AC_UL320_.jpg"
 
     )
@@ -786,98 +786,98 @@ def seed_products():
 
     music1 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="The Eagles",
+        description="The band's roots go back to their role as defining artists in the phenomenally popular Southern California rock scene of the '70s, a decade in which they delivered four consecutive #1 albums. Their momentous 2004 farewell tour filled stadiums around the world, and this film captures one of the most stellar events from that now-historic global sweep.",
+        price=14.99,
+        image="https://m.media-amazon.com/images/I/71YAWPIbV2L._AC_UY218_.jpg"
 
     )
     music2 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Stevie Ray Vaughan - 1984-1989: Lonestar",
+        description="The Full, Previously Un-Told Story Of Stevie Ray Vaughan's Glory Years, the period between the release of his debut album and his tragic death in a helicopter crash in 1989.",
+        price=9.99,
+        image="https://m.media-amazon.com/images/I/91zqPqNyVTL._AC_UY218_.jpg"
 
     )
     music3 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Music for Yoga",
+        description="Award-winning producer and instrumentalist Ben Leinbach has created yet another enchanting compilation with this soothing blend of live instrumentals, meditative chanting, and much more. Escape day-to-day stress while gentle music guides you into a world of imagination, creativity and wonder. Use for yoga, meditation, or just as an amazing ambient background to help you relax and focus.",
+        price=11.12,
+        image="https://m.media-amazon.com/images/I/71omhWbIYhL._AC_UY218_.jpg"
 
     )
     music4 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Journey",
+        description="On March 14, 2009, Journey returned to Arnel Pineda's homeland and introduced him as their newest lead singer to a crowd of nearly 30,000 at the SM Mall of Asia Concert Grounds. Features songs such as Don't Stop Believin', Stone In Love, When You Love A Woman and Separate Ways.",
+        price=4.99,
+        image="https://m.media-amazon.com/images/I/81cDNqWAV1L._AC_UY218_.jpg"
 
     )
     music5 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Country: Portraits of an American Sound",
+        description="A visual odyssey through the history of country music as told by legendary artists and the elite photographers who captured the evolving image of the country singer, from rhinestone cowboy to pot-smoking outlaw to stadium-filling megastar.",
+        price=12.99,
+        image="https://m.media-amazon.com/images/I/91JxfnMv4eL._AC_UY218_.jpg"
 
     )
     music6 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="George Fest",
+        description="A live concert tribute to former Beatle George Harrison, held at the Fonda Theatre in Los Angeles on 28 September 2014. The 2014 concert coincided with the reissue of Harrison's Apple Records solo albums.",
+        price=4.99,
+        image="https://m.media-amazon.com/images/I/71SWTsGAFZL._AC_UY218_.jpg"
 
     )
     music7 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Classical Piano for Sleep and Relaxation",
+        description="A selection of relaxing piano music form the World's mist famous composers; Chopin, Haydn, Debussy, Brahms, Beethoven, Scriabin, Ravel and Schumann. Accompanied by a relaxing waterfall at Olympic National Park. Performed by Nico de Napoli, Edward Roser, Carlos Gardels, Vadim Chaimovich and Donald Betts.",
+        price=5.99,
+        image="https://m.media-amazon.com/images/I/71Gb4qTWcfL._AC_UY218_.jpg"
 
     )
     music8 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Fleetwood Mac",
+        description="Fleetwood Mac's hugely successful album 'Rumours' has sold over 40 million copies worldwide, was christened Album of the Year at the 1978 Grammy Awards and quickly earned its place in the pantheon of rock music history. This documentary details the making of 'Rumours' and includes exclusive interviews and a wonderful new acoustic edition of 'Never Going Back' from Lindsey Buckingham.",
+        price=14.99,
+        image="https://m.media-amazon.com/images/I/71PMkyR3AwL._AC_UY218_.jpg"
 
     )
     music9 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Black Sabbath",
+        description="The multi-platinum selling Paranoid is arguably Black Sabbath's finest album, not to mention one of the most seminal Heavy Metal albums of all time. This programme tells the story behind the writing, recording and success of this remarkable and groundbreaking Heavy Metal album.",
+        price=4.99,
+        image="https://m.media-amazon.com/images/I/71kcFPY358L._AC_UY218_.jpg"
 
     )
     music10 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Symphony in Colorado",
+        description="A selection of the world's favorite classical music from Beethoven, Mozart, Bach, Chopin, Vivaldi, Brahms and more. Accompanied by beautiful nature videos to enhance the senses. Performed by Martha Goldstein, Paul Pitman, Markus Staab, Nico de Napoli, Michel Rondeau, Aya Higuchi, Orchestra Gli Armonici, John Harrison, Us Navy Band, Carlos Gardels. Curated by Oumayma Naciri.",
+        price=9.99,
+        image="https://m.media-amazon.com/images/I/81-tERsHtdL._AC_UY218_.jpg"
 
     )
     music11 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Eric Clapton",
+        description="Eric Clapton is one of the most influential guitarists of all time. He ranked 2nd in Rolling Stone magazines list of the 100 Greatest Guitarists of All Time and 4th in Gibson's Top 50 Guitarists of All Time. In this documentary feature he is interviewed in depth with contributions from Keith Richards, John Mayall, The Yardbirds, Jack Bruce and many more. It is the definitive Clapton biography.",
+        price=7.99,
+        image="https://m.media-amazon.com/images/I/71NZFLJGT0L._AC_UY218_.jpg"
 
     )
     music12 = Product(
         type_id=9,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Stevie Nicks",
+        description="For over four decades Stevie Nicks has been responsible for composing some of the best loved and most joyous contemporary songs ever written, as this documentary film recounts. Featuring rare footage, archive and new interviews, plus contributions from those who have worked closely with Stevie such as good friend Keith Olsen, Rumours producer Ken Caillat, and Rick Vito, this will delight fans.",
+        price=3.39,
+        image="https://m.media-amazon.com/images/I/81WjI58RkZL._AC_UY218_.jpg"
 
     )
 
@@ -930,58 +930,58 @@ def seed_products():
     )
     movies6 = Product(
         type_id=10,
-        name="Black Swan",
-        description="",
-        price=1.00,
-        image=""
+        name="Home",
+        description="In the year's hit comedy, a lovable misfit from another planet meets a girl named Tip. The two unlikely friends embark on the greatest journey of all time...the journey HOME.",
+        price=3.99,
+        image="https://m.media-amazon.com/images/I/91xU16apY1L._AC_UY218_.jpg"
 
     )
     movies7 = Product(
         type_id=10,
-        name="",
-        description="",
-        price=1.00,
-        image=""
+        name="The Right Stuff",
+        description="This adaptation of the non-fiction novel by Tom Wolfe chronicles the first 15 years of America's space program. By focusing on the lives of the Mercury astronauts, including John Glenn (Ed Harris) and Alan Shepard (Scott Glenn), the film recounts the dangers and frustrations experienced by those involved with NASA's earliest achievements. It also depicts their family lives and the personal crises they endured during an era of great political turmoil and technological innovation.",
+        price=9.89,
+        image="https://m.media-amazon.com/images/I/91hqjqy9MvL._AC_UY218_.jpg"
 
     )
     movies8 = Product(
         type_id=10,
-        name="The ",
-        description="",
-        price=1.00,
-        image=""
+        name="Encanto",
+        description="Walt Disney Animation Studios’ ENCANTO, with all-new songs by award-winner Lin-Manuel Miranda, tells the tale of the Madrigals, an extraordinary family living in a magical house in the Colombian mountains. But when Mirabel, the only ordinary family member, discovers the magic surrounding their home is in danger, she may be her family’s last hope.",
+        price=15.89,
+        image="https://m.media-amazon.com/images/I/91U-XSNsdoL._AC_UY218_.jpg"
 
     )
     movies9 = Product(
         type_id=10,
-        name="Replace",
-        description="",
-        price=1.00,
-        image=""
+        name="The Martian",
+        description="From legendary director Ridley Scott (Alien, Prometheus) comes a gripping tale of human strength and the will to survive, starring Matt Damon as an astronaut stranded on Mars.",
+        price=3.99,
+        image="https://m.media-amazon.com/images/I/A1j54D2jpxL._AC_UY218_.jpg"
 
     )
     movies10 = Product(
         type_id=10,
-        name="Replace",
-        description="",
-        price=1.00,
-        image=""
+        name="Batman",
+        description="A killer targets Gotham's elite sending Batman on an investigation. As evidence mounts, he must forge new relationships, unmask the culprit, and bring justice to corruption.",
+        price=22.99,
+        image="https://m.media-amazon.com/images/I/91WLf-Pd7ML._AC_UY218_.jpg"
 
     )
     movies11 = Product(
         type_id=10,
-        name="Replace",
-        description="",
-        price=1.00,
-        image=""
+        name="Ant-Man",
+        description="Armed with the astonishing ability to shrink in scale but increase in strength, master thief Scott Lang must embrace his inner hero and help his mentor, Dr. Hank Pym, to plan and pull off a heist that will save the world in Marvel Studios' Ant-Man.",
+        price=12.99,
+        image="https://m.media-amazon.com/images/I/81DlBh6ZaWL._AC_UY218_.jpg"
 
     )
     movies12 = Product(
         type_id=10,
-        name="Replace",
-        description="",
-        price=1.00,
-        image=""
+        name="Shooter",
+        description="A former Marine sniper is called back into duty but discovers he's the patsy in a conspiracy to assassinate the U.S. president in this action thriller starring Mark Wahlberg, Kate Mara and Danny Glover.",
+        price=13.99,
+        image="https://m.media-amazon.com/images/I/81OCGF9V70L._AC_UY218_.jpg"
 
     )
 
@@ -994,98 +994,98 @@ def seed_products():
 
     health1 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Vitamin D3 50,000 IU Weekly Supplement",
+        description="Essential Sunshine Vitamin - Capture all the vitamin D benefits of the sun without harmful UV rays with ForestLeaf vitamin d3 50,000 iu supplements that pack a powerful immune-boosting punch. D3 vitamins deliver more potency than vitamin d supplements.",
+        price=19.95,
+        image="https://m.media-amazon.com/images/I/71TiS4bkmVS._AC_UY218_.jpg"
 
     )
     health2 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Vitamin D3, B12 Gummies",
+        description="𝗕𝗘𝗦𝗧 𝗩𝗜𝗧𝗔𝗠𝗜𝗡 𝗗𝟯+𝗕𝟭𝟮 𝗦𝗨𝗣𝗣𝗟𝗘𝗠𝗘𝗡𝗧 Dr. Danielle’s Delicious Vegan D3 + B12 Gummies are made from Vegan Lichen and bioactive B12 Methylcobalamin. Few food sources in nature offer vitamin D and most D3 on the market is sourced from lanolin—lamb’s wool fat. Dr Danielle’s gummies offer cellular support with a yummy, chewable gummy, naturally flavored with Strawberry.",
+        price=18.95,
+        image="https://m.media-amazon.com/images/I/71VbR5EVi5L._AC_UY218_.jpg"
 
     )
     health3 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="What the Health",
+        description="An interepid filmmaker on a journey of discovery as he uncovers possibly the largest health secret of our time and the collusion between industry, government, pharmacuetical and health organizations keeping this information from us.",
+        price=45.49,
+        image="https://m.media-amazon.com/images/I/81xvuze72RL._AC_UY218_.jpg"
 
     )
     health4 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="The Perfect Human Diet",
+        description="The Perfect Human Diet is the unprecedented global exploration for a solution to our epidemic of overweight, obesity, and diet-related diseases - the #1 killer in America. This film reveals for the first time, the authentic human diet. Film audiences finally can see what our species truly needs for optimal health and are given a practical template based on scientific facts.",
+        price=18.99,
+        image="https://m.media-amazon.com/images/I/81FWriZ3AtL._AC_UY218_.jpg"
 
     )
     health5 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Probiotic Mouthwash",
+        description="Riven - Probiotic Mouthwash | Cool Mint Anti-Cavity Dry Mouth Plaque Remover, Fight Bad Breath & Get Rid of Plaque & Gingivitis for Healthier Gum Tissue | Spearmint Flavor | Alcohol Free",
+        price=19.99,
+        image="https://m.media-amazon.com/images/I/71AQrE2mHJL._AC_UY218_.jpg"
 
     )
     health6 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Nuts Snack Packs",
+        description="Nuts Snack Packs / Mixed Nuts and Trail Mix Healthy Snacks Variety Pack for Adults - 28 Count Healthy Snacks Care Package",
+        price=9.99,
+        image="https://m.media-amazon.com/images/I/A1STYSC+87L._AC_UY218_.jpg"
 
     )
     health7 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="That Sugar Film",
+        description="Damon Gameau embarks on an experiment to document the effects of a high sugar diet on a healthy body.",
+        price=14.99,
+        image="https://m.media-amazon.com/images/I/A19nOtrjeHL._AC_UY218_.jpg"
 
     )
     health8 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Super Weight Loss Guided Self Hypnosis",
+        description="This 'Super Weight Loss' Guided Self-Hypnosis video was designed to assist the listener in getting motivated to exercise, making healthy food choices, altering emotional eating habits and suppressing appetite. Written and narrated by Anna Thompson, MA, MHP, LMHC, Advanced Clinical Hypnotherapist. Life is short; live it well.",
+        price=2.99,
+        image="https://m.media-amazon.com/images/I/813Iqa+rOmL._AC_UY218_.jpg"
 
     )
     health9 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Yoga for the rest of us",
+        description="Peggy Cappy designed this workout to improve heart health as well as overall health. Centered around sun salutations, and featuring dynamic movements, relaxation poses, and breathing techniques, you’ll enjoy doing this at home",
+        price=4.99,
+        image="https://m.media-amazon.com/images/I/61-8nDFwJmL._AC_UY218_.jpg"
 
     )
     health10 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Grow, Cook, Eat",
+        description="Back for a third season of this very practical series aimed at helping people with little or no knowledge of growing their own food, but who like the idea of being able to grow something themselves. With plant-based diets becoming ever more popular, and consumers' increasing awareness of how far their food has traveled, this could not be arriving on our screens at a better time.",
+        price=18.99,
+        image="https://m.media-amazon.com/images/I/712VW7RcmDL._AC_UY218_.jpg"
 
     )
     health11 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Bress 'n' Nyam",
+        description="From Hot Buttermilk Biscuits and Sweet Potato Pie to Salmon Cakes on Pepper Rice and Gullah Fish Stew, Gullah Geechee food is an essential cuisine of American history. It is the culinary representation of the ocean, rivers, and rich fertile loam in and around the coastal South. From the Carolinas to Georgia and Florida, this is where descendants of enslaved Africans came together to make extraordinary food, speaking the African Creole language called Gullah Geechee.In this groundbreaking and beautiful cookbook, Matthew Raiford pays homage to this cuisine that nurtured his family for seven generations. In 2010, Raiford’s Nana handed over the deed to the family farm to him and his sister, and Raiford rose to the occasion, nurturing the farm that his great-great-great grandfather, a freed slave, purchased in 1874. In this collection of heritage and updated recipes, he traces a history of community and family brought together by food.100 color photographs",
+        price=9.18,
+        image="https://m.media-amazon.com/images/I/71YiCSS+1-L._AC_UY218_.jpg"
 
     )
     health12 = Product(
         type_id=11,
-        name="Replace",
-        description="",
-        price=1.00,
-        image="https://www.iams.com/sites/g/files/fnmzdf386/files/migrate-product-files/images/ugrp5w7bxhsd9ltxey7d.png"
+        name="Kitchen Cooking Utensils Set",
+        description="Kitchen Cooking Utensils Set, 14 Non-Stick Silicone Cooking Kitchen Utensils Spatula Set with Holder, Wooden Handle Silicone Kitchen Gadgets Utensil Set for Nonstick Cookware(White)",
+        price=56.89,
+        image="https://m.media-amazon.com/images/I/61l6i45cidS._AC_UY218_.jpg"
 
     )
 
