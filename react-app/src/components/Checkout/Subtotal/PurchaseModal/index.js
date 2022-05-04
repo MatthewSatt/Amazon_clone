@@ -1,17 +1,25 @@
-import React from 'react'
-import {Modal} from '../../../../context/Modal'
-import './PurchaseModal.css'
+import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { Modal } from "../../../../context/Modal";
+import "./PurchaseModal.css";
 
-function PurchaseModal({showPurchaseModal, setShowPurchaseModal}) {
+function PurchaseModal({
+  showPurchaseModal,
+  setShowPurchaseModal,
+  total,
+}) {
+  const [submitTotal, setSubmitTotal] = useState(total)
   return (
     <Modal className="purchasemodal">
-        <div className='purchasemodal'>
-
-    <div className='complete'>Purchase Complete!</div>
-    <div className='completedescription'>Products can be viewed in your order history</div>
+      <div className="purchasemodal">
+        <div className="complete">Purchase Complete!</div>
+        <div className="complete"> You spent: ${Number.parseFloat(submitTotal).toFixed(2)}</div>
+        <div className="completedescription">
+          Products can be viewed in your order history
         </div>
-  </Modal>
-  )
+      </div>
+    </Modal>
+  );
 }
 
-export default PurchaseModal
+export default PurchaseModal;

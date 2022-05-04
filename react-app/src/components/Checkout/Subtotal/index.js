@@ -58,12 +58,12 @@ useEffect(() =>  {
 
 
 const purchaseOrders = async () => {
+  setShowPurchaseModal(true)
+  await setTimeout(() => {
+    setShowPurchaseModal(false)
+  }, 4000)
   await dispatch(submitOrderThunk({"submitOrder": cart}))
   await dispatch(getCartThunk(user.id))
-  setShowPurchaseModal(true)
-  setTimeout(() => {
-    setShowPurchaseModal(false)
-  }, 4500)
 
 }
 
@@ -83,7 +83,7 @@ const purchaseOrders = async () => {
     <button  onClick={purchaseOrders}className='cartbutton'>Purchase</button>
     </div>
     {showPurchaseModal && (
-      <PurchaseModal setShowPurchaseModal={setShowPurchaseModal} showPurchaseModal={showPurchaseModal}/>
+      <PurchaseModal savings={savings} total={total} shipping={shipping} setShowPurchaseModal={setShowPurchaseModal} showPurchaseModal={showPurchaseModal}/>
     )}
 
     </div>
