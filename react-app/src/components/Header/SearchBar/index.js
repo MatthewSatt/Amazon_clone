@@ -26,7 +26,8 @@ function SearchBar({setSearchResult, searchResult, search, setSearch}) {
       console.log(search)
       for(let i = 0; i< products.length; i++) {
          let name = products[i].name.toLowerCase()
-         if(name.includes(search) && array.length < 6) {
+         console.log(name)
+         if(name.includes(search) && array.length < 7) {
              array.push(products[i])
          }
       }

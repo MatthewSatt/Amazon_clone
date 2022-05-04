@@ -19,7 +19,7 @@ function NavBar() {
 
 
   useEffect(() => {
-    if(search.length < 1) {
+    if(search.length === 0) {
         setSearchResult([])
     }
 }, [search])
@@ -59,7 +59,7 @@ function NavBar() {
           searchResult={searchResult}
         />
       <div className="searchresultcontainer">
-      {searchResult.length > 1 && searchResult.map(result => (
+      {searchResult.length > 0 && searchResult.map(result => (
         <div className="searchresults">{result.name}</div>
         ))}
       </div>
