@@ -11,8 +11,8 @@ function Babies() {
   const products = useSelector(state => state?.productReducer)
   const {typeId} = useParams()
 
-  useEffect(() => {
-    dispatch(getProductTypesThunk(typeId))
+  useEffect(async () => {
+    await dispatch(getProductTypesThunk(+typeId))
   }, [dispatch, typeId])
   return (
     <div className="electronics">
