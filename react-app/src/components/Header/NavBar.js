@@ -18,6 +18,7 @@ function NavBar() {
 
 
 
+
   useEffect(() => {
     if(search.length === 0) {
         setSearchResult([])
@@ -27,6 +28,11 @@ function NavBar() {
   useEffect(() => {
     setLength(cart.length);
   }, [cart.length]);
+
+  const clear = () => {
+    history.push('/')
+    setSearch([])
+  }
 
 
   const logoutUser = async () => {
@@ -60,7 +66,9 @@ function NavBar() {
         />
       <div className="searchresultcontainer">
       {searchResult.length > 0 && searchResult.map(result => (
+        <Link onClick={clear} to={`product/${result.id}`}className="searchlinks">
         <div className="searchresults">{result.name}</div>
+        </Link>
         ))}
       </div>
         </div>
