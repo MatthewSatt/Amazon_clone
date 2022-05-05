@@ -10,7 +10,6 @@ function Music() {
   const dispatch = useDispatch();
   const products = useSelector((state) => state?.productReducer);
   const { typeId } = useParams();
-  console.log(typeId)
   useEffect(() => {
     dispatch(getProductTypesThunk(typeId));
   }, [dispatch]);

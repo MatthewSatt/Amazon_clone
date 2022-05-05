@@ -20,7 +20,6 @@ export const getUserOrdersThunk = (userId) => async (dispatch) => {
   }
 };
 export const submitOrderThunk = (payload) => async (dispatch) => {
-  console.log(payload)
   const res = await fetch("/api/orders/add", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
