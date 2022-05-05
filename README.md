@@ -26,41 +26,42 @@ Amazon allows users to view all of the products within the store, make reviews a
   * Reviews: Users can create, read, update, and delete reviews.
   * Prime: Users can update their current Prime memebership status which offers discounts on purchase totals.
   * Products: Users can view all of the products inside of the amazon store.
-  * Types: All of Amazons products are categorized into specfic types which users can view their 
+  * Types: All of Amazons products are categorized into specfic types which users can view individually organized into the corresponding type.
   * Orders: Users can view their full order history and create new orders but making purchases.
   * Cart: Users can add, view, and delete cart items them as desired.
 
 
 ### Amazon Landing Page
-![landing](https://user-images.githubusercontent.com/85750283/155817655-01f031e4-934c-4932-8bc1-977fd5d0b7ba.png)
+![landing](https://user-images.githubusercontent.com/85750283/166884515-8c58142c-e2ee-4180-ad95-1ae97366ccf9.png)
 
 
 ### Amazon Home Page
-![home](https://user-images.githubusercontent.com/85750283/155817904-0443d4b2-86a2-4e53-ae9e-a3b9a26f93da.png)
+![home](https://user-images.githubusercontent.com/85750283/166885072-9623e28a-8e6a-499b-be6a-66564cb5cb75.png)
 
 
-### Amazon Login Page 
-![login](https://user-images.githubusercontent.com/85750283/155817746-41b01f0b-a0e1-4272-aa30-51afccc114ea.png)
-
-
-### Amazon Sign Up Page
-![sign-up](https://user-images.githubusercontent.com/85750283/155817849-58e12c17-d83c-4355-b08d-b8ef8334c5db.png)
+### Amazon Login/Signup Page 
+![login](https://user-images.githubusercontent.com/85750283/166885389-4b663bf1-5ca4-4b45-86fa-4d4ec19f9756.png)
+![signup](https://user-images.githubusercontent.com/85750283/166885489-8d0d367e-86c2-4b56-9e71-4ae627560c9c.png)
 
 
 ### Amazon Checkout page
-![songs-modal](https://user-images.githubusercontent.com/85750283/155818076-8a5fcae7-28e0-45d0-934e-814a288c6880.png)
+![checkout](https://user-images.githubusercontent.com/85750283/166885240-24eeca51-a8b0-4bb0-843c-00cced962673.png)
 
 
 ### Amazon Drop Down Menu
-![songs-modal](https://user-images.githubusercontent.com/85750283/155818076-8a5fcae7-28e0-45d0-934e-814a288c6880.png)
+![dropdown](https://user-images.githubusercontent.com/85750283/166885700-d4971397-a73d-44bc-930e-d5144650f427.png)
 
 
-### Amazon Drop Down Menu
-![songs-modal](https://user-images.githubusercontent.com/85750283/155818076-8a5fcae7-28e0-45d0-934e-814a288c6880.png)
+### Amazon Orders Page
+![orders](https://user-images.githubusercontent.com/85750283/166885855-4b719b3f-793e-413e-9b4f-fbb1617cfe24.png)
 
 
-### Amazon Drop Down Menu
-![songs-modal](https://user-images.githubusercontent.com/85750283/155818076-8a5fcae7-28e0-45d0-934e-814a288c6880.png)
+### Amazon Dynamic Search
+![search](https://user-images.githubusercontent.com/85750283/166886174-45fe803a-c2be-4c9c-bca3-e75dd0cf0a62.png)
+
+
+### Amazon Product Page
+![product](https://user-images.githubusercontent.com/85750283/166886273-1dbfd856-2709-4d4e-ab4b-0a3f0020e19d.png)
 
 ## Wiki Documentation: 
 ***
