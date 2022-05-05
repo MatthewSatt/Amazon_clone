@@ -28,7 +28,7 @@ Amazon allows users to view all of the products within the store, make reviews a
   * Products: Users can view all of the products inside of the amazon store.
   * Types: All of Amazons products are categorized into specfic types which users can view individually organized into the corresponding type.
   * Orders: Users can view their full order history and create new orders but making purchases.
-  * Cart: Users can add, view, and delete cart items them as desired.
+  * Cart: Users can add, view, and delete cart items as desired.
 
 
 ### Amazon Landing Page
