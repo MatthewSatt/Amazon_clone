@@ -3,7 +3,6 @@
 
 This website is a clone of [Amazon](https://www.Amazon.com/).
 
-Live Link[MattsAmazonClone](https://mattsamazonclone.herokuapp.com)
 
 ## Table of Contents 
 
