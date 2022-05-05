@@ -74,7 +74,7 @@ const SignUp = () => {
           <h5>Password</h5>
           <input value={password} type="password" onChange={updatePassword} />
 
-          <h5>Update Password</h5>
+          <h5>Confirm Password</h5>
           <input
             value={repeatPassword}
             type="password"
