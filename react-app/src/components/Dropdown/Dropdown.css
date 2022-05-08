@@ -18,6 +18,11 @@
     transition: ease-in-out;
     animation-name: shiftright;
     animation-duration: 0.5s;
+
+}
+
+.dropdownmenu {
+    color: white;
 }
 
 

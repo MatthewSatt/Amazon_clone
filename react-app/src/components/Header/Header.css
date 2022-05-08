@@ -22,15 +22,15 @@
  }
 
  .headersearchinput {
-     height: 12px;
-     padding:10px;
+     height: 25px;
+     padding:5px;
      border: none;
      width: 100%;
  }
 
  .headersearchicon {
      padding: 5px;
-     height: 22px !important;
+     height: 25px !important;
      background-color: #cd9042;
  }
 

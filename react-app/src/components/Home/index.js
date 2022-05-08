@@ -6,7 +6,6 @@ import { getTypesThunk } from "../../store/types";
 import { Link } from "react-router-dom";
 import Dropdown from "../Dropdown";
 import HomeCaro from "./HomeCaro";
-import HomeCaro2 from "./HomeCaro2";
 import "./Home.css";
 import { getCartThunk } from "../../store/cart";
 
@@ -33,7 +32,7 @@ function Home() {
       </div>
       <div className="homecarousels">
         <div className="homecarousel2">
-        <HomeCaro2 />
+        {/* <HomeCaro2 /> */}
         </div>
       </div>
       <div className="homeboxes">
