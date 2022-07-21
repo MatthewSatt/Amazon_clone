@@ -7,13 +7,12 @@ import { Link } from "react-router-dom";
 import Dropdown from "../Dropdown";
 import HomeCaro from "./HomeCaro";
 import "./Home.css";
-import { getCartThunk } from "../../store/cart";
+import cartReducer, { getCartThunk } from "../../store/cart";
 
 function Home() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.session.user);
-  // const products = useSelector((state) => Object.values(state.productReducer));
-  // const types = useSelector((state) => state.typeReducer);
+  const cart = useSelector(state => state.cartReducer)
   const [showSideNav, setShowSideNav] = useState(false);
 
   useEffect(() => {
@@ -30,6 +29,8 @@ function Home() {
       <div className="headerhome">
         <Dropdown showSideNav={showSideNav} setShowSideNav={setShowSideNav} />
       </div>
+      <h1 className="hometitle">Amazon</h1>
+
       <div className="homecarousels">
         <div className="homecarousel2">
         {/* <HomeCaro2 /> */}

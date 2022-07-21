@@ -49,6 +49,11 @@
      margin-right: 5%;
  }
 
+ .iconalert {
+   color:green;
+
+ }
+
 
  @media only screen and (max-width: 730px) {
    .productdisplay {

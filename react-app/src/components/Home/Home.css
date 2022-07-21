@@ -3,8 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    background-color: #FF9900;
+    background: linear-gradient(90deg, #FDA403 0%, #E8751A 100%);
 }
 
 .headerhome {
@@ -121,6 +121,14 @@
     left: 0;
     padding: 4px;
     font-size: 28px;
+}
+
+.hometitle {
+    font-size: 70px;
+    padding: 5px;
+    color: white;
+    border-bottom: 1px solid white;
+    border-width: 100%;
 }
 
 @media only screen and (max-width: 1160px) {
