@@ -3,9 +3,23 @@ from app.models import User, db
 from app.forms import LoginForm
 from app.forms import SignUpForm
 from flask_login import current_user, login_user, logout_user, login_required
+from twilio.rest import Client
+
+
 
 auth_routes = Blueprint('auth', __name__)
 
+
+def login_notice():
+    account_sid = "ACa2b799f6980f53da53b034ad127a1f33"
+    auth_token = "86f8adee381fb8831f9de91d7426d8d2"
+
+    client = Client(account_sid, auth_token)
+
+    message = client.messages.create(
+        body='Amazon Login Alert!',
+        from_='+15185203803',
+        to='+17605858002')
 
 def validation_errors_to_error_messages(validation_errors):
     """
@@ -44,8 +58,7 @@ def login():
         text_check = user.to_dict()
         demo_check = text_check["username"]
         if demo_check == "Demo":
-            print("hi")
-
+            login_notice()
         return user.to_dict()
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
