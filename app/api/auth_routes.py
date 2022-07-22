@@ -4,15 +4,14 @@ from app.forms import LoginForm
 from app.forms import SignUpForm
 from flask_login import current_user, login_user, logout_user, login_required
 from twilio.rest import Client
-
+from app.config import Config
 
 
 auth_routes = Blueprint('auth', __name__)
 
-
 def login_notice():
-    account_sid = "ACa2b799f6980f53da53b034ad127a1f33"
-    auth_token = "86f8adee381fb8831f9de91d7426d8d2"
+    account_sid = Config.TWILIO_ACCOUNT_SID
+    auth_token = Config.TWILIO_AUTH_TOKEN
 
     client = Client(account_sid, auth_token)
 
@@ -20,6 +19,7 @@ def login_notice():
         body='Amazon Login Alert!',
         from_='+15185203803',
         to='+17605858002')
+    return None
 
 def validation_errors_to_error_messages(validation_errors):
     """
