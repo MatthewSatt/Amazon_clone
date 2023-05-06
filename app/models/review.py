@@ -1,15 +1,15 @@
-from .db import db
-from werkzeug.security import generate_password_hash, check_password_hash
-from flask_login import UserMixin
+from .db import db, environment, SCHEMA, add_prefix_for_prod
 from sqlalchemy import ForeignKey, func
 
 
 class Review(db.Model):
     __tablename__ = 'reviews'
+    if environment == "production":
+        __table_args__ = {'schema': SCHEMA}
 
     id=db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
-    product_id = db.Column(db.Integer, db.ForeignKey('products.id'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
+    product_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('products.id')), nullable=False)
     title=db.Column(db.String(255), nullable=False)
     body=db.Column(db.Text, nullable=False)
     rating = db.Column(db.Integer)

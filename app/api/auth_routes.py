@@ -9,17 +9,6 @@ from app.config import Config
 
 auth_routes = Blueprint('auth', __name__)
 
-def login_notice():
-    account_sid = Config.TWILIO_ACCOUNT_SID
-    auth_token = Config.TWILIO_AUTH_TOKEN
-
-    client = Client(account_sid, auth_token)
-
-    message = client.messages.create(
-        body='Amazon Login Alert!',
-        from_='+15185203803',
-        to='+17605858002')
-    return None
 
 def validation_errors_to_error_messages(validation_errors):
     """
@@ -55,11 +44,8 @@ def login():
         # Add the user to the session, we are logged in!
         user = User.query.filter(User.email == form.data['email']).first()
         login_user(user)
-        text_check = user.to_dict()
-        demo_check = text_check["username"]
-        if demo_check == "Demo":
-            login_notice()
         return user.to_dict()
+
     return {'errors': validation_errors_to_error_messages(form.errors)}, 401
 
 

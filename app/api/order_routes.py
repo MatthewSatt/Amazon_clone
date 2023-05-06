@@ -27,7 +27,6 @@ def product_types():
         db.session.add(new_order)
         db.session.delete(cart_item)
         db.session.commit()
-    print('.............', [order.to_dict() for order in orders])
     # return jsonify([product.to_dict() for product in products])
     return {}
 
