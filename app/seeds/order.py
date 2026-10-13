@@ -1,3 +1,5 @@
+from sqlalchemy import text
+from app.models.db import qualified
 from app.models import db, Order
 
 
@@ -40,5 +42,5 @@ def seed_orders():
 
 
 def undo_orders():
-    db.session.execute('TRUNCATE orders RESTART IDENTITY CASCADE;')
+    db.session.execute(text(f'TRUNCATE {qualified("orders")} RESTART IDENTITY CASCADE;'))
     db.session.commit()

@@ -1,35 +1,48 @@
-from flask import Blueprint, jsonify, request
-from app.models import db, Order, Cart
-from flask_login import login_required
+from flask import Blueprint, jsonify
+from flask_login import current_user, login_required
+
+from app.models import Cart, Order, db
+from app.pricing import summarize
+
+from .utils import error
+
+order_routes = Blueprint('orders', __name__)
 
 
-order_routes = Blueprint("orders", __name__)
+def order_json(order):
+    return {**order.to_dict(), 'product': order.product.to_dict(full=False)}
 
 
-@order_routes.route('/<int:userId>')
-def get_user_orders(userId):
-    orders = Order.query.filter(Order.user_id == userId)
-    return jsonify([order.to_dict() for order in orders])
+@order_routes.route('/')
+@login_required
+def get_orders():
+    orders = db.session.scalars(
+        db.select(Order)
+        .where(Order.user_id == current_user.id)
+        .order_by(Order.created_at.desc(), Order.id.desc()))
+    return jsonify([order_json(order) for order in orders])
 
-@order_routes.route("/add", methods=["POST"])
-def product_types():
-    data = request.json
-    old_cart = data["submitOrder"]
+
+@order_routes.route('/', methods=['POST'])
+@login_required
+def place_order():
+    """Turn the signed-in user's cart into orders, priced at today's prices"""
+    items = db.session.scalars(
+        db.select(Cart).where(Cart.user_id == current_user.id).order_by(Cart.id)).all()
+    if not items:
+        return error('Your cart is empty.')
+
+    summary = summarize(
+        [(item.product.price, item.quantity) for item in items], current_user.isPrime)
     orders = []
-
-    for obj in old_cart:
-        cart_id = obj["id"]
-        user_id = obj["user_id"]
-        product_id = obj["product_id"]
-        cart_item = Cart.query.get(cart_id)
-        new_order = Order(user_id=user_id, product_id=product_id)
-        orders.append(new_order)
-        db.session.add(new_order)
-        db.session.delete(cart_item)
-        db.session.commit()
-    # return jsonify([product.to_dict() for product in products])
-    return {}
-
-
-
-# {'created_at': 'Mon, 02 May 2022 22:08:40 GMT', 'id': 21, 'product_id': 1, 'quantity': 1, 'updated_at': 'Mon, 02 May 2022 22:08:40 GMT', 'user_id': 1}
+    for item in items:
+        order = Order(
+            user_id=current_user.id,
+            product_id=item.product_id,
+            quantity=item.quantity,
+            price=item.product.price)
+        orders.append(order)
+        db.session.add(order)
+        db.session.delete(item)
+    db.session.commit()
+    return {'orders': [order_json(order) for order in orders], 'summary': summary}, 201

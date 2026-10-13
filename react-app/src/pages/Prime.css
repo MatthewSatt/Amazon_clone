@@ -1,0 +1,112 @@
+.prime {
+  margin-top: -24px;
+}
+
+.prime__hero {
+  padding-block: 56px 80px;
+  background: radial-gradient(circle at 85% 20%, #3a5a86 0, transparent 50%), linear-gradient(130deg, var(--nav), #243b55);
+  color: #fff;
+}
+
+.prime__hero-inner {
+  max-width: 820px;
+}
+
+.prime__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  padding: 5px 14px;
+  border-radius: 999px;
+  background: rgb(255 153 0 / 18%);
+  color: var(--accent-soft);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.prime h1 {
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.prime__hero p {
+  max-width: 56ch;
+  margin-top: 14px;
+  color: rgb(255 255 255 / 82%);
+  font-size: 18px;
+}
+
+.prime__cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.prime__leave {
+  border-color: rgb(255 255 255 / 40%);
+  background: transparent;
+  color: #fff;
+}
+
+.prime__leave:hover:not(:disabled) {
+  background: rgb(255 255 255 / 12%);
+}
+
+.prime__checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+  margin-top: 26px;
+  padding: 0;
+  list-style: none;
+  color: rgb(255 255 255 / 80%);
+  font-size: 14px;
+}
+
+.prime__checks li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.prime__checks svg {
+  color: #4ade80;
+}
+
+.prime__benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+  margin-top: -40px;
+  position: relative;
+}
+
+.prime__benefit {
+  padding: 24px;
+}
+
+.prime__icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  margin-bottom: 14px;
+  border-radius: var(--r-sm);
+  background: #fff1d6;
+  color: #b86e00;
+}
+
+.prime__benefit h2 {
+  margin-bottom: 6px;
+  font-size: 17px;
+}
+
+.prime__benefit p {
+  color: var(--ink-2);
+  font-size: 14px;
+}

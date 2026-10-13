@@ -1,41 +1,45 @@
 import os
-from flask import Flask, render_template, request, session, redirect
-from flask_cors import CORS
-from flask_migrate import Migrate
-from flask_wtf.csrf import CSRFProtect, generate_csrf
+
+from flask import Flask, jsonify, redirect, request
 from flask_login import LoginManager
+from flask_migrate import Migrate
+from flask_wtf.csrf import CSRFError, CSRFProtect, generate_csrf
 
-
-from .models import db, User
-from .api.user_routes import user_routes
 from .api.auth_routes import auth_routes
-from .api.type_routes import type_routes
-from .api.product_routes import product_routes
-from .api.review_routes import review_routes
 from .api.cart_routes import cart_routes
 from .api.order_routes import order_routes
-
-
+from .api.product_routes import product_routes
+from .api.review_routes import review_routes
+from .api.type_routes import type_routes
+from .api.user_routes import user_routes
+from .config import Config
+from .models import User, db
 from .seeds import seed_commands
 
-from .config import Config
+DIST_DIR = os.path.join(os.path.dirname(__file__), '..', 'react-app', 'dist')
+IS_PRODUCTION = os.environ.get('FLASK_ENV') == 'production'
 
-app = Flask(__name__, static_folder='../react-app/build', static_url_path='/')
+app = Flask(__name__, static_folder=DIST_DIR, static_url_path='/')
+app.config.from_object(Config)
 
-# Setup login manager
+db.init_app(app)
+Migrate(app, db)
+csrf = CSRFProtect(app)
+
 login = LoginManager(app)
-login.login_view = 'auth.unauthorized'
 
 
 @login.user_loader
 def load_user(id):
-    return User.query.get(int(id))
+    return db.session.get(User, int(id))
 
 
-# Tell flask about our seed commands
+@login.unauthorized_handler
+def unauthorized():
+    return jsonify(errors={'form': ['You must be signed in.']}), 401
+
+
 app.cli.add_command(seed_commands)
-
-app.config.from_object(Config)
 app.register_blueprint(user_routes, url_prefix='/api/users')
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(type_routes, url_prefix='/api/types')
@@ -44,42 +48,68 @@ app.register_blueprint(review_routes, url_prefix='/api/reviews')
 app.register_blueprint(cart_routes, url_prefix='/api/carts')
 app.register_blueprint(order_routes, url_prefix='/api/orders')
 
-db.init_app(app)
-Migrate(app, db)
 
-# Application Security
-CORS(app)
+@app.route('/api/health')
+def health():
+    return {'status': 'ok'}
 
 
-# Since we are deploying with Docker and Flask,
-# we won't be using a buildpack when we deploy to Heroku.
-# Therefore, we need to make sure that in production any
-# request made over http is redirected to https.
-# Well.........
+# Hosts like Heroku terminate TLS in front of us, so redirect plain-http
+# requests (as reported by the proxy) to https in production.
 @app.before_request
 def https_redirect():
-    if os.environ.get('FLASK_ENV') == 'production':
-        if request.headers.get('X-Forwarded-Proto') == 'http':
-            url = request.url.replace('http://', 'https://', 1)
-            code = 301
-            return redirect(url, code=code)
+    if IS_PRODUCTION and request.headers.get('X-Forwarded-Proto') == 'http':
+        return redirect(request.url.replace('http://', 'https://', 1), code=301)
 
 
+# The React app reads this cookie and echoes it back in the X-CSRFToken header
 @app.after_request
 def inject_csrf_token(response):
-    response.set_cookie(
-        'csrf_token',
-        generate_csrf(),
-        secure=True if os.environ.get('FLASK_ENV') == 'production' else False,
-        samesite='Strict' if os.environ.get(
-            'FLASK_ENV') == 'production' else None,
-        httponly=True)
+    if response.mimetype in ('application/json', 'text/html'):
+        response.set_cookie(
+            'csrf_token',
+            generate_csrf(),
+            secure=IS_PRODUCTION,
+            samesite='Lax',
+            httponly=False)
+    if request.path.startswith('/api/'):
+        response.headers['Cache-Control'] = 'no-store'
+    elif request.path.startswith('/assets/'):
+        # Vite fingerprints everything in /assets
+        response.headers['Cache-Control'] = 'public, max-age=31536000, immutable'
     return response
 
 
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def react_root(path):
-    if path == 'favicon.ico':
-        return app.send_from_directory('public', 'favicon.ico')
+@app.route('/')
+def index():
     return app.send_static_file('index.html')
+
+
+@app.errorhandler(CSRFError)
+def csrf_error(e):
+    return jsonify(errors={'form': ['Your session expired. Please refresh the page.']}), 400
+
+
+@app.errorhandler(404)
+def not_found(e):
+    if request.path.startswith('/api/'):
+        return jsonify(errors={'form': ['Not found.']}), 404
+    # The static route catches every file path, so anything unknown here is a
+    # client-side route (e.g. a refreshed /orders): let React Router handle it
+    if os.path.exists(os.path.join(app.static_folder, 'index.html')):
+        return app.send_static_file('index.html')
+    return e
+
+
+@app.errorhandler(405)
+def method_not_allowed(e):
+    if request.path.startswith('/api/'):
+        return jsonify(errors={'form': ['Method not allowed.']}), 405
+    return e
+
+
+@app.errorhandler(500)
+def server_error(e):
+    if request.path.startswith('/api/'):
+        return jsonify(errors={'form': ['Something went wrong. Please try again.']}), 500
+    return e

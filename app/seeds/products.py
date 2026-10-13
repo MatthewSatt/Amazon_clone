@@ -1,3 +1,5 @@
+from sqlalchemy import text
+from app.models.db import qualified
 from app.models import db, Product
     # id=db.Column(db.Integer, primary_key=True)
     # type_id = db.Column(db.Integer, db.ForeignKey('types.id'), nullable=False)
@@ -10,8 +12,8 @@ from app.models import db, Product
 def seed_products():
     book1 = Product(type_id=1, name='The Last Apprentice', description='For years, Old Gregory has been the Spook for the county, ridding the local villages of evil. Now his time is coming to an end. But who will take over for him? Twenty-nine apprentices have tried—some floundered, some fled, some failed to stay alive.', price=35.99, image='https://m.media-amazon.com/images/I/61VThHweiOL._AC_UY436_FMwebp_QL65_.jpg')
     book2 = Product(type_id=1, name='Harry Potter', description="Readers beware. The brilliant, breathtaking conclusion to J.K. Rowling's spellbinding series is not for the faint of heart--such revelations, battles, and betrayals await in Harry Potter and the Deathly Hallows that no fan will make it to the end unscathed. Luckily, Rowling has prepped loyal readers for the end of her series by doling out increasingly dark and dangerous tales of magic and mystery, shot through with lessons about honor and contempt, love and loss, and right and wrong.", price=43.99, image='https://m.media-amazon.com/images/I/71sH3vxziLL._AC_UL640_FMwebp_QL65_.jpg')
-    book3 = Product(type_id=1, name='Holes', description="Stanley Yelnats is under a curse. A curse that began with his no-good-dirty-rotten-pig-stealing-great-great-grandfather and has since followed generations of Yelnatses. Now Stanley has been unjustly sent to a boys’ detention center, Camp Green Lake, where the boys build character by spending all day, every day digging holes exactly five feet wide and five feet deep. There is no lake at Camp Green Lake. But there are an awful lot of holes.", price=5.99, image='https://m.media-amazon.com/images/I/814TCW6Y7hL._AC_UY436_FMwebp_QL65_.jpg')
-    book4 = Product(type_id=1, name='Series of Unforunate Events', description="Violet, Klaus, and Sunny Baudelaire are intelligent children. They are charming, and resourceful, and have pleasant facial features. Unfortunately, they are exceptionally unlucky.", price=22.99, image="https://m.media-amazon.com/images/I/51Yno8F2hNL._AC_UY436_FMwebp_QL65_.jpg")
+    book3 = Product(type_id=1, name='Holes', description="Stanley Yelnats is under a curse. A curse that began with his no-good-dirty-rotten-pig-stealing-great-great-grandfather and has since followed generations of Yelnatses. Now Stanley has been unjustly sent to a boys’ detention center, Camp Green Lake, where the boys build character by spending all day, every day digging holes exactly five feet wide and five feet deep. There is no lake at Camp Green Lake. But there are an awful lot of holes.", price=5.99, image='https://covers.openlibrary.org/b/isbn/9780440414803-L.jpg')
+    book4 = Product(type_id=1, name='A Series of Unfortunate Events', description="Violet, Klaus, and Sunny Baudelaire are intelligent children. They are charming, and resourceful, and have pleasant facial features. Unfortunately, they are exceptionally unlucky.", price=22.99, image="https://m.media-amazon.com/images/I/51Yno8F2hNL._AC_UY436_FMwebp_QL65_.jpg")
     book5=Product(
         type_id=1,
         name="Dr. Seuss's Beginner Book Collection",
@@ -1243,5 +1245,5 @@ def seed_products():
 
 
 def undo_products():
-    db.session.execute('TRUNCATE products RESTART IDENTITY CASCADE;')
+    db.session.execute(text(f'TRUNCATE {qualified("products")} RESTART IDENTITY CASCADE;'))
     db.session.commit()

@@ -1,0 +1,239 @@
+/* ---------- Hero ---------- */
+.hero {
+  position: relative;
+  margin-top: -24px;
+  display: grid;
+  background: var(--nav-2);
+}
+
+.hero__slide {
+  grid-area: 1 / 1;
+  min-height: 340px;
+  display: flex;
+  align-items: center;
+  padding-block: 28px 70px;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.hero__slide.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hero__slide--indigo {
+  background: radial-gradient(circle at 80% 30%, #4b57d6 0, transparent 55%), linear-gradient(120deg, #1b2144, #2d2f7a);
+}
+
+.hero__slide--teal {
+  background: radial-gradient(circle at 80% 30%, #1fa59a 0, transparent 55%), linear-gradient(120deg, #0d2f3a, #11566a);
+}
+
+.hero__slide--ember {
+  background: radial-gradient(circle at 80% 30%, #ff9a3c 0, transparent 52%), linear-gradient(120deg, #3a1a14, #7a2f1b);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+}
+
+.hero__kicker {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 14%);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 16ch;
+  font-size: clamp(30px, 4.4vw, 50px);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.hero p {
+  max-width: 44ch;
+  margin: 14px 0 24px;
+  color: rgb(255 255 255 / 82%);
+  font-size: 17px;
+}
+
+.hero__product {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 300px);
+  aspect-ratio: 1;
+  border-radius: var(--r-lg);
+  background: #fff;
+  box-shadow: 0 30px 60px rgb(0 0 0 / 35%);
+  transform: rotate(3deg);
+  transition: transform 0.3s;
+}
+
+.hero__product:hover {
+  transform: rotate(0) scale(1.03);
+}
+
+.hero__image {
+  position: absolute;
+  inset: 22px;
+  width: calc(100% - 44px);
+  height: calc(100% - 44px);
+  object-fit: contain;
+}
+
+.hero__controls {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgb(10 14 20 / 45%);
+  backdrop-filter: blur(6px);
+}
+
+.hero__btn {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  color: #fff;
+}
+
+.hero__btn:hover {
+  background: rgb(255 255 255 / 20%);
+}
+
+.hero__dots {
+  display: flex;
+  gap: 8px;
+}
+
+.hero__dot {
+  width: 9px;
+  height: 9px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: rgb(255 255 255 / 50%);
+  transition: width 0.2s, background-color 0.2s;
+}
+
+.hero__dot.is-active {
+  width: 26px;
+  background: var(--accent);
+}
+
+/* ---------- Category tiles ---------- */
+.home {
+  position: relative;
+  z-index: 1;
+  margin-top: -44px;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+}
+
+.tile h2 {
+  font-size: 19px;
+}
+
+.tile__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  flex: 1;
+}
+
+.tile__img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: contain;
+  border-radius: var(--r-sm);
+  background: #fff;
+  mix-blend-mode: multiply;
+  transition: transform 0.2s;
+}
+
+.tile__grid:hover .tile__img {
+  transform: scale(1.03);
+}
+
+.tile__link {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.tile--prime {
+  justify-content: center;
+  align-items: flex-start;
+  border-radius: var(--r-md);
+  background: linear-gradient(140deg, var(--nav), #2c3e55);
+  color: #fff;
+}
+
+.tile--prime svg {
+  color: var(--accent);
+}
+
+.tile--prime p {
+  color: rgb(255 255 255 / 78%);
+}
+
+@media (max-width: 800px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__product {
+    display: none;
+  }
+
+  .hero__slide {
+    min-height: 300px;
+  }
+
+  .tiles {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .tile {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 460px) {
+  .tiles {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

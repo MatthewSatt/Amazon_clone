@@ -1,3 +1,5 @@
+from sqlalchemy import text
+from app.models.db import qualified
 from app.models import db, Cart
 
 
@@ -19,15 +21,5 @@ def seed_carts():
 
 
 def undo_carts():
-    db.session.execute('TRUNCATE carts RESTART IDENTITY CASCADE;')
+    db.session.execute(text(f'TRUNCATE {qualified("carts")} RESTART IDENTITY CASCADE;'))
     db.session.commit()
-
-    # def to_dict(self):
-    #     return {
-    #         'id': self.id,
-    #         'user_id': self.user_id,
-    #         'product_id': self.product_id,
-    #         'quantity': self.quantity,
-    #         'created_at': self.created_at,
-    #         'updated_at': self.updated_at
-    #     }

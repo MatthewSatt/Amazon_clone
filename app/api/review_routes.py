@@ -1,49 +1,88 @@
-from itertools import product
-import re
-from flask import Blueprint, jsonify, request
-from app.models import db, Review, review
-from flask_login import login_required
+from flask import Blueprint, jsonify
+from flask_login import current_user, login_required
+
+from app.models import Product, Review, db
+
+from .utils import as_int, error, json_body
+
+review_routes = Blueprint('reviews', __name__)
 
 
+def clean_review(data):
+    """(fields, errors) from a request body"""
+    title = str(data.get('title') or '').strip()
+    body = str(data.get('body') or '').strip()
+    rating = as_int(data.get('rating'))
+    errors = {}
+    if not 1 <= len(title) <= 255:
+        errors['title'] = ['Add a headline (up to 255 characters).']
+    if not 1 <= len(body) <= 5000:
+        errors['body'] = ['Write a review (up to 5000 characters).']
+    if rating is None or not 1 <= rating <= 5:
+        errors['rating'] = ['Choose a rating from 1 to 5 stars.']
+    return {'title': title, 'body': body, 'rating': rating}, errors
 
-review_routes = Blueprint("reviews", __name__)
 
-
-@review_routes.route("/<int:id>")
-def getReviews(id):
-    reviews = Review.query.filter(id == Review.product_id).all()
+@review_routes.route('/product/<int:product_id>')
+def get_reviews(product_id):
+    reviews = db.session.scalars(
+        db.select(Review)
+        .where(Review.product_id == product_id)
+        .order_by(Review.created_at.desc(), Review.id.desc()))
     return jsonify([review.to_dict() for review in reviews])
 
 
-@review_routes.route("/add", methods=["POST"])
+@review_routes.route('/product/<int:product_id>', methods=['POST'])
 @login_required
-def add_review():
-    data = request.json
-    user_id = data["user_id"]
-    product_id = data["product_id"]
-    title= data["title"]
-    body= data["body"]
-    rating=data["rating"]
-    new_review = Review(user_id=user_id, product_id=product_id, title=title, body=body, rating=rating)
-    db.session.add(new_review)
-    db.session.commit()
-    return new_review.to_dict()
+def add_review(product_id):
+    if not db.session.get(Product, product_id):
+        return error('Product not found.', 404)
+    already_reviewed = db.session.scalar(
+        db.select(Review.id).where(
+            Review.product_id == product_id, Review.user_id == current_user.id))
+    if already_reviewed:
+        return error('You have already reviewed this product. Edit your review instead.', 409)
 
-@review_routes.route("/delete/<int:id>", methods=["DELETE"])
-@login_required
-def delete_review(id):
-    deleted_review = Review.query.filter(Review.id == id).first()
-    db.session.delete(deleted_review)
-    db.session.commit()
-    return deleted_review.to_dict()
+    fields, errors = clean_review(json_body())
+    if errors:
+        return jsonify(errors=errors), 400
 
-@review_routes.route("/edit", methods=["PUT"])
+    review = Review(user_id=current_user.id, product_id=product_id, **fields)
+    db.session.add(review)
+    db.session.commit()
+    return review.to_dict(), 201
+
+
+def own_review(id):
+    review = db.session.get(Review, id)
+    if not review:
+        return None, error('Review not found.', 404)
+    if review.user_id != current_user.id:
+        return None, error('You can only change your own reviews.', 403)
+    return review, None
+
+
+@review_routes.route('/<int:id>', methods=['PUT'])
 @login_required
-def edit_review():
-    data = request.json
-    review = Review.query.get(data['id'])
-    review.title = data['title']
-    review.body = data['body']
-    review.rating = data['rating']
+def edit_review(id):
+    review, problem = own_review(id)
+    if problem:
+        return problem
+    fields, errors = clean_review(json_body())
+    if errors:
+        return jsonify(errors=errors), 400
+    for name, value in fields.items():
+        setattr(review, name, value)
     db.session.commit()
     return review.to_dict()
+
+
+@review_routes.route('/<int:id>', methods=['DELETE'])
+@login_required
+def delete_review(id):
+    review, problem = own_review(id)
+    if problem:
+        return problem
+    db.session.delete(review)
+    db.session.commit()
+    return {'id': id}

@@ -1,3 +1,5 @@
+from sqlalchemy import text
+from app.models.db import qualified
 from app.models import db, User
 
 
@@ -23,5 +25,5 @@ def seed_users():
 # resets the auto incrementing primary key, CASCADE deletes any
 # dependent entities
 def undo_users():
-    db.session.execute('TRUNCATE users RESTART IDENTITY CASCADE;')
+    db.session.execute(text(f'TRUNCATE {qualified("users")} RESTART IDENTITY CASCADE;'))
     db.session.commit()

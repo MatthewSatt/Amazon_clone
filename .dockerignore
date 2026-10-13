@@ -1,6 +1,9 @@
-react-app/node_modules
+.git
 .venv
-Pipfile
-Pipfile.lock
 .env
 .DS_Store
+.vscode
+**/__pycache__
+**/*.py[cod]
+**/node_modules
+react-app/dist

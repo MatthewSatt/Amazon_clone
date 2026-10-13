@@ -1,5 +1,4 @@
-from email.policy import default
-from .db import db, environment, SCHEMA, add_prefix_for_prod
+from .db import db, environment, SCHEMA
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 
@@ -9,11 +8,10 @@ class User(db.Model, UserMixin):
     if environment == "production":
         __table_args__ = {'schema': SCHEMA}
 
-
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(40), unique=True)
     email = db.Column(db.String(255), nullable=False, unique=True)
-    isPrime = db.Column(db.Boolean(255), nullable=False, default=False)
+    isPrime = db.Column(db.Boolean, nullable=False, default=False)
     hashed_password = db.Column(db.String(255), nullable=False)
 
     review = db.relationship("Review", back_populates='user')

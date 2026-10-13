@@ -98,6 +98,20 @@ src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.s
 
 ## Installation 
 
+### Running with Docker
+
+With [Docker](https://www.docker.com/products/docker-desktop/) installed, clone the repository, cd into it, and run:
+
+    docker compose up --build
+
+Then open http://localhost:8000 and log in as `demo@aa.io` / `password`. The first start creates the Postgres database, runs the migrations, and seeds demo data. The data lives in a Docker volume, so it persists between restarts.
+
+  •  Run Flask commands in the running container, e.g. `docker compose exec web flask seed undo`
+
+  •  `docker compose down -v` stops everything and deletes the database. It is migrated and seeded again on the next `up`
+
+### Running locally
+
 To install Amazon on your local machine please clone the project repository. 
 
 1 )  `git clone https://github.com/MatthewSatt/Amazon_clone.git`

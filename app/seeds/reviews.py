@@ -1,116 +1,43 @@
-            # 'id': self.id,
-            # 'user_id': self.user_id,
-            # 'product_id': self.product_id,
-            # 'title': self.title,
-            # 'body': self.body,
-            # 'rating': self.rating,
-            # 'created_at': self.created_at,
-            # 'updated_at': self.updated_at
+from sqlalchemy import text
+from app.models.db import qualified
 from app.models import db, Review
+
+# (user_id, product_id, rating, title, body)
+REVIEWS = [
+    (1, 1, 5, 'Gripping from the first chapter',
+     'A properly creepy story with a great sense of atmosphere. It is darker than the shelf it sits on suggests, so probably best for older readers.'),
+    (2, 1, 3, 'Good, but not for everyone',
+     'Fairytale-style horror with plenty of menace. The pacing drags a little in the middle, though the ending makes up for it.'),
+    (3, 1, 4, 'Great start to a series',
+     'Solid world-building and a likeable narrator. I finished it in two evenings and immediately ordered the next one.'),
+    (2, 3, 5, 'Still holds up',
+     'Read it as a kid and just picked it up again. The way the storylines connect is every bit as clever as I remembered.'),
+    (3, 7, 5, 'Timeless and unsettling',
+     'Beautifully written and more relevant than ever. A book that stays with you long after the last page.'),
+    (1, 11, 5, 'Practical and easy to apply',
+     'Clear ideas, short chapters and real examples. I started two small habits the same week and both have stuck.'),
+    (2, 13, 4, 'Fixed our dead spots',
+     'Setup took about five minutes and the signal in the back bedroom went from one bar to full. Speeds are noticeably better.'),
+    (1, 15, 4, 'Great little console',
+     'Quiet, fast and plays everything I care about. Wish the internal storage were larger, but it is easy to expand.'),
+    (3, 16, 4, 'Worth the money',
+     'Bright screen, good speakers and the battery lasts all week for casual use. Perfect for the couch.'),
+    (2, 18, 5, 'Pairs instantly',
+     'Connect to my phone in seconds, sound is clear and they stay put on my commute. Battery life is solid.'),
+    (1, 18, 4, 'Comfortable all day',
+     'Nice fit and reliable connection. The case is a bit slippery but I have no real complaints.'),
+    (3, 9, 2, 'Very specialised',
+     'Comprehensive, but it is a dense clinical textbook and priced accordingly. Only buy it if your course requires it.'),
+]
+
+
 def seed_reviews():
-    review1 = Review(
-        user_id=1,
-        product_id=1,
-        title='One of my favorites',
-        body='This is a very well written book with an interesting plot and good story. However, it is probably one of the more scary books I have ever read. There is no way it should be shelved in the juvenile fiction part of the library - definitely more young adult.',
-        rating=5
-        )
-    review2 = Review(
-        user_id=2,
-        product_id=1,
-        title='Not that great',
-        body='Just like a classic: scary, entertaining, and has a plot like a fairytale. Revenge of the witch is played out just like a Grimm brothers tale: dark but yet entertaining with positive messages. There is a fair handful of violence, but Mr. Gregory advises against it often',
-        rating=2
-        )
-    review3 = Review(
-        user_id=3,
-        product_id=1,
-        title='Decent Book',
-        body='Joseph DELANEY is the author of the internationally best-selling The Last Apprentice series, which is now a major motion picture, Seventh Son. He is a former English teacher who lives in the heart of boggart territory in Lancashire, England.',
-        rating=4
-        )
-
-    review4 = Review(
-        user_id=2,
-        product_id=13,
-        title='BEST PRODUCT EVER',
-        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
-        rating=5
-        )
-    review5 = Review(
-        user_id=2,
-        product_id=11,
-        title='DO NOT BUY',
-        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
-        rating=1
-        )
-    review6 = Review(
-        user_id=3,
-        product_id=16,
-        title='Worth the money',
-        body="I've had this for years and it's been great",
-        rating=4
-        )
-    review7 = Review(
-        user_id=2,
-        product_id=9,
-        title='DO NOT BUY',
-        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
-        rating=1
-        )
-    review8 = Review(
-        user_id=2,
-        product_id=7,
-        title='DO NOT BUY',
-        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
-        rating=1
-        )
-    review9 = Review(
-        user_id=1,
-        product_id=15,
-        title='DO NOT BUY',
-        body="It's way too much money.",
-        rating=1
-        )
-    review10 = Review(
-        user_id=2,
-        product_id=18,
-        title='DO NOT BUY',
-        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
-        rating=1
-        )
-    review11 = Review(
-        user_id=1,
-        product_id=18,
-        title='DO NOT BUY',
-        body="It's too thick and probably will not sit well in the channel. Also, the installation will not appear finished since the sliding door and doggie door won't be flush. There are other types specifically for single pane.",
-        rating=1
-        )
-    review12 = Review(
-        user_id=2,
-        product_id=3,
-        title='I read this as a kid',
-        body="Stanley Yelnats ....racecar",
-        rating=1
-        )
-
-
-    db.session.add(review1)
-    db.session.add(review2)
-    db.session.add(review3)
-    db.session.add(review4)
-    db.session.add(review5)
-    db.session.add(review6)
-    db.session.add(review7)
-    db.session.add(review8)
-    db.session.add(review9)
-    db.session.add(review10)
-    db.session.add(review11)
-    db.session.add(review12)
+    for user_id, product_id, rating, title, body in REVIEWS:
+        db.session.add(Review(
+            user_id=user_id, product_id=product_id, rating=rating, title=title, body=body))
     db.session.commit()
 
 
-
 def undo_reviews():
-    db.session.execute('TRUNCATE reviews RESTART IDENTITY CASCADE;')
+    db.session.execute(text(f'TRUNCATE {qualified("reviews")} RESTART IDENTITY CASCADE;'))
     db.session.commit()

@@ -1,3 +1,5 @@
+from sqlalchemy import text
+from app.models.db import qualified
 from app.models import db, Type
 
 
@@ -29,5 +31,5 @@ def seed_types():
     db.session.commit()
 
 def undo_types():
-    db.session.execute('TRUNCATE types RESTART IDENTITY CASCADE;')
+    db.session.execute(text(f'TRUNCATE {qualified("types")} RESTART IDENTITY CASCADE;'))
     db.session.commit()

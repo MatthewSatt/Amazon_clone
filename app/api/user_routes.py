@@ -1,30 +1,18 @@
-from flask import Blueprint, jsonify
-from flask_login import login_required
-from app.models import User, db
+from flask import Blueprint
+from flask_login import current_user, login_required
+
+from app.models import db
+
+from .utils import json_body
 
 user_routes = Blueprint('users', __name__)
 
 
-@user_routes.route('/')
-def users():
-    users = User.query.all()
-    return {'users': [user.to_dict() for user in users]}
-
-
-@user_routes.route('/<int:id>')
+@user_routes.route('/prime', methods=['PUT'])
 @login_required
-def user(id):
-    user = User.query.get(id)
-    return user.to_dict()
-
-
-@user_routes.route("/prime/<int:id>", methods=["PUT"])
-@login_required
-def set_prime(id):
-    user = User.query.get(id)
-    if(user.isPrime == False):
-        user.isPrime = True
-    elif(user.isPrime == True):
-        user.isPrime = False
+def set_prime():
+    """Join or leave Prime. Send {"isPrime": bool}; omit it to toggle."""
+    wanted = json_body().get('isPrime')
+    current_user.isPrime = wanted if isinstance(wanted, bool) else not current_user.isPrime
     db.session.commit()
-    return user.to_dict()
+    return {'user': current_user.to_dict()}

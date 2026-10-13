@@ -1,6 +1,7 @@
 from flask.cli import AppGroup
-from app.models.db import db, environment, SCHEMA
+from sqlalchemy import text
 
+from app.models.db import db, qualified
 
 from .products import seed_products, undo_products
 from .users import seed_users, undo_users
@@ -8,24 +9,19 @@ from .types import seed_types, undo_types
 from .reviews import seed_reviews, undo_reviews
 from .cart import seed_carts, undo_carts
 from .order import seed_orders, undo_orders
-# Creates a seed group to hold our commands
-# So we can type `flask seed --help`
+
+# `flask seed --help`
 seed_commands = AppGroup('seed')
 
+TABLES = ['users', 'types', 'products', 'reviews', 'carts', 'orders']
 
-# Creates the `flask seed all` command
+
+# `flask seed all` wipes the tables first, so it's safe to run repeatedly
 @seed_commands.command('all')
 def seed():
-    if environment == 'production':
-        # Before seeding, truncate all tables prefixed with schema name
-        db.session.execute(f"TRUNCATE table {SCHEMA}.users RESTART IDENTITY CASCADE;")
-        db.session.execute(f"TRUNCATE table {SCHEMA}.types RESTART IDENTITY CASCADE;")
-        db.session.execute(f"TRUNCATE table {SCHEMA}.products RESTART IDENTITY CASCADE;")
-        db.session.execute(f"TRUNCATE table {SCHEMA}.reviews RESTART IDENTITY CASCADE;")
-        db.session.execute(f"TRUNCATE table {SCHEMA}.carts RESTART IDENTITY CASCADE;")
-        db.session.execute(f"TRUNCATE table {SCHEMA}.orders RESTART IDENTITY CASCADE;")
-        # Add a truncate command here for every table that will be seeded.
-        db.session.commit()
+    for table in TABLES:
+        db.session.execute(text(f'TRUNCATE {qualified(table)} RESTART IDENTITY CASCADE;'))
+    db.session.commit()
 
     seed_users()
     seed_types()
@@ -33,11 +29,9 @@ def seed():
     seed_reviews()
     seed_carts()
     seed_orders()
-    # Add other seed functions here
 
 
-
-# Creates the `flask seed undo` command
+# `flask seed undo`
 @seed_commands.command('undo')
 def undo():
     undo_users()
@@ -46,4 +40,3 @@ def undo():
     undo_reviews()
     undo_carts()
     undo_orders()
-    # Add other undo functions here
