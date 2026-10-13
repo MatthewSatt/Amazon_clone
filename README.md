@@ -71,86 +71,45 @@ Amazon allows users to view all of the products within the store, make reviews a
 * [User Stories](https://github.com/MatthewSatt/Amazon_clone/wiki/User-Stories)
 * [Wireframes](https://github.com/MatthewSatt/Amazon_clone/wiki/Wire-Frames)
 
-## Technologies 
+## Technologies
 ***
-Amazon was developed using the following Technologies: 
+React 19 · Redux Toolkit · React Router 7 · Vite · Flask 3 · SQLAlchemy 2 · Alembic · PostgreSQL · Docker
 
-<img 
-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height=40/><img 
-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" height=40/><img 
-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" height=40/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"  height=40/><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlalchemy/sqlalchemy-original.svg"  height=40/><img  
-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"  height=40/><img  
-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"  height=40/><img  
-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"  height=40/><img  
-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg"  height=40/>
+## Installation
 
-
- React | Redux | Flask | Postgres |SQLAlchemy | Alembic | CSS | Git | Node.js | NPM | HTML / JSX | Heroku
-
-## Languages 
-***
-
-<img  src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"  height=40/><img
-src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" height=50/>
-* JavaScript/React (frontend)
-* Python/Flask (backend)
-
-
-## Installation 
-
-### Running with Docker
+### Running with Docker (recommended)
 
 With [Docker](https://www.docker.com/products/docker-desktop/) installed, clone the repository, cd into it, and run:
 
     docker compose up --build
 
-Then open http://localhost:8000 and log in as `demo@aa.io` / `password`. The first start creates the Postgres database, runs the migrations, and seeds demo data. The data lives in a Docker volume, so it persists between restarts.
+Then open http://localhost:8000 and sign in with the demo account (`demo@aa.io` / `password`). The first start creates the Postgres database, runs the migrations, and seeds demo data. The data lives in a Docker volume, so it persists between restarts.
 
-  •  Run Flask commands in the running container, e.g. `docker compose exec web flask seed undo`
+  •  Run Flask commands in the running container, e.g. `docker compose exec web flask seed all`
 
-  •  `docker compose down -v` stops everything and deletes the database. It is migrated and seeded again on the next `up`
+  •  `docker compose down -v` stops everything and deletes the database
 
 ### Running locally
 
-To install Amazon on your local machine please clone the project repository. 
+You need Python 3.12+, Node 20.19+ and PostgreSQL.
 
-1 )  `git clone https://github.com/MatthewSatt/Amazon_clone.git`
+1 ) Backend (from the repository root)
 
-2 ) cd into Amazon_clone
-    `cd Amazon_clone/`
+    python -m venv .venv && source .venv/bin/activate
+    pip install -r requirements.txt
+    cp .env.example .env        # then point DATABASE_URL at your Postgres database
+    flask db upgrade
+    flask seed all
+    flask run -p 8000
 
-3 )  Install dependencies
-     
-     `pipenv install --dev -r dev-requirements.txt && pipenv install -r requirements.txt`
+2 ) Frontend (in a second terminal)
 
-4 )  Create a .env file based on the example with proper settings for your development environment
+    cd react-app
+    npm install
+    npm run dev                 # http://localhost:3000, proxies /api to Flask on :8000
 
-5 )  Setup your PostgreSQL user, password, database, and make sure it matches your .env file
+`npm run build` writes the production bundle to `react-app/dist`, which Flask serves.
 
-
-  
-6 ) To setup the backend application...
-   
-   enter the pipenv shell, migrate your database, seed your database, and run the flask application 
-     
-  •  `cd Amazon_clone/` 
-
-  •  `pipenv shell` to enter the pipenv shell 
-
-  •  `flask db upgrade`
-
-  •  `flask seed all`
-
-  •  `flask run` while in the shell and within the backend (Amazon_clone/) directory under localhost:5000
-  
-7 ) To run the frontend react application...
-
-  •  Change into the frontend directory `Amazon_clone/react-app/`
-
-  •  Run `npm install` to install all dependencies from the package.json within the frontend directory 
-  
-  •  `npm start` within the frontend directory(Amazon_clone/react-app) under localhost:3000
-  
 ## Development 
 This project was developed by a single developer (Matthew Satterwhite).
 
